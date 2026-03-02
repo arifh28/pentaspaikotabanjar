@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LCC Quiz Mobile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #14532d; --bg: #f8fafc; --card-bg: #ffffff; --wrong: #ef4444; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            padding-bottom: 100px; /* Ruang untuk floating button */
+        }
+
+        /* Typography Khusus Arab */
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            line-height: 2;
+            direction: rtl;
+        }
+
+        /* Card Styles */
+        .mobile-card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            overflow: hidden;
+        }
+
+        .card-header-mobile {
+            padding: 12px 15px;
+            background: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Badge Styles */
+        .badge-tipe {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 5px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+        .bg-paket-a { background: #dcfce7; color: #166534; }
+        .bg-paket-b { background: #e0e7ff; color: #3730a3; }
+        .bg-paket-c { background: #ffedd5; color: #9a3412; }
+
+        /* Pilihan Jawaban Buttons */
+        .option-btn {
+            width: 100%;
+            text-align: left;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: white;
+            color: #334155;
+            transition: all 0.2s;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option-btn:hover { background-color: #f8fafc; }
+        .option-btn:active { transform: scale(0.99); }
+
+        .option-label {
+            font-weight: 700;
+            min-width: 25px;
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        /* State Jawaban */
+        .option-btn.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+            color: #14532d;
+        }
+        .option-btn.wrong {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+        .option-btn.correct .option-label { color: #14532d; }
+        .option-btn.wrong .option-label { color: #991b1b; }
+
+        /* Floating Button */
+        .fab-container {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+        }
+        .btn-generate {
+            width: 100%;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--primary);
+            border: none;
+            box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
+            color: white;
+            transition: 0.3s;
+        }
+        .btn-generate:active { transform: translateX(-50%) scale(0.95); }
+        .btn-generate:disabled { background: #94a3b8; cursor: not-allowed; }
+
+        .divider-text {
+            display: flex; align-items: center; text-align: center;
+            color: #94a3b8; font-size: 11px; font-weight: 800;
+            text-transform: uppercase; margin: 30px 0 10px 0; letter-spacing: 1px;
+        }
+        .divider-text::before, .divider-text::after { content: ''; flex: 1; border-bottom: 2px solid #e2e8f0; }
+        .divider-text::before { margin-right: 1em; }
+        .divider-text::after { margin-left: 1em; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-white sticky-top shadow-sm px-3 py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 fw-bold text-success"><i class="fas fa-book-open me-2"></i>LCC Digital</h6>
+        <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">0 / 0</span>
+    </div>
+
+    <div class="container mt-2 px-3" id="quiz-container">
+        <div class="text-center py-5 text-muted mt-5">
+            <i class="fas fa-layer-group fa-3x mb-3 text-success opacity-25"></i>
+            <p class="small fw-bold">Pastikan file 'soal.json' ada.<br>Tekan tombol untuk mulai.</p>
+        </div>
+    </div>
+
+    <div class="fab-container">
+        <button onclick="generateQuiz()" id="btnGen" class="btn-generate">
+            <i class="fas fa-random me-2"></i>ACAK 10 SOAL
+        </button>
+    </div>
+
+    <script>
+        // --- UTILS ---
+        
+        // Fungsi untuk mengambil data JSON dari file eksternal
+        async function fetchQuestionsFromFile() {
+            try {
+                // Pastikan nama file sesuai, di sini 'soal.json'
+                const response = await fetch('soal.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error("Gagal mengambil soal:", error);
+                return null;
+            }
+        }
+
+        // Fungsi acak array
+        function getRandomQuestions(sourceArray, count) {
+            if (!sourceArray || sourceArray.length === 0) return [];
+            const shuffled = [...sourceArray].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Helper untuk warna badge berdasarkan paket
+        function getBadgeClass(paket) {
+            const p = paket ? paket.toUpperCase() : '';
+            if (p === 'A') return 'bg-paket-a';
+            if (p === 'B') return 'bg-paket-b';
+            if (p === 'C') return 'bg-paket-c';
+            return 'bg-secondary text-white';
+        }
+
+        // --- CORE LOGIC ---
+
+        async function generateQuiz() {
+            const container = document.getElementById('quiz-container');
+            const btn = document.getElementById('btnGen');
+            const scoreBadge = document.getElementById('score-badge');
+
+            // 1. Set Loading UI
+            container.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-success mb-3"></div><p class="small text-muted">Sedang memuat data dari soal.json...</p></div>';
+            btn.disabled = true;
+            scoreBadge.innerText = "0 / 0";
+            
+            // Reset counters
+            correctCount = 0;
+            answeredCount = 0;
+
+            // 2. Fetch Data
+            const databaseSoal = await fetchQuestionsFromFile();
+
+            // 3. Error Handling jika gagal fetch
+            if (!databaseSoal) {
+                container.innerHTML = `
+                    <div class="alert alert-danger text-center mt-5">
+                        <i class="fas fa-exclamation-triangle fa-2x mb-3"></i><br>
+                        <strong>Gagal Memuat Soal</strong><br>
+                        <small>Pastikan file 'soal.json' ada di folder yang sama dan Anda menjalankannya menggunakan Local Server (bukan double click file html).</small>
+                    </div>`;
+                btn.disabled = false;
+                return;
+            }
+
+            // 4. Proses Randomize
+            setTimeout(() => {
+                const soalTerpilih = getRandomQuestions(databaseSoal, 10);
+                
+                if (soalTerpilih.length === 0) {
+                    container.innerHTML = '<div class="alert alert-warning text-center">Data soal kosong di dalam file json.</div>';
+                    btn.disabled = false;
+                    return;
+                }
+
+                let html = '<div class="divider-text">Latihan 10 Soal Acak</div>';
+
+                // 5. Render Loop
+                soalTerpilih.forEach((item, index) => {
+                    const uniqueId = `q-${index}`;
+                    
+                    // Render Pilihan Jawaban
+                    let optionsHtml = '';
+                    // Mengambil keys (A, B, C, D) secara dinamis
+                    const keys = Object.keys(item.pilihan); 
+                    
+                    keys.forEach(key => {
+                        const jawabanText = item.pilihan[key];
+                        // Pass parameter ke fungsi checkAnswer
+                        optionsHtml += `
+                            <button onclick="checkAnswer(this, '${key}', '${item.kunci}', '${uniqueId}')" 
+                                class="option-btn" data-key="${key}">
+                                <span class="option-label">${key}.</span>
+                                <span>${jawabanText}</span>
+                            </button>
+                        `;
+                    });
+
+                    // Render Card HTML
+                    html += `
+                    <div class="mobile-card" id="${uniqueId}">
+                        <div class="card-header-mobile">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-dark rounded-circle" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;">${index + 1}</span>
+                                <span class="fw-bold text-secondary small">No. ${item.no_soal}</span>
+                            </div>
+                            <span class="badge-tipe ${getBadgeClass(item.paket)}">PAKET ${item.paket}</span>
+                        </div>
+                        <div class="p-3">
+                            <p class="mb-3 text-dark fw-bold" style="font-size:1.05rem; line-height:1.6;">
+                                ${item.soal}
+                            </p>
+                            <div class="options-container">
+                                ${optionsHtml}
+                            </div>
+                            <div class="feedback-area mt-2 d-none">
+                                <div class="alert py-2 px-3 small fw-bold mb-0"></div>
+                            </div>
+                        </div>
+                    </div>`;
+                });
+
+                container.innerHTML = html;
+                btn.disabled = false;
+                window.scrollTo(0, 0);
+                
+                // Set total soal di header (misal 0/10)
+                document.getElementById('score-badge').innerText = `0 / 0`;
+                
+            }, 500); 
+        }
+
+        // --- INTERAKSI JAWABAN ---
+        let correctCount = 0;
+        let answeredCount = 0;
+
+        function checkAnswer(btnElement, selectedKey, correctKey, questionId) {
+            const card = document.getElementById(questionId);
+            
+            // Cegah klik ulang jika sudah dijawab
+            if (card.classList.contains('answered')) return;
+            
+            card.classList.add('answered');
+            answeredCount++;
+
+            const allBtns = card.querySelectorAll('.option-btn');
+            const feedbackArea = card.querySelector('.feedback-area');
+            const feedbackAlert = feedbackArea.querySelector('.alert');
+
+            // Normalisasi kunci jawaban (jaga-jaga jika json huruf kecil)
+            const isCorrect = (selectedKey.toUpperCase() === correctKey.toUpperCase());
+
+            if (isCorrect) {
+                // Jawaban Benar
+                btnElement.classList.add('correct');
+                feedbackAlert.className = 'alert alert-success py-2 px-3 small fw-bold mb-0';
+                feedbackAlert.innerHTML = '<i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!';
+                correctCount++;
+            } else {
+                // Jawaban Salah
+                btnElement.classList.add('wrong');
+                feedbackAlert.className = 'alert alert-danger py-2 px-3 small fw-bold mb-0';
+                feedbackAlert.innerHTML = `<i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${correctKey}</strong>`;
+                
+                // Highlight jawaban yang benar otomatis
+                allBtns.forEach(btn => {
+                    if (btn.getAttribute('data-key').toUpperCase() === correctKey.toUpperCase()) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+
+            // Update Score
+            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
+
+            // Tampilkan feedback
+            feedbackArea.classList.remove('d-none');
+        }
+    </script>
+</body>
+</html>

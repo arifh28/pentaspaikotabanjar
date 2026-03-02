@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MHQ Mobile - Audio Per Ayat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #14532d; --bg: #f8fafc; --card-bg: #ffffff; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            padding-bottom: 100px; /* Space for fixed button */
+        }
+
+        /* Typography Arab */
+        .quran-text {
+            font-family: 'Amiri', serif;
+            font-size: 24px;
+            line-height: 2.5;
+            direction: rtl;
+            text-align: right;
+            color: #1e293b;
+        }
+
+        .nomor-ayat {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 50%;
+            color: #64748b;
+            margin-right: 8px;
+            vertical-align: middle;
+            background: #f8fafc;
+        }
+
+        /* Layout Per Ayat */
+        .ayat-row {
+            display: flex;
+            align-items: flex-start; /* Align top agar rapi jika teks panjang */
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .ayat-row:last-child { border-bottom: none; }
+
+        .ayat-text-col {
+            flex: 1;
+            text-align: right;
+            padding-left: 15px; /* Jarak antara tombol play dan teks */
+        }
+
+        /* Tombol Audio Spesifik */
+        .btn-play-ayat {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #dcfce7;
+            color: #15803d;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0; /* Agar tombol tidak mengecil */
+            margin-top: 5px; /* Luruskan visual dengan baris pertama teks arab */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+        .btn-play-ayat:active { 
+            transform: scale(0.9); 
+            background: #15803d; 
+            color: white;
+        }
+
+        /* Card Styles */
+        .mobile-card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            overflow: hidden;
+        }
+
+        .card-header-mobile {
+            padding: 12px 15px;
+            background: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge-tipe {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 5px 8px;
+            border-radius: 6px;
+        }
+        .bg-panjang { background: #e0e7ff; color: #3730a3; }
+        .bg-sedang { background: #ffedd5; color: #9a3412; }
+        .bg-pendek { background: #dcfce7; color: #166534; }
+        .bg-wajib { background: #fee2e2; color: #991b1b; }
+
+        /* Floating Button */
+        .fab-container {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+        }
+        .btn-generate {
+            width: 100%;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--primary);
+            border: none;
+            box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
+            color: white;
+        }
+
+        /* Divider */
+        .divider-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 30px 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .divider-text::before, .divider-text::after {
+            content: ''; flex: 1; border-bottom: 2px solid #e2e8f0;
+        }
+        .divider-text:not(:empty)::before { margin-right: 1em; }
+        .divider-text:not(:empty)::after { margin-left: 1em; }
+
+        /* Loading */
+        #loading {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.95);
+            z-index: 2000;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-white sticky-top shadow-sm px-3 py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 fw-bold text-success"><i class="fas fa-quran me-2"></i>MHQ Mobile</h6>
+        <span class="badge bg-light text-secondary border rounded-pill">Audio Per Ayat</span>
+    </div>
+
+    <div class="container mt-2 px-3" id="soal-container">
+        <div class="text-center py-5 text-muted mt-5">
+            <i class="fas fa-mobile-alt fa-3x mb-3 text-success opacity-25"></i>
+            <p class="small fw-bold">Tekan tombol hijau untuk membuat soal baru.</p>
+        </div>
+    </div>
+
+    <div id="loading" class="d-none">
+        <div class="spinner-border text-success mb-3" role="status"></div>
+        <p class="small fw-bold text-secondary">Sedang Mengunduh Audio & Soal...</p>
+    </div>
+
+    <div class="fab-container">
+        <button onclick="generateMobile()" id="btnGen" class="btn-generate">
+            <i class="fas fa-sync-alt me-2"></i>ACAK PAKET SOAL
+        </button>
+    </div>
+
+    <script>
+        const BASE_URL = 'https://equran.id/api/v2/surat';
+        const AUDIO_SOURCE = '05'; // Mishary Rasyid
+
+        const RANGES = {
+            panjang: { start: 85, end: 92, label: 'PANJANG' }, 
+            sedang: { start: 93, end: 104, label: 'SEDANG' }, 
+            pendek: { start: 105, end: 114, label: 'PENDEK' }
+        };
+
+        // --- UTILS ---
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        async function fetchSurah(nomor) {
+            try {
+                const res = await fetch(`${BASE_URL}/${nomor}`);
+                const json = await res.json();
+                return json.data;
+            } catch (e) { return null; }
+        }
+
+        let currentAudio = null;
+        function playAudio(url) {
+            if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; }
+            if (url) { currentAudio = new Audio(url); currentAudio.play(); }
+        }
+
+        // --- RENDER PER AYAT DENGAN AUDIO ---
+        function renderFullAyatWithAudio(ayatArray) {
+            return ayatArray.map(a => `
+                <div class="ayat-row">
+                    <button onclick="playAudio('${a.audio[AUDIO_SOURCE]}')" class="btn-play-ayat" aria-label="Play Ayat ${a.nomorAyat}">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="ayat-text-col">
+                        <div class="quran-text">
+                            ${a.teksArab} <span class="nomor-ayat">${a.nomorAyat}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- MAIN LOGIC ---
+        async function generateMobile() {
+            const container = document.getElementById('soal-container');
+            const loading = document.getElementById('loading');
+            const btn = document.getElementById('btnGen');
+
+            loading.classList.remove('d-none');
+            btn.disabled = true;
+            container.innerHTML = '';
+            window.scrollTo(0, 0);
+
+            try {
+                let html = '';
+
+                // --- 1. WAJIB (Full Ayat + Audio per baris) ---
+                const wajib = await fetchSurah(84);
+                html += renderSection("Sesi 1: Surat Wajib");
+                html += renderCard(1, "WAJIB", "bg-wajib", "Al-Insyiqoq (Full)", `
+                    <div class="mb-3 border-bottom pb-2">
+                        <span class="fw-bold text-dark d-block">${wajib.namaLatin}</span>
+                        <span class="small text-muted">${wajib.arti} • ${wajib.jumlahAyat} Ayat</span>
+                    </div>
+                    <div class="mt-2">
+                        ${renderFullAyatWithAudio(wajib.ayat)}
+                    </div>
+                `);
+
+                // --- 2-4. SAMBUNG AYAT (Audio pada Soal) ---
+                html += renderSection("Sesi 2: Sambung Ayat");
+                const catsSambung = ['panjang', 'sedang', 'pendek'];
+                for(let i=0; i<3; i++) {
+                    const r = RANGES[catsSambung[i]];
+                    const s = await fetchSurah(randomInt(r.start, r.end));
+                    const idx = randomInt(0, s.ayat.length - 2);
+                    const ayatSoal = s.ayat[idx];
+                    const ayatJawab = s.ayat[idx+1];
+
+                    html += renderCard(2+i, r.label, `bg-${catsSambung[i]}`, `QS. ${s.namaLatin}`, `
+                        <div class="ayat-row bg-light rounded px-2">
+                            <button onclick="playAudio('${ayatSoal.audio[AUDIO_SOURCE]}')" class="btn-play-ayat bg-white shadow-sm text-primary">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="ayat-text-col">
+                                <small class="text-muted d-block mb-1 text-start">Soal (Dengarkan):</small>
+                                <div class="quran-text text-dark" style="font-size:20px">${ayatSoal.teksArab}</div>
+                            </div>
+                        </div>
+                        <div class="mt-2 pt-2 border-top">
+                            <small class="text-success fw-bold d-block mb-1">Lanjutan (Jawaban):</small>
+                            <div class="ayat-row py-0">
+                                <button onclick="playAudio('${ayatJawab.audio[AUDIO_SOURCE]}')" class="btn-play-ayat bg-success text-white" style="width:30px; height:30px; font-size:10px;">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                                <div class="ayat-text-col">
+                                    <div class="quran-text text-success" style="font-size:20px">${ayatJawab.teksArab}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                }
+
+                // --- 5-6. LAFAL SURAT (Full Ayat + Audio per baris) ---
+                html += renderSection("Sesi 3: Melafalkan Surat");
+                const catsLafal = ['panjang', 'pendek'];
+                for(let i=0; i<2; i++) {
+                    const r = RANGES[catsLafal[i]];
+                    const s = await fetchSurah(randomInt(r.start, r.end));
+                    html += renderCard(5+i, r.label, `bg-${catsLafal[i]}`, `Hafalan: ${s.namaLatin}`, `
+                        <div class="mb-3 border-bottom pb-2">
+                            <h6 class="fw-bold m-0 text-success">${s.nama} (${s.namaLatin})</h6>
+                        </div>
+                        <div class="mt-2">
+                            ${renderFullAyatWithAudio(s.ayat)}
+                        </div>
+                    `);
+                }
+
+                // --- 7-9. SAMBUNG SURAT (Audio Akhir Surat) ---
+                html += renderSection("Sesi 4: Sambung Antar Surat");
+                const catsSS = ['panjang', 'sedang', 'pendek'];
+                for(let i=0; i<3; i++) {
+                    const key = catsSS[i];
+                    let max = RANGES[key].end === 114 ? 113 : RANGES[key].end;
+                    const idSoal = randomInt(RANGES[key].start, max);
+                    
+                    const s1 = await fetchSurah(idSoal);
+                    const s2 = await fetchSurah(idSoal + 1);
+                    const lastAyat = s1.ayat[s1.ayat.length-1];
+
+                    html += renderCard(7+i, key.toUpperCase(), `bg-${key}`, `Akhir ${s1.namaLatin} ➝ Awal ${s2.namaLatin}`, `
+                        <div class="ayat-row">
+                            <button onclick="playAudio('${lastAyat.audio[AUDIO_SOURCE]}')" class="btn-play-ayat bg-warning text-dark bg-opacity-25">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="ayat-text-col">
+                                <small class="text-muted d-block text-start">Akhir Surat (Soal):</small>
+                                <div class="quran-text text-dark">${lastAyat.teksArab}</div>
+                            </div>
+                        </div>
+                        <div class="bg-success bg-opacity-10 p-2 rounded mt-2">
+                            <div class="quran-text text-success fs-5 text-center">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+                            <div class="quran-text text-success fw-bold text-center mt-1">${s2.ayat[0].teksArab}</div>
+                        </div>
+                    `);
+                }
+
+                // --- 10-12. TEBAK SURAT (Audio Potongan Ayat) ---
+                html += renderSection("Sesi 5: Tebak Nama Surat");
+                const catsTebak = ['panjang', 'sedang', 'pendek'];
+                for(let i=0; i<3; i++) {
+                    const r = RANGES[catsTebak[i]];
+                    const s = await fetchSurah(randomInt(r.start, r.end));
+                    const idx = s.ayat.length > 2 ? randomInt(1, s.ayat.length-1) : 0;
+                    const ayat = s.ayat[idx];
+
+                    html += renderCard(10+i, r.label, `bg-${catsTebak[i]}`, "Tebak Nama Surat", `
+                        <div class="ayat-row bg-white border rounded p-2">
+                            <button onclick="playAudio('${ayat.audio[AUDIO_SOURCE]}')" class="btn-play-ayat bg-primary text-white">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="ayat-text-col">
+                                <small class="text-muted d-block text-start">Soal (Dengarkan):</small>
+                                <div class="quran-text text-dark">${ayat.teksArab}</div>
+                            </div>
+                        </div>
+                        <div class="text-end mt-3 border-top pt-2">
+                            <small class="text-muted">Jawaban:</small>
+                            <h5 class="fw-bold text-success m-0">${s.namaLatin}</h5>
+                        </div>
+                    `);
+                }
+
+                container.innerHTML = html;
+
+            } catch (e) {
+                console.error(e);
+                container.innerHTML = `
+                    <div class="alert alert-danger text-center mt-5">
+                        <i class="fas fa-wifi fa-2x mb-3"></i><br>
+                        Gagal memuat data audio.
+                    </div>`;
+            } finally {
+                loading.classList.add('d-none');
+                btn.disabled = false;
+            }
+        }
+
+        function renderSection(title) {
+            return `<div class="divider-text">${title}</div>`;
+        }
+
+        function renderCard(num, badge, bgClass, title, body) {
+            return `
+            <div class="mobile-card">
+                <div class="card-header-mobile">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-dark rounded-circle" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;">${num}</span>
+                        <span class="fw-bold text-secondary" style="font-size:0.9rem">${title}</span>
+                    </div>
+                    <span class="badge-tipe ${bgClass}">${badge}</span>
+                </div>
+                <div class="p-3">
+                    ${body}
+                </div>
+            </div>`;
+        }
+    </script>
+</body>
+</html>
