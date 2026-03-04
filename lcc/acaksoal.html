@@ -147,8 +147,19 @@
 <body>
 
     <div class="bg-white sticky-top shadow-sm px-3 py-3 d-flex justify-content-between align-items-center">
-        <h6 class="m-0 fw-bold text-success"><i class="fas fa-book-open me-2"></i>LCC Digital</h6>
-        <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">0 / 0</span>
+        <h6 class="m-0 fw-bold text-success">
+            <i class="fas fa-book-open me-2"></i>LCC Digital
+        </h6>
+
+        <div class="d-flex gap-2 align-items-center">
+            <span class="badge bg-warning text-dark border rounded-pill" id="timer-badge">
+                ⏱ 00:00
+            </span>
+
+            <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">
+                0 / 0
+            </span>
+        </div>
     </div>
 
     <div class="container mt-2 px-3" id="quiz-container">
@@ -178,7 +189,31 @@
 
     <script>
         // --- UTILS ---
-        
+        let timerInterval = null;
+        let secondsElapsed = 0;
+
+        function startTimer() {
+
+            clearInterval(timerInterval);
+
+            secondsElapsed = 0;
+
+            timerInterval = setInterval(() => {
+
+                secondsElapsed++;
+
+                const minutes = Math.floor(secondsElapsed / 60);
+                const seconds = secondsElapsed % 60;
+
+                const formatted =
+                    String(minutes).padStart(2, '0') + ":" +
+                    String(seconds).padStart(2, '0');
+
+                document.getElementById("timer-badge").innerText = "⏱ " + formatted;
+
+            }, 1000);
+        }
+
         // Fungsi untuk mengambil data JSON dari file eksternal
         async function fetchQuestionsFromFile() {
             try {
@@ -216,6 +251,9 @@
         // --- CORE LOGIC ---
 
         async function generateQuiz() {
+
+            startTimer();
+
             const container = document.getElementById('quiz-container');
             const btn = document.getElementById('btnGen');
             const scoreBadge = document.getElementById('score-badge');
@@ -356,6 +394,13 @@
 
             // Tampilkan feedback
             feedbackArea.classList.remove('d-none');
+
+            if (answeredCount === 30) {
+                clearInterval(timerInterval);
+
+                alert("Semua soal selesai!\nWaktu pengerjaan: " +
+                    document.getElementById("timer-badge").innerText);
+            }
         }
     </script>
 </body>
