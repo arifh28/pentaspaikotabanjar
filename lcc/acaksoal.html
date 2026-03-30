@@ -11,12 +11,6 @@
     <meta property="og:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
     <meta property="og:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pentaspaikotabanjar.vercel.app/">
-    <meta property="twitter:title" content="Pentas PAI Kota Banjar 2026 (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
@@ -27,10 +21,9 @@
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: var(--bg); 
-            padding-bottom: 100px; /* Ruang untuk floating button */
+            padding-bottom: 100px;
         }
 
-        /* Typography Khusus Arab */
         .arabic-text {
             font-family: 'Amiri', serif;
             font-size: 1.4rem;
@@ -38,7 +31,6 @@
             direction: rtl;
         }
 
-        /* Card Styles */
         .mobile-card {
             border: none;
             border-radius: 16px;
@@ -57,7 +49,6 @@
             align-items: center;
         }
 
-        /* Badge Styles */
         .badge-tipe {
             font-size: 10px;
             font-weight: 800;
@@ -70,7 +61,6 @@
         .bg-paket-b { background: #e0e7ff; color: #3730a3; }
         .bg-paket-c { background: #ffedd5; color: #9a3412; }
 
-        /* Pilihan Jawaban Buttons */
         .option-btn {
             width: 100%;
             text-align: left;
@@ -86,8 +76,9 @@
             align-items: flex-start;
         }
         
-        .option-btn:hover { background-color: #f8fafc; }
-        .option-btn:active { transform: scale(0.99); }
+        .option-btn:hover:not(:disabled) { background-color: #f8fafc; cursor: pointer; }
+        .option-btn:active:not(:disabled) { transform: scale(0.99); }
+        .option-btn:disabled { cursor: default; }
 
         .option-label {
             font-weight: 700;
@@ -96,21 +87,11 @@
             color: var(--primary);
         }
 
-        /* State Jawaban */
-        .option-btn.correct {
-            background-color: #dcfce7;
-            border-color: #22c55e;
-            color: #14532d;
-        }
-        .option-btn.wrong {
-            background-color: #fee2e2;
-            border-color: #ef4444;
-            color: #991b1b;
-        }
+        .option-btn.correct { background-color: #dcfce7; border-color: #22c55e; color: #14532d; }
+        .option-btn.wrong { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
         .option-btn.correct .option-label { color: #14532d; }
         .option-btn.wrong .option-label { color: #991b1b; }
 
-        /* Floating Button */
         .fab-container {
             position: fixed;
             bottom: 25px;
@@ -133,6 +114,7 @@
         }
         .btn-generate:active { transform: translateX(-50%) scale(0.95); }
         .btn-generate:disabled { background: #94a3b8; cursor: not-allowed; }
+        .btn-danger-custom { background: #dc3545; box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3); }
 
         .divider-text {
             display: flex; align-items: center; text-align: center;
@@ -142,6 +124,9 @@
         .divider-text::before, .divider-text::after { content: ''; flex: 1; border-bottom: 2px solid #e2e8f0; }
         .divider-text::before { margin-right: 1em; }
         .divider-text::after { margin-left: 1em; }
+
+        .result-card { background: linear-gradient(135deg, #14532d 0%, #166534 100%); color: white; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 10px 25px rgba(20, 83, 45, 0.2); }
+        .score-circle { width: 100px; height: 100px; background: white; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 15px auto; }
     </style>
 </head>
 <body>
@@ -155,233 +140,276 @@
             <span class="badge bg-warning text-dark border rounded-pill" id="timer-badge">
                 ⏱ 00:00
             </span>
-
             <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">
                 0 / 0
             </span>
         </div>
     </div>
 
-    <div class="container mt-2 px-3" id="quiz-container">
-        <div class="text-center py-5 text-muted mt-5">
-            <i class="fas fa-layer-group fa-3x mb-3 text-success opacity-25"></i>
-            <p class="small fw-bold">Tekan tombol untuk mulai.</p>
+    <div class="container mt-4 px-3" id="main-container">
         </div>
-    </div>
 
-    <div class="fab-container">
-        <button onclick="generateQuiz()" id="btnGen" class="btn-generate">
-            <i class="fas fa-random me-2"></i>ACAK 30 SOAL
+    <div class="fab-container d-none" id="fab-action">
+        <button onclick="resetQuizConfirm()" class="btn-generate btn-danger-custom">
+            <i class="fas fa-redo me-2"></i>RESET UJIAN
         </button>
     </div>
 
     <footer class="text-center py-4 text-muted border-top mt-5 bg-white">
         <div class="container">
-            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia - Periksa Lagi pada Juknis langsung <a href="assets/juknis.zip" class="text-success fw-bold text-decoration-none">disini</a>.</p>
-            <p class="small text-muted mb-0"><i class="fas fa-eye me-1"></i> Total Kunjungan Halaman: <strong id="total-views" class="text-primary">Loading...</strong></p>
+            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia - Periksa Lagi pada Juknis langsung.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="../assets/js/script.js"></script>
 
     <script>
-        // --- UTILS ---
+        const SESSION_KEY = 'lcc_quiz_session';
         let timerInterval = null;
-        let secondsElapsed = 0;
+        let sessionData = null;
 
-        function startTimer() {
+        // --- INISIALISASI ---
+        window.onload = () => {
+            const savedSession = localStorage.getItem(SESSION_KEY);
+            if (savedSession) {
+                sessionData = JSON.parse(savedSession);
+                if (sessionData.isFinished) {
+                    showResult();
+                } else {
+                    renderQuiz();
+                    startTimer();
+                }
+            } else {
+                showStartForm();
+            }
+        };
 
-            clearInterval(timerInterval);
-
-            secondsElapsed = 0;
-
-            timerInterval = setInterval(() => {
-
-                secondsElapsed++;
-
-                const minutes = Math.floor(secondsElapsed / 60);
-                const seconds = secondsElapsed % 60;
-
-                const formatted =
-                    String(minutes).padStart(2, '0') + ":" +
-                    String(seconds).padStart(2, '0');
-
-                document.getElementById("timer-badge").innerText = "⏱ " + formatted;
-
-            }, 1000);
+        // --- TAMPILAN FORM AWAL ---
+        function showStartForm() {
+            document.getElementById('fab-action').classList.add('d-none');
+            document.getElementById('timer-badge').innerText = "⏱ 00:00";
+            document.getElementById('score-badge').innerText = "0 / 0";
+            
+            const html = `
+                <div class="mobile-card p-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-user-graduate fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">Selamat Datang</h4>
+                        <p class="text-muted small">Silakan isi data diri sebelum memulai ujian 30 soal acak.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold small text-secondary">Nama Lengkap</label>
+                        <input type="text" id="input-nama" class="form-control form-control-lg" placeholder="Masukkan nama..." required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small text-secondary">Asal Sekolah</label>
+                        <input type="text" id="input-sekolah" class="form-control form-control-lg" placeholder="Contoh: SDN 1 Banjar" required>
+                    </div>
+                    <button onclick="startNewQuiz()" id="btn-start" class="btn btn-success btn-lg w-100 fw-bold rounded-pill shadow-sm">
+                        <i class="fas fa-play me-2"></i> MULAI UJIAN
+                    </button>
+                </div>
+            `;
+            document.getElementById('main-container').innerHTML = html;
         }
 
-        // Fungsi untuk mengambil data JSON dari file eksternal
+        // --- FETCH DATA JSON ---
         async function fetchQuestionsFromFile() {
             try {
-                // Pastikan nama file sesuai, di sini 'soal.json'
                 const response = await fetch('soal.json');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                return data;
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return await response.json();
             } catch (error) {
                 console.error("Gagal mengambil soal:", error);
                 return null;
             }
         }
 
-        // Fungsi acak array
         function getRandomQuestions(sourceArray, count) {
             if (!sourceArray || sourceArray.length === 0) return [];
-            const shuffled = [...sourceArray].sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
+            return [...sourceArray].sort(() => 0.5 - Math.random()).slice(0, count);
         }
 
-        // Helper untuk warna badge berdasarkan paket
-        function getBadgeClass(paket) {
-            const p = paket ? paket.toUpperCase() : '';
-            if (p === 'A') return 'bg-paket-a';
-            if (p === 'B') return 'bg-paket-b';
-            if (p === 'C') return 'bg-paket-c';
-            return 'bg-secondary text-white';
-        }
+        // --- MULAI UJIAN BARU ---
+        async function startNewQuiz() {
+            const nama = document.getElementById('input-nama').value.trim();
+            const sekolah = document.getElementById('input-sekolah').value.trim();
+            const btn = document.getElementById('btn-start');
 
-        // --- CORE LOGIC ---
-
-        async function generateQuiz() {
-
-            startTimer();
-
-            const container = document.getElementById('quiz-container');
-            const btn = document.getElementById('btnGen');
-            const scoreBadge = document.getElementById('score-badge');
-
-            // 1. Set Loading UI
-            container.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-success mb-3"></div><p class="small text-muted">Sedang memuat data dari soal.json...</p></div>';
-            btn.disabled = true;
-            scoreBadge.innerText = "0 / 0";
-            
-            // Reset counters
-            correctCount = 0;
-            answeredCount = 0;
-
-            // 2. Fetch Data
-            const databaseSoal = await fetchQuestionsFromFile();
-
-            // 3. Error Handling jika gagal fetch
-            if (!databaseSoal) {
-                container.innerHTML = `
-                    <div class="alert alert-danger text-center mt-5">
-                        <i class="fas fa-exclamation-triangle fa-2x mb-3"></i><br>
-                        <strong>Gagal Memuat Soal</strong><br>
-                        <small>Pastikan file 'soal.json' ada di folder yang sama dan Anda menjalankannya menggunakan Local Server (bukan double click file html).</small>
-                    </div>`;
-                btn.disabled = false;
+            if (!nama || !sekolah) {
+                alert("Mohon isi Nama dan Asal Sekolah terlebih dahulu!");
                 return;
             }
 
-            // 4. Proses Randomize
-            setTimeout(() => {
-                const soalTerpilih = getRandomQuestions(databaseSoal, 30);
-                
-                if (soalTerpilih.length === 0) {
-                    container.innerHTML = '<div class="alert alert-warning text-center">Data soal kosong di dalam file json.</div>';
-                    btn.disabled = false;
-                    return;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Menyiapkan Soal...';
+
+            const databaseSoal = await fetchQuestionsFromFile();
+
+            if (!databaseSoal) {
+                alert("Gagal memuat soal. Pastikan file soal.json tersedia.");
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-play me-2"></i> MULAI UJIAN';
+                return;
+            }
+
+            const soalTerpilih = getRandomQuestions(databaseSoal, 30);
+            
+            if (soalTerpilih.length === 0) {
+                alert("Data soal kosong di dalam file json.");
+                return;
+            }
+
+            // Simpan ke Local Storage
+            sessionData = {
+                nama: nama,
+                sekolah: sekolah,
+                startTime: Date.now(),
+                endTime: null,
+                questions: soalTerpilih,
+                answers: {}, // Format: { "q-0": "A" }
+                isFinished: false
+            };
+            
+            saveSession();
+            renderQuiz();
+            startTimer();
+        }
+
+        // --- RENDER SOAL ---
+        function renderQuiz() {
+            document.getElementById('fab-action').classList.remove('d-none');
+            const container = document.getElementById('main-container');
+            
+            let html = `
+                <div class="alert alert-success border-0 shadow-sm mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="d-block text-success fw-bold">Peserta:</small>
+                            <span class="fw-bold text-dark">${sessionData.nama}</span>
+                        </div>
+                        <div class="text-end">
+                            <small class="d-block text-success fw-bold">Sekolah:</small>
+                            <span class="fw-bold text-dark">${sessionData.sekolah}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-text">Latihan 30 Soal Acak</div>
+            `;
+
+            let answeredCount = 0;
+            let correctCount = 0;
+
+            sessionData.questions.forEach((item, index) => {
+                const uniqueId = `q-${index}`;
+                const hasAnswered = sessionData.answers.hasOwnProperty(uniqueId);
+                const userAnswer = hasAnswered ? sessionData.answers[uniqueId] : null;
+                const isCorrect = hasAnswered && (userAnswer.toUpperCase() === item.kunci.toUpperCase());
+
+                if (hasAnswered) {
+                    answeredCount++;
+                    if (isCorrect) correctCount++;
                 }
 
-                let html = '<div class="divider-text">Latihan 30 Soal Acak</div>';
-
-                // 5. Render Loop
-                soalTerpilih.forEach((item, index) => {
-                    const uniqueId = `q-${index}`;
+                let optionsHtml = '';
+                const keys = Object.keys(item.pilihan); 
+                
+                keys.forEach(key => {
+                    const jawabanText = item.pilihan[key];
+                    let btnClass = "option-btn";
                     
-                    // Render Pilihan Jawaban
-                    let optionsHtml = '';
-                    // Mengambil keys (A, B, C, D) secara dinamis
-                    const keys = Object.keys(item.pilihan); 
-                    
-                    keys.forEach(key => {
-                        const jawabanText = item.pilihan[key];
-                        // Pass parameter ke fungsi checkAnswer
-                        optionsHtml += `
-                            <button onclick="checkAnswer(this, '${key}', '${item.kunci}', '${uniqueId}')" 
-                                class="option-btn" data-key="${key}">
-                                <span class="option-label">${key}.</span>
-                                <span>${jawabanText}</span>
-                            </button>
-                        `;
-                    });
+                    // Logika pewarnaan jika sudah dijawab (dari reload state)
+                    if (hasAnswered) {
+                        if (key.toUpperCase() === item.kunci.toUpperCase()) {
+                            btnClass += " correct"; // Kunci selalu hijau
+                        } else if (key === userAnswer && !isCorrect) {
+                            btnClass += " wrong"; // Jawaban user yg salah merah
+                        }
+                    }
 
-                    // Render Card HTML
-                    html += `
-                    <div class="mobile-card" id="${uniqueId}">
-                        <div class="card-header-mobile">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="badge bg-dark rounded-circle" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;">${index + 1}</span>
-                                <span class="fw-bold text-secondary small">No. ${item.no_soal}</span>
-                            </div>
-                            <span class="badge-tipe ${getBadgeClass(item.paket)}">PAKET ${item.paket}</span>
-                        </div>
-                        <div class="p-3">
-                            <p class="mb-3 text-dark fw-bold" style="font-size:1.05rem; line-height:1.6;">
-                                ${item.soal}
-                            </p>
-                            <div class="options-container">
-                                ${optionsHtml}
-                            </div>
-                            <div class="feedback-area mt-2 d-none">
-                                <div class="alert py-2 px-3 small fw-bold mb-0"></div>
-                            </div>
-                        </div>
-                    </div>`;
+                    optionsHtml += `
+                        <button onclick="checkAnswer(this, '${key}', '${item.kunci}', '${uniqueId}')" 
+                            class="${btnClass}" data-key="${key}" ${hasAnswered ? 'disabled' : ''}>
+                            <span class="option-label">${key}.</span>
+                            <span>${jawabanText}</span>
+                        </button>
+                    `;
                 });
 
-                container.innerHTML = html;
-                btn.disabled = false;
-                window.scrollTo(0, 0);
-                
-                // Set total soal di header (misal 0/10)
-                document.getElementById('score-badge').innerText = `0 / 0`;
-                
-            }, 500); 
+                let feedbackHtml = '';
+                if (hasAnswered) {
+                    if (isCorrect) {
+                        feedbackHtml = `<div class="alert alert-success py-2 px-3 small fw-bold mb-0"><i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!</div>`;
+                    } else {
+                        feedbackHtml = `<div class="alert alert-danger py-2 px-3 small fw-bold mb-0"><i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${item.kunci}</strong></div>`;
+                    }
+                }
+
+                function getBadgeClass(paket) {
+                    const p = paket ? paket.toUpperCase() : '';
+                    if (p === 'A') return 'bg-paket-a';
+                    if (p === 'B') return 'bg-paket-b';
+                    if (p === 'C') return 'bg-paket-c';
+                    return 'bg-secondary text-white';
+                }
+
+                html += `
+                <div class="mobile-card ${hasAnswered ? 'answered' : ''}" id="${uniqueId}">
+                    <div class="card-header-mobile">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-dark rounded-circle" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;">${index + 1}</span>
+                            <span class="fw-bold text-secondary small">No. ${item.no_soal}</span>
+                        </div>
+                        <span class="badge-tipe ${getBadgeClass(item.paket)}">PAKET ${item.paket}</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="mb-3 text-dark fw-bold" style="font-size:1.05rem; line-height:1.6;">
+                            ${item.soal}
+                        </p>
+                        <div class="options-container">
+                            ${optionsHtml}
+                        </div>
+                        <div class="feedback-area mt-2 ${hasAnswered ? '' : 'd-none'}">
+                            ${feedbackHtml}
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            container.innerHTML = html;
+            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
+            window.scrollTo(0, 0);
+
+            // Cek jika termuat ulang dalam keadaan sudah beres semua
+            if (answeredCount === sessionData.questions.length && !sessionData.isFinished) {
+                finishQuiz();
+            }
         }
 
         // --- INTERAKSI JAWABAN ---
-        let correctCount = 0;
-        let answeredCount = 0;
-
         function checkAnswer(btnElement, selectedKey, correctKey, questionId) {
             const card = document.getElementById(questionId);
-            
-            // Cegah klik ulang jika sudah dijawab
             if (card.classList.contains('answered')) return;
             
             card.classList.add('answered');
-            answeredCount++;
+            
+            // Simpan jawaban ke session
+            sessionData.answers[questionId] = selectedKey;
+            saveSession();
 
             const allBtns = card.querySelectorAll('.option-btn');
             const feedbackArea = card.querySelector('.feedback-area');
-            const feedbackAlert = feedbackArea.querySelector('.alert');
-
-            // Normalisasi kunci jawaban (jaga-jaga jika json huruf kecil)
             const isCorrect = (selectedKey.toUpperCase() === correctKey.toUpperCase());
 
+            // Nonaktifkan semua tombol di soal ini
+            allBtns.forEach(btn => btn.disabled = true);
+
             if (isCorrect) {
-                // Jawaban Benar
                 btnElement.classList.add('correct');
-                feedbackAlert.className = 'alert alert-success py-2 px-3 small fw-bold mb-0';
-                feedbackAlert.innerHTML = '<i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!';
-                correctCount++;
+                feedbackArea.innerHTML = '<div class="alert alert-success py-2 px-3 small fw-bold mb-0"><i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!</div>';
             } else {
-                // Jawaban Salah
                 btnElement.classList.add('wrong');
-                feedbackAlert.className = 'alert alert-danger py-2 px-3 small fw-bold mb-0';
-                feedbackAlert.innerHTML = `<i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${correctKey}</strong>`;
-                
-                // Highlight jawaban yang benar otomatis
+                feedbackArea.innerHTML = `<div class="alert alert-danger py-2 px-3 small fw-bold mb-0"><i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${correctKey}</strong></div>`;
                 allBtns.forEach(btn => {
                     if (btn.getAttribute('data-key').toUpperCase() === correctKey.toUpperCase()) {
                         btn.classList.add('correct');
@@ -389,19 +417,133 @@
                 });
             }
 
-            // Update Score
-            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
-
-            // Tampilkan feedback
             feedbackArea.classList.remove('d-none');
 
-            if (answeredCount === 30) {
-                clearInterval(timerInterval);
+            // Hitung ulang score untuk header
+            updateScoreHeader();
 
-                alert("Semua soal selesai!\nWaktu pengerjaan: " +
-                    document.getElementById("timer-badge").innerText);
+            // Cek apakah selesai
+            if (Object.keys(sessionData.answers).length === sessionData.questions.length) {
+                finishQuiz();
             }
         }
+
+        function updateScoreHeader() {
+            let correctCount = 0;
+            let answeredCount = Object.keys(sessionData.answers).length;
+
+            sessionData.questions.forEach((item, index) => {
+                const qId = `q-${index}`;
+                if (sessionData.answers[qId] && sessionData.answers[qId].toUpperCase() === item.kunci.toUpperCase()) {
+                    correctCount++;
+                }
+            });
+
+            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
+        }
+
+        // --- TIMER BEBAS RELOAD ---
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                if (sessionData.isFinished) {
+                    clearInterval(timerInterval);
+                    return;
+                }
+                
+                const now = Date.now();
+                const diffSeconds = Math.floor((now - sessionData.startTime) / 1000);
+                
+                const minutes = Math.floor(diffSeconds / 60);
+                const seconds = diffSeconds % 60;
+
+                const formatted = String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
+                document.getElementById("timer-badge").innerText = "⏱ " + formatted;
+            }, 1000);
+        }
+
+        function getFormattedTimeElapsed() {
+            const end = sessionData.endTime ? sessionData.endTime : Date.now();
+            const diffSeconds = Math.floor((end - sessionData.startTime) / 1000);
+            const minutes = Math.floor(diffSeconds / 60);
+            const seconds = diffSeconds % 60;
+            return `${minutes} Menit ${seconds} Detik`;
+        }
+
+        // --- SELESAI UJIAN ---
+        function finishQuiz() {
+            clearInterval(timerInterval);
+            
+            if (!sessionData.endTime) {
+                sessionData.endTime = Date.now();
+            }
+            sessionData.isFinished = true;
+            saveSession();
+
+            window.scrollTo(0, 0);
+            showResult();
+        }
+
+        function showResult() {
+            document.getElementById('fab-action').classList.remove('d-none');
+            const container = document.getElementById('main-container');
+            
+            let correctCount = 0;
+            sessionData.questions.forEach((item, index) => {
+                const qId = `q-${index}`;
+                if (sessionData.answers[qId] && sessionData.answers[qId].toUpperCase() === item.kunci.toUpperCase()) {
+                    correctCount++;
+                }
+            });
+
+            const totalSoal = sessionData.questions.length;
+            const nilaiAkhir = Math.round((correctCount / totalSoal) * 100);
+            const waktuSelesai = getFormattedTimeElapsed();
+
+            container.innerHTML = `
+                <div class="result-card mb-4">
+                    <h5 class="fw-bold mb-4">Ujian Selesai!</h5>
+                    <div class="score-circle shadow-sm">
+                        ${nilaiAkhir}
+                    </div>
+                    <p class="mb-1">Benar: <strong>${correctCount}</strong> dari ${totalSoal} Soal</p>
+                    <p class="mb-3 small opacity-75">Waktu: ${waktuSelesai}</p>
+                    <hr style="border-color: rgba(255,255,255,0.2);">
+                    <div class="text-start">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Nama:</span>
+                            <span class="fw-bold">${sessionData.nama}</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Sekolah:</span>
+                            <span class="fw-bold">${sessionData.sekolah}</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="renderQuiz()" class="btn btn-light w-100 border fw-bold mb-3 shadow-sm text-success py-3 rounded-pill">
+                    <i class="fas fa-list me-2"></i> LIHAT KUNCI JAWABAN
+                </button>
+            `;
+            
+            // Set header fix
+            document.getElementById('score-badge').innerText = `${correctCount} / ${totalSoal}`;
+            document.getElementById('timer-badge').innerText = "Selesai";
+        }
+
+        // --- RESET / KEMBALI KE AWAL ---
+        function resetQuizConfirm() {
+            if (confirm("Apakah Anda yakin ingin menghapus progres dan mengulang dari awal?")) {
+                localStorage.removeItem(SESSION_KEY);
+                sessionData = null;
+                clearInterval(timerInterval);
+                showStartForm();
+            }
+        }
+
+        function saveSession() {
+            localStorage.setItem(SESSION_KEY, JSON.stringify(sessionData));
+        }
+
     </script>
 </body>
 </html>
