@@ -24,68 +24,37 @@
             padding-bottom: 100px;
         }
 
-        .arabic-text {
-            font-family: 'Amiri', serif;
-            font-size: 1.4rem;
-            line-height: 2;
-            direction: rtl;
-        }
+        .arabic-text { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; direction: rtl; }
 
         .mobile-card {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            margin-bottom: 1.5rem;
-            background: var(--card-bg);
-            overflow: hidden;
+            border: none; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem; background: var(--card-bg); overflow: hidden;
         }
 
         .card-header-mobile {
-            padding: 12px 15px;
-            background: #f1f5f9;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 12px 15px; background: #f1f5f9; border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
         }
 
         .badge-tipe {
-            font-size: 10px;
-            font-weight: 800;
-            text-transform: uppercase;
-            padding: 5px 8px;
-            border-radius: 6px;
-            letter-spacing: 0.5px;
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            padding: 5px 8px; border-radius: 6px; letter-spacing: 0.5px;
         }
         .bg-paket-a { background: #dcfce7; color: #166534; }
         .bg-paket-b { background: #e0e7ff; color: #3730a3; }
         .bg-paket-c { background: #ffedd5; color: #9a3412; }
 
         .option-btn {
-            width: 100%;
-            text-align: left;
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            background: white;
-            color: #334155;
-            transition: all 0.2s;
-            position: relative;
-            display: flex;
-            align-items: flex-start;
+            width: 100%; text-align: left; padding: 12px 15px; margin-bottom: 8px;
+            border: 1px solid #e2e8f0; border-radius: 10px; background: white;
+            color: #334155; transition: all 0.2s; position: relative; display: flex; align-items: flex-start;
         }
         
         .option-btn:hover:not(:disabled) { background-color: #f8fafc; cursor: pointer; }
         .option-btn:active:not(:disabled) { transform: scale(0.99); }
         .option-btn:disabled { cursor: default; }
 
-        .option-label {
-            font-weight: 700;
-            min-width: 25px;
-            margin-right: 8px;
-            color: var(--primary);
-        }
+        .option-label { font-weight: 700; min-width: 25px; margin-right: 8px; color: var(--primary); }
 
         .option-btn.correct { background-color: #dcfce7; border-color: #22c55e; color: #14532d; }
         .option-btn.wrong { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
@@ -93,33 +62,20 @@
         .option-btn.wrong .option-label { color: #991b1b; }
 
         .fab-container {
-            position: fixed;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: 90%;
-            max-width: 400px;
+            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+            z-index: 1000; width: 90%; max-width: 400px;
         }
         .btn-generate {
-            width: 100%;
-            padding: 14px;
-            border-radius: 50px;
-            font-weight: 700;
-            background: var(--primary);
-            border: none;
-            box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
-            color: white;
-            transition: 0.3s;
+            width: 100%; padding: 14px; border-radius: 50px; font-weight: 700;
+            background: var(--primary); border: none; box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
+            color: white; transition: 0.3s;
         }
         .btn-generate:active { transform: translateX(-50%) scale(0.95); }
-        .btn-generate:disabled { background: #94a3b8; cursor: not-allowed; }
         .btn-danger-custom { background: #dc3545; box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3); }
 
         .divider-text {
-            display: flex; align-items: center; text-align: center;
-            color: #94a3b8; font-size: 11px; font-weight: 800;
-            text-transform: uppercase; margin: 30px 0 10px 0; letter-spacing: 1px;
+            display: flex; align-items: center; text-align: center; color: #94a3b8; font-size: 11px;
+            font-weight: 800; text-transform: uppercase; margin: 30px 0 10px 0; letter-spacing: 1px;
         }
         .divider-text::before, .divider-text::after { content: ''; flex: 1; border-bottom: 2px solid #e2e8f0; }
         .divider-text::before { margin-right: 1em; }
@@ -137,17 +93,12 @@
         </h6>
 
         <div class="d-flex gap-2 align-items-center">
-            <span class="badge bg-warning text-dark border rounded-pill" id="timer-badge">
-                ⏱ 00:00
-            </span>
-            <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">
-                0 / 0
-            </span>
+            <span class="badge bg-warning text-dark border rounded-pill" id="timer-badge">⏱ 00:00</span>
+            <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">0 / 0</span>
         </div>
     </div>
 
-    <div class="container mt-4 px-3" id="main-container">
-        </div>
+    <div class="container mt-4 px-3" id="main-container"></div>
 
     <div class="fab-container d-none" id="fab-action">
         <button onclick="resetQuizConfirm()" class="btn-generate btn-danger-custom">
@@ -157,18 +108,24 @@
 
     <footer class="text-center py-4 text-muted border-top mt-5 bg-white">
         <div class="container">
-            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia - Periksa Lagi pada Juknis langsung.</p>
+            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
+        // --- INISIALISASI SUPABASE ---
+        const SUPABASE_URL = 'https://oisrtlcxdwgvzrxrlzpb.supabase.co'; 
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9pc3J0bGN4ZHdndnpyeHJsenBiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMzM3OTEsImV4cCI6MjA3ODYwOTc5MX0.aI162olkIydnJrRxLnC0NsBU9umySmd2nWSTt8Hc1ec'; 
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
         const SESSION_KEY = 'lcc_quiz_session';
         let timerInterval = null;
         let sessionData = null;
 
-        // --- INISIALISASI ---
         window.onload = () => {
             const savedSession = localStorage.getItem(SESSION_KEY);
             if (savedSession) {
@@ -184,7 +141,6 @@
             }
         };
 
-        // --- TAMPILAN FORM AWAL ---
         function showStartForm() {
             document.getElementById('fab-action').classList.add('d-none');
             document.getElementById('timer-badge').innerText = "⏱ 00:00";
@@ -213,7 +169,6 @@
             document.getElementById('main-container').innerHTML = html;
         }
 
-        // --- FETCH DATA JSON ---
         async function fetchQuestionsFromFile() {
             try {
                 const response = await fetch('soal.json');
@@ -230,7 +185,6 @@
             return [...sourceArray].sort(() => 0.5 - Math.random()).slice(0, count);
         }
 
-        // --- MULAI UJIAN BARU ---
         async function startNewQuiz() {
             const nama = document.getElementById('input-nama').value.trim();
             const sekolah = document.getElementById('input-sekolah').value.trim();
@@ -260,15 +214,15 @@
                 return;
             }
 
-            // Simpan ke Local Storage
             sessionData = {
                 nama: nama,
                 sekolah: sekolah,
                 startTime: Date.now(),
                 endTime: null,
                 questions: soalTerpilih,
-                answers: {}, // Format: { "q-0": "A" }
-                isFinished: false
+                answers: {},
+                isFinished: false,
+                isSaved: false // Status untuk Supabase
             };
             
             saveSession();
@@ -276,7 +230,6 @@
             startTimer();
         }
 
-        // --- RENDER SOAL ---
         function renderQuiz() {
             document.getElementById('fab-action').classList.remove('d-none');
             const container = document.getElementById('main-container');
@@ -318,12 +271,11 @@
                     const jawabanText = item.pilihan[key];
                     let btnClass = "option-btn";
                     
-                    // Logika pewarnaan jika sudah dijawab (dari reload state)
                     if (hasAnswered) {
                         if (key.toUpperCase() === item.kunci.toUpperCase()) {
-                            btnClass += " correct"; // Kunci selalu hijau
+                            btnClass += " correct";
                         } else if (key === userAnswer && !isCorrect) {
-                            btnClass += " wrong"; // Jawaban user yg salah merah
+                            btnClass += " wrong";
                         }
                     }
 
@@ -380,20 +332,16 @@
             document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
             window.scrollTo(0, 0);
 
-            // Cek jika termuat ulang dalam keadaan sudah beres semua
             if (answeredCount === sessionData.questions.length && !sessionData.isFinished) {
                 finishQuiz();
             }
         }
 
-        // --- INTERAKSI JAWABAN ---
         function checkAnswer(btnElement, selectedKey, correctKey, questionId) {
             const card = document.getElementById(questionId);
             if (card.classList.contains('answered')) return;
             
             card.classList.add('answered');
-            
-            // Simpan jawaban ke session
             sessionData.answers[questionId] = selectedKey;
             saveSession();
 
@@ -401,7 +349,6 @@
             const feedbackArea = card.querySelector('.feedback-area');
             const isCorrect = (selectedKey.toUpperCase() === correctKey.toUpperCase());
 
-            // Nonaktifkan semua tombol di soal ini
             allBtns.forEach(btn => btn.disabled = true);
 
             if (isCorrect) {
@@ -418,11 +365,8 @@
             }
 
             feedbackArea.classList.remove('d-none');
-
-            // Hitung ulang score untuk header
             updateScoreHeader();
 
-            // Cek apakah selesai
             if (Object.keys(sessionData.answers).length === sessionData.questions.length) {
                 finishQuiz();
             }
@@ -442,7 +386,6 @@
             document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
         }
 
-        // --- TIMER BEBAS RELOAD ---
         function startTimer() {
             clearInterval(timerInterval);
             timerInterval = setInterval(() => {
@@ -470,7 +413,6 @@
             return `${minutes} Menit ${seconds} Detik`;
         }
 
-        // --- SELESAI UJIAN ---
         function finishQuiz() {
             clearInterval(timerInterval);
             
@@ -520,17 +462,46 @@
                         </div>
                     </div>
                 </div>
+                
+                <div id="save-status" class="alert alert-info small p-3 text-start mb-4 border-0 shadow-sm rounded-3">
+                    <span class="spinner-border spinner-border-sm me-2 text-primary"></span>Menyimpan nilai ke server...
+                </div>
+
                 <button onclick="renderQuiz()" class="btn btn-light w-100 border fw-bold mb-3 shadow-sm text-success py-3 rounded-pill">
                     <i class="fas fa-list me-2"></i> LIHAT KUNCI JAWABAN
                 </button>
             `;
             
-            // Set header fix
             document.getElementById('score-badge').innerText = `${correctCount} / ${totalSoal}`;
             document.getElementById('timer-badge').innerText = "Selesai";
+
+            // --- PROSES SIMPAN KE SUPABASE ---
+            const statusDiv = document.getElementById('save-status');
+            
+            if (!sessionData.isSaved) {
+                _supabase.from('quiz_results').insert([{
+                    nama: sessionData.nama,
+                    sekolah: sessionData.sekolah,
+                    nilai: nilaiAkhir,
+                    waktu_pengerjaan: waktuSelesai
+                }]).then(({ error }) => {
+                    if (error) {
+                        console.error("Supabase Error:", error);
+                        statusDiv.className = "alert alert-danger small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                        statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> <strong>Gagal menyimpan!</strong> Periksa koneksi internet Anda.';
+                    } else {
+                        sessionData.isSaved = true;
+                        saveSession();
+                        statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                        statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Berhasil!</strong> Nilai tersimpan di database panitia.';
+                    }
+                });
+            } else {
+                statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Tersimpan!</strong> Nilai ini sudah tercatat di server.';
+            }
         }
 
-        // --- RESET / KEMBALI KE AWAL ---
         function resetQuizConfirm() {
             if (confirm("Apakah Anda yakin ingin menghapus progres dan mengulang dari awal?")) {
                 localStorage.removeItem(SESSION_KEY);
