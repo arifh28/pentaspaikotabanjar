@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>LCC Quiz Mobile</title>
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pentaspaikotabanjar.vercel.app/">
-    <meta property="og:title" content="Pentas PAI Kota Banjar 2026 (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="og:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="og:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
+    <title>LCC Quiz Mobile - Ujian</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,14 +15,31 @@
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: var(--bg); 
-            padding-bottom: 100px;
+            padding-bottom: 30px; /* Kurangi padding bottom karena tidak ada floating button */
         }
 
         .arabic-text { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; direction: rtl; }
 
         .mobile-card {
-            border: none; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent; /* Border default transparan */
+            border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             margin-bottom: 1.5rem; background: var(--card-bg); overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Class untuk menyorot soal yang belum diisi */
+        .unanswered-warning {
+            border-color: var(--wrong) !important;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.2) !important;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
         }
 
         .card-header-mobile {
@@ -56,22 +67,8 @@
 
         .option-label { font-weight: 700; min-width: 25px; margin-right: 8px; color: var(--primary); }
 
-        .option-btn.correct { background-color: #dcfce7; border-color: #22c55e; color: #14532d; }
-        .option-btn.wrong { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
-        .option-btn.correct .option-label { color: #14532d; }
-        .option-btn.wrong .option-label { color: #991b1b; }
-
-        .fab-container {
-            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-            z-index: 1000; width: 90%; max-width: 400px;
-        }
-        .btn-generate {
-            width: 100%; padding: 14px; border-radius: 50px; font-weight: 700;
-            background: var(--primary); border: none; box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
-            color: white; transition: 0.3s;
-        }
-        .btn-generate:active { transform: translateX(-50%) scale(0.95); }
-        .btn-danger-custom { background: #dc3545; box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3); }
+        /* Warna netral saat dipilih, tidak menunjukkan benar/salah */
+        .option-btn.selected { background-color: #e2e8f0; border-color: #94a3b8; color: #0f172a; }
 
         .divider-text {
             display: flex; align-items: center; text-align: center; color: #94a3b8; font-size: 11px;
@@ -80,9 +77,6 @@
         .divider-text::before, .divider-text::after { content: ''; flex: 1; border-bottom: 2px solid #e2e8f0; }
         .divider-text::before { margin-right: 1em; }
         .divider-text::after { margin-left: 1em; }
-
-        .result-card { background: linear-gradient(135deg, #14532d 0%, #166534 100%); color: white; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 10px 25px rgba(20, 83, 45, 0.2); }
-        .score-circle { width: 100px; height: 100px; background: white; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 15px auto; }
     </style>
 </head>
 <body>
@@ -94,34 +88,15 @@
 
         <div class="d-flex gap-2 align-items-center">
             <span class="badge bg-warning text-dark border rounded-pill" id="timer-badge">⏱ 00:00</span>
-            <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">0 / 0</span>
+            <span class="badge bg-light text-secondary border rounded-pill" id="score-badge">0 / 0 Terjawab</span>
         </div>
     </div>
 
     <div class="container mt-4 px-3" id="main-container"></div>
 
-    <div class="fab-container d-none" id="fab-action">
-        <button onclick="resetQuizConfirm()" class="btn-generate btn-danger-custom">
-            <i class="fas fa-redo me-2"></i>RESET UJIAN
-        </button>
-    </div>
-
-    <footer class="text-center py-4 text-muted border-top mt-5 bg-white">
-        <div class="container">
-            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia.</p>
-        </div>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <script>
-        // --- INISIALISASI SUPABASE ---
-        const SUPABASE_URL = 'https://oisrtlcxdwgvzrxrlzpb.supabase.co'; 
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9pc3J0bGN4ZHdndnpyeHJsenBiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMzM3OTEsImV4cCI6MjA3ODYwOTc5MX0.aI162olkIydnJrRxLnC0NsBU9umySmd2nWSTt8Hc1ec'; 
-        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
         const SESSION_KEY = 'lcc_quiz_session';
         let timerInterval = null;
         let sessionData = null;
@@ -131,7 +106,7 @@
             if (savedSession) {
                 sessionData = JSON.parse(savedSession);
                 if (sessionData.isFinished) {
-                    showResult();
+                    window.location.href = 'hasiltest.html'; 
                 } else {
                     renderQuiz();
                     startTimer();
@@ -142,9 +117,8 @@
         };
 
         function showStartForm() {
-            document.getElementById('fab-action').classList.add('d-none');
             document.getElementById('timer-badge').innerText = "⏱ 00:00";
-            document.getElementById('score-badge').innerText = "0 / 0";
+            document.getElementById('score-badge').innerText = "0 / 0 Terjawab";
             
             const html = `
                 <div class="mobile-card p-4">
@@ -222,7 +196,7 @@
                 questions: soalTerpilih,
                 answers: {},
                 isFinished: false,
-                isSaved: false // Status untuk Supabase
+                isSaved: false
             };
             
             saveSession();
@@ -231,7 +205,6 @@
         }
 
         function renderQuiz() {
-            document.getElementById('fab-action').classList.remove('d-none');
             const container = document.getElementById('main-container');
             
             let html = `
@@ -247,22 +220,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="divider-text">Latihan 30 Soal Acak</div>
+                <div class="divider-text">30 Soal Acak (Sedang Berjalan)</div>
             `;
 
             let answeredCount = 0;
-            let correctCount = 0;
 
             sessionData.questions.forEach((item, index) => {
                 const uniqueId = `q-${index}`;
                 const hasAnswered = sessionData.answers.hasOwnProperty(uniqueId);
                 const userAnswer = hasAnswered ? sessionData.answers[uniqueId] : null;
-                const isCorrect = hasAnswered && (userAnswer.toUpperCase() === item.kunci.toUpperCase());
 
-                if (hasAnswered) {
-                    answeredCount++;
-                    if (isCorrect) correctCount++;
-                }
+                if (hasAnswered) answeredCount++;
 
                 let optionsHtml = '';
                 const keys = Object.keys(item.pilihan); 
@@ -271,31 +239,18 @@
                     const jawabanText = item.pilihan[key];
                     let btnClass = "option-btn";
                     
-                    if (hasAnswered) {
-                        if (key.toUpperCase() === item.kunci.toUpperCase()) {
-                            btnClass += " correct";
-                        } else if (key === userAnswer && !isCorrect) {
-                            btnClass += " wrong";
-                        }
+                    if (hasAnswered && key === userAnswer) {
+                        btnClass += " selected"; 
                     }
 
                     optionsHtml += `
-                        <button onclick="checkAnswer(this, '${key}', '${item.kunci}', '${uniqueId}')" 
-                            class="${btnClass}" data-key="${key}" ${hasAnswered ? 'disabled' : ''}>
+                        <button onclick="checkAnswer(this, '${key}', '${uniqueId}')" 
+                            class="${btnClass}" data-key="${key}">
                             <span class="option-label">${key}.</span>
                             <span>${jawabanText}</span>
                         </button>
                     `;
                 });
-
-                let feedbackHtml = '';
-                if (hasAnswered) {
-                    if (isCorrect) {
-                        feedbackHtml = `<div class="alert alert-success py-2 px-3 small fw-bold mb-0"><i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!</div>`;
-                    } else {
-                        feedbackHtml = `<div class="alert alert-danger py-2 px-3 small fw-bold mb-0"><i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${item.kunci}</strong></div>`;
-                    }
-                }
 
                 function getBadgeClass(paket) {
                     const p = paket ? paket.toUpperCase() : '';
@@ -321,69 +276,85 @@
                         <div class="options-container">
                             ${optionsHtml}
                         </div>
-                        <div class="feedback-area mt-2 ${hasAnswered ? '' : 'd-none'}">
-                            ${feedbackHtml}
-                        </div>
                     </div>
                 </div>`;
             });
 
-            container.innerHTML = html;
-            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
-            window.scrollTo(0, 0);
+            // Tambahkan Tombol Kirim di Paling Bawah
+            html += `
+                <div class="mt-4 mb-5 pb-5 px-2">
+                    <button onclick="submitQuiz()" class="btn btn-success btn-lg w-100 fw-bold rounded-pill shadow-lg" style="padding: 16px;">
+                        <i class="fas fa-paper-plane me-2"></i> KIRIM JAWABAN
+                    </button>
+                </div>
+            `;
 
-            if (answeredCount === sessionData.questions.length && !sessionData.isFinished) {
-                finishQuiz();
-            }
+            container.innerHTML = html;
+            document.getElementById('score-badge').innerText = `${answeredCount} / ${sessionData.questions.length} Terjawab`;
+            window.scrollTo(0, 0);
         }
 
-        function checkAnswer(btnElement, selectedKey, correctKey, questionId) {
+        function checkAnswer(btnElement, selectedKey, questionId) {
             const card = document.getElementById(questionId);
-            if (card.classList.contains('answered')) return;
+            
+            // Hapus peringatan merah jika sebelumnya belum dijawab
+            card.classList.remove('unanswered-warning');
             
             card.classList.add('answered');
             sessionData.answers[questionId] = selectedKey;
             saveSession();
 
+            // Reset semua tombol pada soal ini agar tidak ada yang selected
             const allBtns = card.querySelectorAll('.option-btn');
-            const feedbackArea = card.querySelector('.feedback-area');
-            const isCorrect = (selectedKey.toUpperCase() === correctKey.toUpperCase());
+            allBtns.forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            // Tandai jawaban yang baru dipilih (warna abu-abu)
+            btnElement.classList.add('selected');
 
-            allBtns.forEach(btn => btn.disabled = true);
-
-            if (isCorrect) {
-                btnElement.classList.add('correct');
-                feedbackArea.innerHTML = '<div class="alert alert-success py-2 px-3 small fw-bold mb-0"><i class="fas fa-check-circle me-1"></i> Jawaban Anda Benar!</div>';
-            } else {
-                btnElement.classList.add('wrong');
-                feedbackArea.innerHTML = `<div class="alert alert-danger py-2 px-3 small fw-bold mb-0"><i class="fas fa-times-circle me-1"></i> Salah! Kunci: <strong>${correctKey}</strong></div>`;
-                allBtns.forEach(btn => {
-                    if (btn.getAttribute('data-key').toUpperCase() === correctKey.toUpperCase()) {
-                        btn.classList.add('correct');
-                    }
-                });
-            }
-
-            feedbackArea.classList.remove('d-none');
             updateScoreHeader();
-
-            if (Object.keys(sessionData.answers).length === sessionData.questions.length) {
-                finishQuiz();
-            }
         }
 
         function updateScoreHeader() {
-            let correctCount = 0;
             let answeredCount = Object.keys(sessionData.answers).length;
+            document.getElementById('score-badge').innerText = `${answeredCount} / ${sessionData.questions.length} Terjawab`;
+        }
 
-            sessionData.questions.forEach((item, index) => {
-                const qId = `q-${index}`;
-                if (sessionData.answers[qId] && sessionData.answers[qId].toUpperCase() === item.kunci.toUpperCase()) {
-                    correctCount++;
+        // Fungsi Validasi & Kirim Jawaban
+        function submitQuiz() {
+            const totalSoal = sessionData.questions.length;
+            const dijawab = Object.keys(sessionData.answers).length;
+
+            if (dijawab < totalSoal) {
+                // Ada yang belum diisi
+                alert(`Masih ada ${totalSoal - dijawab} soal yang belum dijawab!\nPeriksa kembali soal yang ditandai dengan garis merah.`);
+                
+                // Tandai soal yang belum dijawab
+                sessionData.questions.forEach((item, index) => {
+                    const uniqueId = `q-${index}`;
+                    const card = document.getElementById(uniqueId);
+                    if (!sessionData.answers.hasOwnProperty(uniqueId)) {
+                        card.classList.add('unanswered-warning');
+                    } else {
+                        card.classList.remove('unanswered-warning');
+                    }
+                });
+                
+                // Otomatis scroll ke soal pertama yang belum dijawab
+                const firstUnanswered = document.querySelector('.unanswered-warning');
+                if (firstUnanswered) {
+                    // Beri offset sedikit agar tidak tertutup header
+                    const y = firstUnanswered.getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
-            });
+                return; // Batalkan proses kirim
+            }
 
-            document.getElementById('score-badge').innerText = `${correctCount} / ${answeredCount}`;
+            // Jika sudah diisi semua
+            if (confirm("Apakah Anda yakin ingin mengirim semua jawaban sekarang?\nPastikan jawaban Anda sudah benar.")) {
+                finishQuiz();
+            }
         }
 
         function startTimer() {
@@ -405,14 +376,6 @@
             }, 1000);
         }
 
-        function getFormattedTimeElapsed() {
-            const end = sessionData.endTime ? sessionData.endTime : Date.now();
-            const diffSeconds = Math.floor((end - sessionData.startTime) / 1000);
-            const minutes = Math.floor(diffSeconds / 60);
-            const seconds = diffSeconds % 60;
-            return `${minutes} Menit ${seconds} Detik`;
-        }
-
         function finishQuiz() {
             clearInterval(timerInterval);
             
@@ -422,99 +385,13 @@
             sessionData.isFinished = true;
             saveSession();
 
-            window.scrollTo(0, 0);
-            showResult();
-        }
-
-        function showResult() {
-            document.getElementById('fab-action').classList.remove('d-none');
-            const container = document.getElementById('main-container');
-            
-            let correctCount = 0;
-            sessionData.questions.forEach((item, index) => {
-                const qId = `q-${index}`;
-                if (sessionData.answers[qId] && sessionData.answers[qId].toUpperCase() === item.kunci.toUpperCase()) {
-                    correctCount++;
-                }
-            });
-
-            const totalSoal = sessionData.questions.length;
-            const nilaiAkhir = Math.round((correctCount / totalSoal) * 100);
-            const waktuSelesai = getFormattedTimeElapsed();
-
-            container.innerHTML = `
-                <div class="result-card mb-4">
-                    <h5 class="fw-bold mb-4">Ujian Selesai!</h5>
-                    <div class="score-circle shadow-sm">
-                        ${nilaiAkhir}
-                    </div>
-                    <p class="mb-1">Benar: <strong>${correctCount}</strong> dari ${totalSoal} Soal</p>
-                    <p class="mb-3 small opacity-75">Waktu: ${waktuSelesai}</p>
-                    <hr style="border-color: rgba(255,255,255,0.2);">
-                    <div class="text-start">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Nama:</span>
-                            <span class="fw-bold">${sessionData.nama}</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span>Sekolah:</span>
-                            <span class="fw-bold">${sessionData.sekolah}</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="save-status" class="alert alert-info small p-3 text-start mb-4 border-0 shadow-sm rounded-3">
-                    <span class="spinner-border spinner-border-sm me-2 text-primary"></span>Menyimpan nilai ke server...
-                </div>
-
-                <button onclick="renderQuiz()" class="btn btn-light w-100 border fw-bold mb-3 shadow-sm text-success py-3 rounded-pill">
-                    <i class="fas fa-list me-2"></i> LIHAT KUNCI JAWABAN
-                </button>
-            `;
-            
-            document.getElementById('score-badge').innerText = `${correctCount} / ${totalSoal}`;
-            document.getElementById('timer-badge').innerText = "Selesai";
-
-            // --- PROSES SIMPAN KE SUPABASE ---
-            const statusDiv = document.getElementById('save-status');
-            
-            if (!sessionData.isSaved) {
-                _supabase.from('quiz_results').insert([{
-                    nama: sessionData.nama,
-                    sekolah: sessionData.sekolah,
-                    nilai: nilaiAkhir,
-                    waktu_pengerjaan: waktuSelesai
-                }]).then(({ error }) => {
-                    if (error) {
-                        console.error("Supabase Error:", error);
-                        statusDiv.className = "alert alert-danger small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
-                        statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> <strong>Gagal menyimpan!</strong> Periksa koneksi internet Anda.';
-                    } else {
-                        sessionData.isSaved = true;
-                        saveSession();
-                        statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
-                        statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Berhasil!</strong> Nilai tersimpan di database panitia.';
-                    }
-                });
-            } else {
-                statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
-                statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Tersimpan!</strong> Nilai ini sudah tercatat di server.';
-            }
-        }
-
-        function resetQuizConfirm() {
-            if (confirm("Apakah Anda yakin ingin menghapus progres dan mengulang dari awal?")) {
-                localStorage.removeItem(SESSION_KEY);
-                sessionData = null;
-                clearInterval(timerInterval);
-                showStartForm();
-            }
+            // Arahkan ke halaman hasil
+            window.location.href = 'hasiltest.html';
         }
 
         function saveSession() {
             localStorage.setItem(SESSION_KEY, JSON.stringify(sessionData));
         }
-
     </script>
 </body>
 </html>

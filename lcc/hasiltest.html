@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hasil Ujian LCC</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #14532d; --bg: #f8fafc; --card-bg: #ffffff; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            padding-bottom: 50px;
+        }
+
+        .arabic-text { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; direction: rtl; }
+
+        .mobile-card {
+            border: none; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem; background: var(--card-bg); overflow: hidden;
+        }
+
+        .card-header-mobile {
+            padding: 12px 15px; background: #f1f5f9; border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .badge-tipe {
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            padding: 5px 8px; border-radius: 6px; letter-spacing: 0.5px;
+        }
+        .bg-paket-a { background: #dcfce7; color: #166534; }
+        .bg-paket-b { background: #e0e7ff; color: #3730a3; }
+        .bg-paket-c { background: #ffedd5; color: #9a3412; }
+
+        .option-btn {
+            width: 100%; text-align: left; padding: 12px 15px; margin-bottom: 8px;
+            border: 1px solid #e2e8f0; border-radius: 10px; background: white;
+            color: #334155; display: flex; align-items: flex-start; cursor: default;
+        }
+        
+        .option-label { font-weight: 700; min-width: 25px; margin-right: 8px; color: var(--primary); }
+
+        /* Pewarnaan Hasil Review */
+        .option-btn.correct { background-color: #dcfce7; border-color: #22c55e; color: #14532d; }
+        .option-btn.wrong { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .option-btn.correct .option-label { color: #14532d; }
+        .option-btn.wrong .option-label { color: #991b1b; }
+
+        .result-card { background: linear-gradient(135deg, #14532d 0%, #166534 100%); color: white; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 10px 25px rgba(20, 83, 45, 0.2); }
+        .score-circle { width: 100px; height: 100px; background: white; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 15px auto; }
+        
+        .divider-text {
+            display: flex; align-items: center; text-align: center; color: #94a3b8; font-size: 11px;
+            font-weight: 800; text-transform: uppercase; margin: 30px 0 10px 0; letter-spacing: 1px;
+        }
+        .divider-text::before, .divider-text::after { content: ''; flex: 1; border-bottom: 2px solid #e2e8f0; }
+        .divider-text::before { margin-right: 1em; }
+        .divider-text::after { margin-left: 1em; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-white sticky-top shadow-sm px-3 py-3 d-flex justify-content-center align-items-center">
+        <h6 class="m-0 fw-bold text-success">
+            <i class="fas fa-clipboard-check me-2"></i>Hasil Ujian
+        </h6>
+    </div>
+
+    <div class="container mt-4 px-3" id="result-container">
+        <div class="text-center py-5">
+            <div class="spinner-border text-success mb-3"></div>
+            <p class="small text-muted">Menganalisis hasil ujian...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // --- INISIALISASI SUPABASE ---
+        const SUPABASE_URL = 'https://oisrtlcxdwgvzrxrlzpb.supabase.co'; 
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9pc3J0bGN4ZHdndnpyeHJsenBiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMzM3OTEsImV4cCI6MjA3ODYwOTc5MX0.aI162olkIydnJrRxLnC0NsBU9umySmd2nWSTt8Hc1ec'; 
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        const SESSION_KEY = 'lcc_quiz_session';
+        let sessionData = null;
+
+        window.onload = () => {
+            const savedSession = localStorage.getItem(SESSION_KEY);
+            if (savedSession) {
+                sessionData = JSON.parse(savedSession);
+                
+                // Jika user masuk sini tapi belum beres, kembalikan ke acaksoal.html
+                if (!sessionData.isFinished) {
+                    window.location.href = 'acaksoal.html';
+                } else {
+                    processResults();
+                }
+            } else {
+                // Tidak ada session, lempar kembali ke halaman awal
+                window.location.href = 'acaksoal.html';
+            }
+        };
+
+        function getFormattedTimeElapsed() {
+            const end = sessionData.endTime ? sessionData.endTime : Date.now();
+            const diffSeconds = Math.floor((end - sessionData.startTime) / 1000);
+            const minutes = Math.floor(diffSeconds / 60);
+            const seconds = diffSeconds % 60;
+            return `${minutes} Menit ${seconds} Detik`;
+        }
+
+        function processResults() {
+            const container = document.getElementById('result-container');
+            
+            let correctCount = 0;
+            sessionData.questions.forEach((item, index) => {
+                const qId = `q-${index}`;
+                if (sessionData.answers[qId] && sessionData.answers[qId].toUpperCase() === item.kunci.toUpperCase()) {
+                    correctCount++;
+                }
+            });
+
+            const totalSoal = sessionData.questions.length;
+            const nilaiAkhir = Math.round((correctCount / totalSoal) * 100);
+            const waktuSelesai = getFormattedTimeElapsed();
+
+            let html = `
+                <div class="result-card mb-4">
+                    <h5 class="fw-bold mb-4">Ujian Selesai!</h5>
+                    <div class="score-circle shadow-sm">
+                        ${nilaiAkhir}
+                    </div>
+                    <p class="mb-1">Benar: <strong>${correctCount}</strong> dari ${totalSoal} Soal</p>
+                    <p class="mb-3 small opacity-75">Waktu: ${waktuSelesai}</p>
+                    <hr style="border-color: rgba(255,255,255,0.2);">
+                    <div class="text-start">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Nama:</span>
+                            <span class="fw-bold">${sessionData.nama}</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Sekolah:</span>
+                            <span class="fw-bold">${sessionData.sekolah}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="save-status" class="alert alert-info small p-3 text-start mb-4 border-0 shadow-sm rounded-3">
+                    <span class="spinner-border spinner-border-sm me-2 text-primary"></span>Mengirim hasil ke server panitia...
+                </div>
+
+                <div class="divider-text">Review Jawaban Anda</div>
+            `;
+
+            // Render kunci jawaban untuk di-review
+            sessionData.questions.forEach((item, index) => {
+                const uniqueId = `q-${index}`;
+                const userAnswer = sessionData.answers[uniqueId];
+                const isCorrect = (userAnswer.toUpperCase() === item.kunci.toUpperCase());
+
+                let optionsHtml = '';
+                const keys = Object.keys(item.pilihan); 
+                
+                keys.forEach(key => {
+                    const jawabanText = item.pilihan[key];
+                    let btnClass = "option-btn";
+                    
+                    if (key.toUpperCase() === item.kunci.toUpperCase()) {
+                        btnClass += " correct"; // Ini kunci jawaban yang sebenarnya
+                    } else if (key === userAnswer && !isCorrect) {
+                        btnClass += " wrong"; // Ini jawaban salah yang dipilih user
+                    }
+
+                    optionsHtml += `
+                        <div class="${btnClass}">
+                            <span class="option-label">${key}.</span>
+                            <span>${jawabanText}</span>
+                        </div>
+                    `;
+                });
+
+                let feedbackHtml = isCorrect 
+                    ? `<div class="alert alert-success py-2 px-3 small fw-bold mb-0 mt-2"><i class="fas fa-check-circle me-1"></i> Benar</div>`
+                    : `<div class="alert alert-danger py-2 px-3 small fw-bold mb-0 mt-2"><i class="fas fa-times-circle me-1"></i> Salah! Anda menjawab: ${userAnswer}</div>`;
+
+                html += `
+                <div class="mobile-card" id="${uniqueId}">
+                    <div class="card-header-mobile">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-dark rounded-circle" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;">${index + 1}</span>
+                            <span class="fw-bold text-secondary small">No. ${item.no_soal}</span>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <p class="mb-3 text-dark fw-bold" style="font-size:1.05rem; line-height:1.6;">
+                            ${item.soal}
+                        </p>
+                        <div class="options-container">
+                            ${optionsHtml}
+                        </div>
+                        ${feedbackHtml}
+                    </div>
+                </div>`;
+            });
+
+            // Tombol kembali untuk menghapus sesi dan bisa digunakan orang lain
+            html += `
+                <button onclick="clearSessionAndReturn()" class="btn btn-outline-danger w-100 fw-bold mb-4 py-3 rounded-pill">
+                    <i class="fas fa-sign-out-alt me-2"></i> KELUAR & KEMBALI KE BERANDA
+                </button>
+            `;
+
+            container.innerHTML = html;
+
+            // --- PROSES SIMPAN KE SUPABASE ---
+            const statusDiv = document.getElementById('save-status');
+            
+            if (!sessionData.isSaved) {
+                _supabase.from('quiz_results').insert([{
+                    nama: sessionData.nama,
+                    sekolah: sessionData.sekolah,
+                    nilai: nilaiAkhir,
+                    waktu_pengerjaan: waktuSelesai
+                }]).then(({ error }) => {
+                    if (error) {
+                        console.error("Supabase Error:", error);
+                        statusDiv.className = "alert alert-danger small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                        statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> <strong>Gagal menyimpan!</strong> Periksa koneksi internet Anda.';
+                    } else {
+                        // Tandai berhasil disimpan di localStorage
+                        sessionData.isSaved = true;
+                        localStorage.setItem(SESSION_KEY, JSON.stringify(sessionData));
+                        
+                        statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                        statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Terkirim!</strong> Nilai tersimpan di database panitia.';
+                    }
+                });
+            } else {
+                statusDiv.className = "alert alert-success small p-3 text-start mb-4 border-0 shadow-sm rounded-3";
+                statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> <strong>Tersimpan!</strong> Nilai ini sudah tercatat di server panitia.';
+            }
+        }
+
+        function clearSessionAndReturn() {
+            if (confirm("Keluar dari halaman ini? Riwayat hasil Anda di HP ini akan dihapus.")) {
+                localStorage.removeItem(SESSION_KEY);
+                window.location.href = 'acaksoal.html';
+            }
+        }
+    </script>
+</body>
+</html>
