@@ -11,92 +11,21 @@
     <meta property="og:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
     <meta property="og:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pentaspaikotabanjar.vercel.app/">
-    <meta property="twitter:title" content="Pentas PAI Kota Banjar 2026 (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #14532d; 
-            --secondary: #16a34a; 
-            --bg: #f0fdf4; 
-        }
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: var(--bg); 
-            color: #1e293b; 
-        }
-        .header { 
-            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-            color: white; 
-            padding: 25px 20px; 
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(20, 83, 45, 0.2);
-        }
-        .btn-back {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 10px 15px;
-            transition: 0.3s;
-        }
-        .btn-back:hover {
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-        }
-        .card-custom {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            background: white;
-        }
+        :root { --primary: #14532d; --secondary: #16a34a; --bg: #f0fdf4; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: #1e293b; }
+        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 25px 20px; border-radius: 0 0 30px 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(20, 83, 45, 0.2); }
+        .btn-back { background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 12px; padding: 10px 15px; transition: 0.3s; }
+        .btn-back:hover { background: rgba(255, 255, 255, 0.3); color: white; }
+        .card-custom { border: none; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); background: white; }
         .text-primary-custom { color: var(--primary); }
-        
-        /* Style untuk Aturan Khusus */
-        .alert-banjar {
-            background-color: #fffbeb;
-            border-left: 5px solid #d97706;
-            border-radius: 12px;
-            color: #92400e;
-        }
-
-        /* Style untuk Menu Bawah */
-        .feature-card { 
-            border: none; 
-            border-radius: 20px; 
-            transition: 0.3s; 
-            height: 100%; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-            text-decoration: none; 
-            display: block; 
-            background: white; 
-            padding: 25px;
-            border-bottom: 4px solid transparent;
-        }
-        .feature-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 15px 30px rgba(22, 163, 74, 0.15); 
-            border-bottom: 4px solid var(--secondary); 
-        }
-        .icon-wrapper { 
-            width: 60px; 
-            height: 60px; 
-            background: #dcfce7; 
-            color: var(--primary); 
-            border-radius: 15px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 1.75rem; 
-            margin-bottom: 15px; 
-        }
+        .alert-banjar { background-color: #fffbeb; border-left: 5px solid #d97706; border-radius: 12px; color: #92400e; }
+        .feature-card { border: none; border-radius: 20px; transition: 0.3s; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-decoration: none; display: block; background: white; padding: 25px; border-bottom: 4px solid transparent; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(22, 163, 74, 0.15); border-bottom: 4px solid var(--secondary); }
+        .icon-wrapper { width: 60px; height: 60px; background: #dcfce7; color: var(--primary); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 15px; }
         .feature-title { color: var(--primary); font-weight: 700; margin-bottom: 5px; }
         .feature-text { color: #64748b; font-size: 0.9rem; margin: 0; }
     </style>
@@ -129,15 +58,9 @@
             <div class="alert alert-banjar p-4 mb-5">
                 <h6 class="fw-bold mb-3"><i class="fas fa-map-marker-alt me-2"></i>Aturan Khusus Babak Penyisihan (Kota Banjar)</h6>
                 <ol class="mb-0 ps-3" style="line-height: 1.8; font-size: 0.95rem;">
-                    <li>MHQ dibagi menjadi 3 (tiga) majlis/ruang PA dan 3 (tiga) majlis/ruang PI, dengan contoh pembagian (bisa berubah sesuai dengan jumlah pendaftar):
-                        <ul class="mt-1 mb-1">
-                            <li><strong>Majlis/Ruang 1:</strong> Nomor peserta 1 – 28</li>
-                            <li><strong>Majlis/Ruang 2:</strong> Nomor peserta 29 – 57</li>
-                            <li><strong>Majlis/Ruang 3:</strong> Nomor peserta 58 – 86</li>
-                        </ul>
-                    </li>
-                    <li>Selain juri, koordinator/panitia dan peserta yang sedang tampil <strong>tidak diperkenankan (dilarang)</strong> berada di dalam ruangan. (Peserta menunggu di luar ruangan).</li>
-                    <li>Setelah juri membacakan soal, peserta diberi jeda waktu <strong>10 detik</strong> untuk menjawab. Jika dalam waktu tersebut peserta tidak menjawab maka dianggap selesai/tidak bisa menjawab pada soal tersebut.</li>
+                    <li>MHQ dibagi menjadi 3 (tiga) majlis/ruang PA dan 3 (tiga) majlis/ruang PI.</li>
+                    <li>Selain juri, koordinator/panitia dan peserta yang sedang tampil <strong>tidak diperkenankan (dilarang)</strong> berada di dalam ruangan.</li>
+                    <li>Setelah juri membacakan soal, peserta diberi jeda waktu <strong>10 detik</strong> untuk menjawab.</li>
                 </ol>
             </div>
 
@@ -166,26 +89,24 @@
 
         <h5 class="text-primary-custom fw-bold mb-3 px-2"><i class="fas fa-laptop-code me-2"></i>Persiapan & Simulasi MHQ</h5>
         <div class="row g-4 mb-4">
-            <div class="col-md-6 col-lg-5">
-                <a href="/mhq/mhq_test.html" class="feature-card">
+            <div class="col-md-6">
+                <a href="mhq_test.html" class="feature-card">
                     <div class="icon-wrapper"><i class="fas fa-random"></i></div>
                     <h5 class="feature-title">Generator Soal Latihan</h5>
                     <p class="feature-text">Hasilkan variasi soal secara acak sesuai dengan ketentuan hafalan surat wajib dan pilihan.</p>
                 </a>
             </div>
+            
+            <div class="col-md-6">
+                <a href="hafalan.html" class="feature-card" style="border-bottom: 4px solid #f59e0b;">
+                    <div class="icon-wrapper" style="background: #fef3c7; color: #d97706;"><i class="fas fa-clipboard-check"></i></div>
+                    <h5 class="feature-title" style="color: #d97706;">Cek Hafal Per Surat</h5>
+                    <p class="feature-text">Muroja'ah mandiri dengan memberi tanda checklist dan catatan perbaikan tajwid/makhroj pada setiap ayat.</p>
+                </a>
+            </div>
         </div>
     </div>
 
-    <footer class="text-center py-4 text-muted border-top mt-5 bg-white">
-        <div class="container">
-            <p class="mb-2">Website Unofficial (Tidak Resmi) dari Panitia - Periksa Lagi pada Juknis langsung <a href="assets/juknis.zip" class="text-success fw-bold text-decoration-none">disini</a>.</p>
-            <p class="small text-muted mb-0"><i class="fas fa-eye me-1"></i> Total Kunjungan Halaman: <strong id="total-views" class="text-primary">Loading...</strong></p>
-        </div>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="../assets/js/script.js"></script>
 </body>
 </html>

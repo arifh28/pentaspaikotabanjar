@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rekap Catatan Muroja'ah - MHQ</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #14532d; --bg: #f8fafc; --card-bg: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); padding-bottom: 50px; }
+        
+        .header { background: linear-gradient(135deg, var(--primary), #16a34a); color: white; padding: 25px 20px; border-radius: 0 0 30px 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(20, 83, 45, 0.2); }
+        .btn-back { background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 12px; padding: 10px 15px; transition: 0.3s; text-decoration: none; display: inline-block; }
+        .btn-back:hover { background: rgba(255, 255, 255, 0.3); color: white; }
+        
+        .surah-card { border: none; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 1.5rem; background: var(--card-bg); overflow: hidden; border-top: 5px solid var(--primary); }
+        .surah-header { padding: 15px; background: #f1f5f9; font-weight: 700; color: var(--primary); font-size: 1.1rem; border-bottom: 1px solid #e2e8f0; }
+        
+        .ayat-note-item { padding: 15px; border-bottom: 1px dashed #e2e8f0; }
+        .ayat-note-item:last-child { border-bottom: none; }
+        
+        .badge-ayat { width: 30px; height: 30px; background: var(--primary); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; margin-right: 10px; }
+        
+        .empty-state { text-align: center; padding: 50px 20px; color: #64748b; }
+        .empty-state i { font-size: 4rem; color: #cbd5e1; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="header d-flex align-items-center">
+        <a href="hafalan.html" class="btn-back me-3"><i class="fas fa-arrow-left"></i></a>
+        <div>
+            <h4 class="m-0 fw-bold">Buku Muroja'ah</h4>
+            <small class="opacity-75">Rekapitulasi Hafalan & Catatan</small>
+        </div>
+    </div>
+
+    <div class="container px-3" id="rekap-container">
+        </div>
+
+    <script>
+        const LOCAL_STORAGE_KEY = 'mhq_catatan_hafalan';
+
+        window.onload = () => {
+            renderRekap();
+        };
+
+        function renderRekap() {
+            const container = document.getElementById('rekap-container');
+            let savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+
+            if (!savedData || Object.keys(savedData).length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h5 class="fw-bold text-dark">Belum ada catatan</h5>
+                        <p class="small">Anda belum menyimpan catatan muroja'ah apapun. Silakan kembali dan cek hafalan per surat.</p>
+                        <a href="hafalan.html" class="btn btn-success rounded-pill px-4 mt-3 fw-bold">Mulai Muroja'ah</a>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            let isCompletelyEmpty = true;
+
+            // Looping berdasarkan nomor surat (agar berurutan jika obyek teracak)
+            Object.keys(savedData).sort((a,b) => parseInt(a) - parseInt(b)).forEach(surahId => {
+                const surah = savedData[surahId];
+                const ayatKeys = Object.keys(surah.ayat).sort((a,b) => parseInt(a) - parseInt(b));
+                
+                // Jika ada isinya
+                if (ayatKeys.length > 0) {
+                    isCompletelyEmpty = false;
+                    
+                    let ayatHtml = '';
+                    ayatKeys.forEach(noAyat => {
+                        const note = surah.ayat[noAyat];
+                        const hafalBadge = note.hafal 
+                            ? `<span class="badge bg-success mb-2"><i class="fas fa-check me-1"></i> Hafal Lancar</span>` 
+                            : `<span class="badge bg-danger mb-2"><i class="fas fa-times me-1"></i> Perlu Diulang</span>`;
+                        
+                        const textCatatan = note.catatan ? `<div class="bg-light p-2 rounded small text-secondary fst-italic border-start border-3 border-warning">" ${note.catatan} "</div>` : '';
+
+                        ayatHtml += `
+                            <div class="ayat-note-item">
+                                <div class="d-flex align-items-start">
+                                    <div class="badge-ayat flex-shrink-0">${noAyat}</div>
+                                    <div class="flex-grow-1">
+                                        ${hafalBadge}
+                                        ${textCatatan}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                        <div class="surah-card">
+                            <div class="surah-header d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-book-open me-2"></i> QS. ${surah.namaLatin}</span>
+                                <span class="badge bg-white text-success border border-success">${ayatKeys.length} Catatan</span>
+                            </div>
+                            <div>
+                                ${ayatHtml}
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            if (isCompletelyEmpty) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h5 class="fw-bold text-dark">Catatan Kosong</h5>
+                        <p class="small">Anda pernah membuka surat namun tidak menyimpan checklist atau catatan apapun.</p>
+                        <a href="hafalan.html" class="btn btn-success rounded-pill px-4 mt-3 fw-bold">Mulai Muroja'ah</a>
+                    </div>
+                `;
+            } else {
+                // Tambahkan tombol hapus semua di bagian bawah
+                html += `
+                    <button onclick="hapusSemuaCatatan()" class="btn btn-outline-danger w-100 fw-bold rounded-pill py-3 mt-2 mb-4">
+                        <i class="fas fa-trash-alt me-2"></i> HAPUS SEMUA REKAP
+                    </button>
+                `;
+                container.innerHTML = html;
+            }
+        }
+
+        function hapusSemuaCatatan() {
+            if(confirm("Apakah Anda yakin ingin menghapus seluruh catatan Muroja'ah secara permanen?")) {
+                localStorage.removeItem(LOCAL_STORAGE_KEY);
+                renderRekap();
+            }
+        }
+    </script>
+</body>
+</html>
