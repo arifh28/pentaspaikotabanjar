@@ -14,12 +14,6 @@
     <meta property="og:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
     <meta property="og:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pentaspaikotabanjar.vercel.app/">
-    <meta property="twitter:title" content="Pentas PAI Kota Banjar 2026 (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:description" content="Petunjuk Teknis, Aturan, dan Informasi Pelaksanaan Pentas PAI Tingkat Kota Banjar Tahun 2026. Terdiri dari Mode Daring dan Luring. (Unofficial/Tidak Resmi dari Panitia)">
-    <meta property="twitter:image" content="https://pentaspaikotabanjar.vercel.app/assets/image/banner.png">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -36,6 +30,10 @@
         .time-box h3 { font-weight: 800; color: var(--primary); margin: 0; }
         .time-box small { color: #64748b; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
         .section-title { font-weight: 800; color: var(--primary); border-bottom: 2px dashed #cbd5e1; padding-bottom: 10px; margin-bottom: 20px; }
+        
+        /* Custom Styles untuk Suggestion List */
+        .suggestion-item { cursor: pointer; transition: background 0.2s; }
+        .suggestion-item:hover { background-color: #f1f5f9; }
     </style>
 </head>
 <body>
@@ -51,7 +49,7 @@
                     <h6 class="text-muted mb-3"><i class="fas fa-video text-success me-2"></i>Batas Pengiriman Video (Daring)</h6>
                     <div id="cd-daring" class="d-flex justify-content-center gap-3 gap-md-4 time-box">
                         </div>
-                    <div class="mt-2 text-muted small">Selasa, 7 April 2026</div>
+                    <div class="mt-2 text-muted small">Rabu, 8 April 2026</div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -61,6 +59,40 @@
                         </div>
                     <div class="mt-2 text-muted small">Kamis, 16 April 2026</div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <h4 class="section-title"><i class="fas fa-search me-2 text-warning"></i>Cek Nomor Peserta & Kirim Video</h4>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 border-0 shadow-sm rounded-4 h-100" style="background: white;">
+                    <label for="schoolSearch" class="form-label fw-bold text-success mb-2">Cari Asal Sekolah:</label>
+                    <div class="position-relative">
+                        <input type="text" id="schoolSearch" class="form-control form-control-lg" placeholder="Ketik nama sekolah (cth: SDN 1 Banjar)..." autocomplete="off">
+                        <ul id="suggestionsList" class="list-group position-absolute w-100 shadow" style="z-index: 1000; display: none; max-height: 250px; overflow-y: auto;"></ul>
+                    </div>
+                    
+                    <div id="resultBox" class="mt-4 text-center d-none p-3 rounded-4 shadow-sm" style="background: var(--bg); border: 2px dashed var(--secondary);">
+                        <p class="mb-1 text-muted small fw-bold text-uppercase">Nomor Urut Peserta</p>
+                        <h1 id="nomorUrutResult" class="display-3 fw-bold text-success mb-0" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1);"></h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <a href="https://forms.gle/ToP8vTWmWL48ken56" target="_blank" class="card p-3 p-md-4 text-decoration-none h-100 d-flex justify-content-center" style="border: none; border-radius: 20px; background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2); transition: 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-white text-warning rounded-circle d-flex align-items-center justify-content-center me-3 me-md-4 shadow-sm" style="width: 65px; height: 65px; flex-shrink: 0; font-size: 1.8rem;">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-white mb-2">Form Pengiriman Video</h4>
+                            <p class="text-white-50 mb-0" style="font-size: 0.95rem;">Klik di sini untuk mengisi formulir dan menautkan link YouTube video peserta (Mode Daring).</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -156,11 +188,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/script.js"></script>
+    
     <script>
-        // Fungsi Hitung Mundur
+        // --- LOGIKA HITUNG MUNDUR ---
         function initCountdown(targetDate, elementId) {
             const dest = new Date(targetDate).getTime();
             
@@ -187,12 +219,97 @@
             }, 1000);
         }
 
-        // Setting Target Waktu: Tanggal, Bulan, Tahun, Jam:Menit:Detik
-        // Diasumsikan batas akhir pengiriman video adalah 6 April jam 23:59:59
-        initCountdown("April 7, 2026 23:59:59", "cd-daring");
-        
-        // Diasumsikan pelaksanaan luring dimulai 16 April jam 07:00:00 pagi
+        initCountdown("April 8, 2026 23:59:59", "cd-daring");
         initCountdown("April 16, 2026 07:00:00", "cd-luring");
+
+        // --- LOGIKA PENCARIAN NOMOR PESERTA ---
+        const schoolData = [
+            { nama: "UPTD SDN 5 HEGARSARI", no: 1 }, { nama: "UPTD SDN 2 BANJAR", no: 2 }, { nama: "UPTD SDN 1 KARANGPANIMBAL", no: 3 },
+            { nama: "UPTD SDN 4 BANJAR", no: 4 }, { nama: "UPTD SDN 8 BANJAR", no: 5 }, { nama: "UPTD SDN 2 WARINGINSARI", no: 6 },
+            { nama: "UPTD SDN 1 MULYASARI", no: 7 }, { nama: "UPTD SDN 1 WARINGINSARI", no: 8 }, { nama: "UPTD SDN 2 KARANGPANIMBAL", no: 9 },
+            { nama: "UPTD SDN 1 SUKAMUKTI", no: 10 }, { nama: "UPTD SDN 4 LANGENSARI", no: 11 }, { nama: "UPTD SDN 2 SITUBATU", no: 12 },
+            { nama: "UPTD SDN 2 REJASARI", no: 13 }, { nama: "UPTD SDN 5 BANJAR", no: 14 }, { nama: "UPTD SDN 3 MUKTISARI", no: 15 },
+            { nama: "SD INSPIRATIF AL-ILHAM", no: 16 }, { nama: "UPTD SDN 3 MULYASARI", no: 17 }, { nama: "UPTD SDN 1 BANJAR", no: 18 },
+            { nama: "UPTD SDN 1 BINANGUN", no: 19 }, { nama: "UPTD SDN 4 BATULAWANG", no: 20 }, { nama: "UPTD SDN 1 SITUBATU", no: 21 },
+            { nama: "UPTD SDN 1 CIBEUREUM", no: 22 }, { nama: "UPTD SDN 2 NEGLASARI", no: 23 }, { nama: "UPTD SDN SINARTANJUNG", no: 24 },
+            { nama: "UPTD SDN 1 BANK JABAR", no: 25 }, { nama: "SD IT USWATUN HASANAH", no: 26 }, { nama: "UPTD SDN 1 HEGARSARI", no: 27 },
+            { nama: "UPTD SDN 1 KUJANGSARI", no: 28 }, { nama: "UPTD SDN 3 NEGLASARI", no: 29 }, { nama: "UPTD SDN 2 MUKTISARI", no: 30 },
+            { nama: "UPTD SDN 2 BALOKANG", no: 31 }, { nama: "UPTD SDN 3 WARINGINSARI", no: 32 }, { nama: "UPTD SDN 1 NEGLASARI", no: 33 },
+            { nama: "UPTD SDN 2 BATULAWANG", no: 34 }, { nama: "UPTD SDN 3 BALOKANG", no: 35 }, { nama: "UPTD SDN 4 REJASARI", no: 36 },
+            { nama: "UPTD SDN 1 JAJAWAR", no: 37 }, { nama: "UPTD SDN 1 KARYAMUKTI", no: 38 }, { nama: "UPTD SDN 1 MEKARSARI", no: 39 },
+            { nama: "UPTD SDN 1 PATARUMAN", no: 40 }, { nama: "UPTD SDN 3 LANGENSARI", no: 41 }, { nama: "UPTD SDN 4 PATARUMAN", no: 42 },
+            { nama: "UPTD SDN 7 KUJANGSARI", no: 43 }, { nama: "UPTD SDN 3 PATARUMAN", no: 44 }, { nama: "UPTD SDN 2 KARYAMUKTI", no: 45 },
+            { nama: "UPTD SDN 10 HEGARSARI", no: 46 }, { nama: "UPTD SDN 4 BOJONGKANTONG", no: 47 }, { nama: "SD IT INSANTAMA", no: 48 },
+            { nama: "UPTD SDN 2 PATARUMAN", no: 49 }, { nama: "UPTD SDN 6 HEGARSARI", no: 50 }, { nama: "UPTD SDN 3 BATULAWANG", no: 51 },
+            { nama: "UPTD SDN 3 BANJAR", no: 52 }, { nama: "UPTD SDN 1 BALOKANG", no: 53 }, { nama: "UPTD SDN 5 MEKARSARI", no: 54 },
+            { nama: "UPTD SDN 5 WARINGINSARI", no: 55 }, { nama: "UPTD SDN 3 KARYAMUKTI", no: 56 }, { nama: "UPTD SDN 2 KUJANGSARI", no: 57 },
+            { nama: "UPTD SDN 4 KUJANGSARI", no: 58 }, { nama: "UPTD SDN 2 SUKAMUKTI", no: 59 }, { nama: "UPTD SDN 4 MUKTISARI", no: 60 },
+            { nama: "UPTD SDN 3 MEKARSARI", no: 61 }, { nama: "UPTD SDN 1 PURWAHARJA", no: 62 }, { nama: "UPTD SDN 2 PURWAHARJA", no: 63 },
+            { nama: "UPTD SDN 2 BOJONGKANTONG", no: 64 }, { nama: "UPTD SDN 1 RAHARJA", no: 65 }, { nama: "UPTD SDN 2 LANGENSARI", no: 66 },
+            { nama: "SD ISLAM AL ISTIQOMAH", no: 67 }, { nama: "UPTD SDN 2 RAHARJA", no: 68 }, { nama: "UPTD SDN 4 MEKARSARI", no: 69 },
+            { nama: "UPTD SDN 6 REJASARI", no: 70 }, { nama: "UPTD SDN 2 BINANGUN", no: 71 }, { nama: "UPTD SDN 3 BOJONGKANTONG", no: 72 },
+            { nama: "UPTD SDN 7 HEGARSARI", no: 73 }, { nama: "UPTD SDN 8 HEGARSARI", no: 74 }, { nama: "UPTD SDN 1 REJASARI", no: 75 },
+            { nama: "UPTD SDN 1 MEKARHARJA", no: 76 }, { nama: "UPTD SDN 5 PATARUMAN", no: 77 }, { nama: "UPTD SDN 2 HEGARSARI", no: 78 },
+            { nama: "UPTD SDN 9 HEGARSARI", no: 79 }, { nama: "UPTD SDN 1 BATULAWANG", no: 80 }, { nama: "UPTD SDN 1 MUKTISARI", no: 81 },
+            { nama: "UPTD SDN 3 KUJANGSARI", no: 82 }, { nama: "UPTD SDN 3 REJASARI", no: 83 }, { nama: "UPTD SDN 5 REJASARI", no: 84 },
+            { nama: "UPTD SDN 2 MEKARHARJA", no: 85 }, { nama: "UPTD SDN 3 MEKARHARJA", no: 86 }, { nama: "SD IT YAYASAN AL-FALAH", no: 87 },
+            { nama: "SD IT DARUL HIKAM", no: 88 }
+        ];
+
+        const searchInput = document.getElementById('schoolSearch');
+        const suggestionsList = document.getElementById('suggestionsList');
+        const resultBox = document.getElementById('resultBox');
+        const nomorUrutResult = document.getElementById('nomorUrutResult');
+
+        // Event saat pengguna mengetik
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            suggestionsList.innerHTML = '';
+            
+            if (query === '') {
+                suggestionsList.style.display = 'none';
+                resultBox.classList.add('d-none');
+                return;
+            }
+
+            const filteredSchools = schoolData.filter(school => school.nama.toLowerCase().includes(query));
+
+            if (filteredSchools.length > 0) {
+                suggestionsList.style.display = 'block';
+                filteredSchools.forEach(school => {
+                    const li = document.createElement('li');
+                    li.classList.add('list-group-item', 'suggestion-item', 'border-bottom');
+                    li.innerHTML = `<i class="fas fa-school text-muted me-2"></i> ${school.nama}`;
+                    
+                    // Event saat saran diklik
+                    li.addEventListener('click', function() {
+                        searchInput.value = school.nama;
+                        suggestionsList.style.display = 'none';
+                        
+                        // Tampilkan Hasil
+                        nomorUrutResult.innerText = school.no;
+                        resultBox.classList.remove('d-none');
+                        
+                        // Efek Pop-up kecil
+                        resultBox.style.transform = 'scale(0.95)';
+                        setTimeout(() => resultBox.style.transform = 'scale(1)', 100);
+                        resultBox.style.transition = 'transform 0.2s';
+                    });
+                    
+                    suggestionsList.appendChild(li);
+                });
+            } else {
+                suggestionsList.style.display = 'none';
+                resultBox.classList.add('d-none');
+            }
+        });
+
+        // Sembunyikan daftar saran jika klik di luar input
+        document.addEventListener('click', function(e) {
+            if (e.target !== searchInput && e.target !== suggestionsList) {
+                suggestionsList.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
