@@ -1991,5 +1991,2405 @@
       "D": "Nabi Hud a.s."
     },
     "kunci": "C"
+  },
+  {
+    "no_soal": 1,
+    "paket": "D",
+    "soal": "Sifat wajib bagi Allah yang berarti berbeda dengan makhluk-Nya disebut sifat apa?",
+    "pilihan": {
+      "A": "Qiyamuhu Binafsihi",
+      "B": "Baqa'",
+      "C": "Mukhalafatu Lilhawaditsi",
+      "D": "Wahdaniyah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 2,
+    "paket": "D",
+    "soal": "Kebalikan dari sifat wujud adalah sifat mustahil yang berarti tiada, yaitu apa?",
+    "pilihan": {
+      "A": "Fana'",
+      "B": "'Adam",
+      "C": "Mautun",
+      "D": "Huduts"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 3,
+    "paket": "D",
+    "soal": "Utusan Allah tidak mungkin menyembunyikan kebenaran meskipun berat untuk disampaikan. Sifat mustahil ini disebut apa?",
+    "pilihan": {
+      "A": "Kidzib",
+      "B": "Khianat",
+      "C": "Baladah",
+      "D": "Kitman"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 4,
+    "paket": "D",
+    "soal": "Sifat wajib Rasul yang berarti cerdas atau pintar dalam membimbing umatnya disebut apa?",
+    "pilihan": {
+      "A": "Fathanah",
+      "B": "Shiddiq",
+      "C": "Amanah",
+      "D": "Tabligh"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 5,
+    "paket": "D",
+    "soal": "Hukum bacaan ketika nun mati bertemu huruf ba sehingga suaranya berubah menjadi mim disebut apa?",
+    "pilihan": {
+      "A": "Idgham Bighunnah",
+      "B": "Iqlab",
+      "C": "Ikhfa Syafawi",
+      "D": "Izhar Halqi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 6,
+    "paket": "D",
+    "soal": "Jika huruf alif lam bertemu dengan salah satu dari 14 huruf qamariyah dan dibaca jelas, hukum bacaannya disebut alif lam apa?",
+    "pilihan": {
+      "A": "Syamsiyah",
+      "B": "Mutamatsilain",
+      "C": "Qamariyah",
+      "D": "Musyba'"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 7,
+    "paket": "D",
+    "soal": "Apabila huruf qalqalah berharakat sukun atau mati asli dan letaknya berada di tengah kata, maka pantulannya disebut qalqalah apa?",
+    "pilihan": {
+      "A": "Kubra",
+      "B": "Sugra",
+      "C": "Akbar",
+      "D": "Asghar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 8,
+    "paket": "D",
+    "soal": "Hukum bacaan yang terjadi saat mim sukun bertemu dengan semua huruf hijaiyah selain huruf mim dan ba disebut apa?",
+    "pilihan": {
+      "A": "Ikhfa Syafawi",
+      "B": "Idgham Mimi",
+      "C": "Izhar Halqi",
+      "D": "Izhar Syafawi"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 9,
+    "paket": "D",
+    "soal": "Mad yang dibaca panjang 4 sampai 5 harakat karena mad thabi'i bertemu huruf hamzah dalam satu kata bersambung disebut mad apa?",
+    "pilihan": {
+      "A": "Jaiz Munfashil",
+      "B": "Wajib Muttashil",
+      "C": "Aridh Lissukun",
+      "D": "Badal"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 10,
+    "paket": "D",
+    "soal": "Manusia pertama yang diciptakan langsung dari tanah dan diajarkan nama-nama segala benda di alam semesta adalah siapa?",
+    "pilihan": {
+      "A": "Nabi Nuh a.s.",
+      "B": "Nabi Adam a.s.",
+      "C": "Nabi Idris a.s.",
+      "D": "Nabi Ibrahim a.s."
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 11,
+    "paket": "D",
+    "soal": "Kemampuan membuat kapal raksasa untuk menyelamatkan orang beriman dari banjir bandang adalah mukjizat dari nabi siapa?",
+    "pilihan": {
+      "A": "Nabi Musa a.s.",
+      "B": "Nabi Nuh a.s.",
+      "C": "Nabi Yunus a.s.",
+      "D": "Nabi Luth a.s."
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 12,
+    "paket": "D",
+    "soal": "Utusan Allah yang dianugerahi mukjizat tubuhnya tidak hangus saat dibakar hidup-hidup oleh Raja Namrud adalah siapa?",
+    "pilihan": {
+      "A": "Nabi Ibrahim a.s.",
+      "B": "Nabi Ismail a.s.",
+      "C": "Nabi Isa a.s.",
+      "D": "Nabi Yahya a.s."
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 13,
+    "paket": "D",
+    "soal": "Kitab suci Taurat yang menjadi pedoman hidup bagi Bani Israil diturunkan kepada nabi siapa?",
+    "pilihan": {
+      "A": "Nabi Daud a.s.",
+      "B": "Nabi Isa a.s.",
+      "C": "Nabi Musa a.s.",
+      "D": "Nabi Muhammad SAW"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 14,
+    "paket": "D",
+    "soal": "Utusan Allah yang dilahirkan istimewa tanpa seorang ayah dan mampu berbicara lantang untuk membela ibunya sejak bayi adalah siapa?",
+    "pilihan": {
+      "A": "Nabi Yahya a.s.",
+      "B": "Nabi Zakariya a.s.",
+      "C": "Nabi Isa a.s.",
+      "D": "Nabi Ismail a.s."
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 15,
+    "paket": "D",
+    "soal": "Sahabat yang menjadi khalifah pertama dan mendapat gelar khusus karena membenarkan peristiwa Isra' Mi'raj adalah siapa?",
+    "pilihan": {
+      "A": "Umar bin Khattab",
+      "B": "Abu Bakar",
+      "C": "Utsman bin Affan",
+      "D": "Ali bin Abi Thalib"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 16,
+    "paket": "D",
+    "soal": "Khalifah kedua yang sangat memperhatikan rakyatnya hingga rela memanggul gandum sendiri di malam hari adalah siapa?",
+    "pilihan": {
+      "A": "Khalifah Abu Bakar",
+      "B": "Khalifah Umar",
+      "C": "Khalifah Utsman",
+      "D": "Khalifah Ali"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 17,
+    "paket": "D",
+    "soal": "Khalifah ketiga mendapat gelar mulia karena menikahi dua putri Rasulullah secara berurutan. Apa nama gelar tersebut?",
+    "pilihan": {
+      "A": "Al-Faruq",
+      "B": "As-Siddiq",
+      "C": "Dzunnurain",
+      "D": "Babul Ilmi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 18,
+    "paket": "D",
+    "soal": "Untuk menyatukan perbedaan dialek bacaan, khalifah ketiga menyusun satu mushaf standar yang kini dikenal dengan nama mushaf apa?",
+    "pilihan": {
+      "A": "Mushaf Ali",
+      "B": "Mushaf Abu Bakar",
+      "C": "Mushaf Usmani",
+      "D": "Mushaf Hafshah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 19,
+    "paket": "D",
+    "soal": "Khalifah keempat yang sangat ahli dalam ilmu agama dan hukum sehingga dijuluki 'Pintu Gerbang Ilmu Pengetahuan' adalah siapa?",
+    "pilihan": {
+      "A": "Muawiyah",
+      "B": "Khalid bin Walid",
+      "C": "Zaid bin Tsabit",
+      "D": "Khalifah Ali bin Abi Thalib"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 20,
+    "paket": "D",
+    "soal": "Untuk mempermudah umat Islam memahami ajaran agama, khalifah keempat mempelopori penulisan buku kaidah tata bahasa Arab yang disebut ilmu apa?",
+    "pilihan": {
+      "A": "Ilmu Fiqih",
+      "B": "Ilmu Nahwu",
+      "C": "Ilmu Tafsir",
+      "D": "Ilmu Tauhid"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 1,
+    "paket": "E",
+    "soal": "Sifat wajib bagi Allah yang berarti ada adalah sifat...?",
+    "pilihan": {
+      "A": "Qidam",
+      "B": "Baqa'",
+      "C": "Wujud",
+      "D": "Hayat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 2,
+    "paket": "E",
+    "soal": "Kebalikan dari sifat wujud adalah sifat mustahil bagi Allah yang berarti tiada, yakni sifat...?",
+    "pilihan": {
+      "A": "'Adam",
+      "B": "Fana'",
+      "C": "Huduts",
+      "D": "Mautun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 3,
+    "paket": "E",
+    "soal": "Mustahil Allah melakukan sesuatu karena adanya paksaan, sifat mustahil ini disebut...?",
+    "pilihan": {
+      "A": "Jahlun",
+      "B": "'Ajzun",
+      "C": "Karahah",
+      "D": "Ta'addud"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 4,
+    "paket": "E",
+    "soal": "Sifat wajib rasul yang berarti selalu berkata dan berbuat jujur adalah sifat...?",
+    "pilihan": {
+      "A": "Amanah",
+      "B": "Shiddiq",
+      "C": "Fathanah",
+      "D": "Tabligh"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 5,
+    "paket": "E",
+    "soal": "Hukum bacaan jika huruf lam bertemu empat belas huruf tertentu sehingga alif lam dibaca jelas dinamakan alif lam...?",
+    "pilihan": {
+      "A": "Syamsiyah",
+      "B": "Qamariyah",
+      "C": "Idgham",
+      "D": "Ikhfa"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 6,
+    "paket": "E",
+    "soal": "Hukum bacaan saat nun mati bertemu huruf tenggorokan yang dibaca terang dan tidak berdengung dinamakan...?",
+    "pilihan": {
+      "A": "Idgham Bighunnah",
+      "B": "Iqlab",
+      "C": "Izhar Halqi",
+      "D": "Ikhfa Haqiqi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 7,
+    "paket": "E",
+    "soal": "Hukum memanjangkan suara dua harakat apabila fathah bertemu alif atau kasrah bertemu ya sukun disebut mad...?",
+    "pilihan": {
+      "A": "Wajib Muttashil",
+      "B": "Thabi'i / Asli",
+      "C": "Jaiz Munfashil",
+      "D": "Aridh Lissukun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 8,
+    "paket": "E",
+    "soal": "Wanita pertama yang diciptakan oleh Allah untuk menemani manusia pertama tinggal di dalam surga bernama Siti...?",
+    "pilihan": {
+      "A": "Sarah",
+      "B": "Hajar",
+      "C": "Maryam",
+      "D": "Hawa"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 9,
+    "paket": "E",
+    "soal": "Rasul yang tidak henti berdakwah selama kurang lebih 950 tahun namun hanya mendapat sedikit pengikut adalah Nabi...?",
+    "pilihan": {
+      "A": "Nuh",
+      "B": "Ibrahim",
+      "C": "Hud",
+      "D": "Shaleh"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 10,
+    "paket": "E",
+    "soal": "Penguasa sombong di Mesir yang memerintahkan semua bayi laki-laki Bani Israil dibunuh bernama Raja...?",
+    "pilihan": {
+      "A": "Namrud",
+      "B": "Abrahah",
+      "C": "Fir'aun",
+      "D": "Jalut"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 11,
+    "paket": "E",
+    "soal": "Masa kebodohan masyarakat Arab sebelum datangnya cahaya Islam di mana mereka suka menyembah patung sering disebut zaman...?",
+    "pilihan": {
+      "A": "Abbasiyah",
+      "B": "Umayyah",
+      "C": "Jahiliyah",
+      "D": "Fathimiyah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 12,
+    "paket": "E",
+    "soal": "Ayah kandung yang meninggal dunia saat sang penutup nabi masih berada di dalam kandungan bernama...?",
+    "pilihan": {
+      "A": "Abdul Muthalib",
+      "B": "Abu Thalib",
+      "C": "Abdullah",
+      "D": "Hamzah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 13,
+    "paket": "E",
+    "soal": "Penduduk Makkah memberi gelar kehormatan untuk Nabi Muhammad remaja karena sifat jujurnya yang berarti orang dapat dipercaya, yaitu gelar...?",
+    "pilihan": {
+      "A": "As-Siddiq",
+      "B": "Al-Faruq",
+      "C": "Al-Amin",
+      "D": "Dzunnurain"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 14,
+    "paket": "E",
+    "soal": "Nama kota peradaban yang menjadi tujuan hijrah umat muslim dan masyarakatnya telah menerima ajaran Islam adalah kota...?",
+    "pilihan": {
+      "A": "Thaif",
+      "B": "Madinah / Yatsrib",
+      "C": "Syam",
+      "D": "Yaman"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 15,
+    "paket": "E",
+    "soal": "Sahabat yang paling awal membenarkan kenabian dan langsung menjadi khalifah pertama bernama...?",
+    "pilihan": {
+      "A": "Umar bin Khattab",
+      "B": "Utsman bin Affan",
+      "C": "Ali bin Abi Thalib",
+      "D": "Abu Bakar"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 16,
+    "paket": "E",
+    "soal": "Pemimpin umat kedua yang meletakkan dasar administrasi keuangan negara dengan mewajibkan pencatatan harta pejabat bernama khalifah...?",
+    "pilihan": {
+      "A": "Abu Bakar",
+      "B": "Umar bin Khattab",
+      "C": "Utsman bin Affan",
+      "D": "Ali bin Abi Thalib"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 17,
+    "paket": "E",
+    "soal": "Sifat wajib yang berarti Maha Berbicara atau Berfirman adalah sifat...?",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Bashar",
+      "C": "Kalam",
+      "D": "Iradat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 18,
+    "paket": "E",
+    "soal": "Sifat mustahil bagi rasul yang berarti bodoh karena tidak mungkin utusan Allah tidak memiliki akal cerdas disebut sifat...?",
+    "pilihan": {
+      "A": "Kitman",
+      "B": "Khianat",
+      "C": "Kidzib",
+      "D": "Baladah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 19,
+    "paket": "E",
+    "soal": "Suara yang wajib ditahan di rongga hidung karena adanya huruf nun atau mim yang bertasydid dinamakan bacaan...?",
+    "pilihan": {
+      "A": "Qalqalah",
+      "B": "Ghunnah",
+      "C": "Mad",
+      "D": "Tarqiq"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 20,
+    "paket": "E",
+    "soal": "Gelar kemuliaan pemimpin ketiga kaum muslim karena ikatan pernikahannya dengan dua putri nabi berturut-turut dinamakan gelar...?",
+    "pilihan": {
+      "A": "As-Siddiq",
+      "B": "Al-Faruq",
+      "C": "Babul Ilmi",
+      "D": "Dzunnurain"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 21,
+    "paket": "D",
+    "soal": "Sifat wajib bagi Allah yang berarti kekal atau abadi disebut apa?",
+    "pilihan": {
+      "A": "Qidam",
+      "B": "Baqa'",
+      "C": "Mukhalafatu Lilhawaditsi",
+      "D": "Qiyamuhu Binafsihi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 22,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang berarti terpaksa dalam melakukan sesuatu disebut apa?",
+    "pilihan": {
+      "A": "Karahah",
+      "B": "'Ajzun",
+      "C": "Jahlun",
+      "D": "Mautun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 23,
+    "paket": "D",
+    "soal": "Mustahil Tuhan itu ada banyak atau berbilang. Sifat mustahil ini disebut apa?",
+    "pilihan": {
+      "A": "Ta'addud",
+      "B": "Karahah",
+      "C": "Summun",
+      "D": "'Umyun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 24,
+    "paket": "D",
+    "soal": "Sifat wajib Allah yang berarti Berdiri Sendiri atau tidak membutuhkan bantuan siapa pun disebut apa?",
+    "pilihan": {
+      "A": "Wahdaniyah",
+      "B": "Qudrat",
+      "C": "Qiyamuhu Binafsihi",
+      "D": "Hayat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 25,
+    "paket": "D",
+    "soal": "Sifat wajib Rasul yang berarti jujur atau selalu berkata yang benar adalah apa?",
+    "pilihan": {
+      "A": "Amanah",
+      "B": "Tabligh",
+      "C": "Fathanah",
+      "D": "Shiddiq"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 26,
+    "paket": "D",
+    "soal": "Sifat mustahil Rasul yang berarti berbuat curang atau melanggar janji disebut apa?",
+    "pilihan": {
+      "A": "Kidzib",
+      "B": "Khianat",
+      "C": "Kitman",
+      "D": "Baladah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 27,
+    "paket": "D",
+    "soal": "Hukum bacaan jika alif lam bertemu huruf tertentu lalu dileburkan atau dimasukkan menjadi tasydid disebut alif lam apa?",
+    "pilihan": {
+      "A": "Syamsiyah",
+      "B": "Qamariyah",
+      "C": "Idgham",
+      "D": "Ikhfa"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 28,
+    "paket": "D",
+    "soal": "Hukum bacaan nun mati yang dibaca terang dan jelas karena bertemu huruf tenggorokan disebut apa?",
+    "pilihan": {
+      "A": "Idgham Bighunnah",
+      "B": "Izhar Syafawi",
+      "C": "Izhar Halqi",
+      "D": "Ikhfa Haqiqi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 29,
+    "paket": "D",
+    "soal": "Hukum membaca nun mati atau tanwin yang dimasukkan ke huruf depannya tanpa dengung saat bertemu huruf lam atau ra disebut apa?",
+    "pilihan": {
+      "A": "Idgham Bighunnah",
+      "B": "Idgham Bilaghunnah",
+      "C": "Iqlab",
+      "D": "Ikhfa"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 30,
+    "paket": "D",
+    "soal": "Hukum bacaan ketika mim sukun bertemu dengan huruf mim sehingga suaranya ditasydidkan dan didengungkan disebut apa?",
+    "pilihan": {
+      "A": "Izhar Syafawi",
+      "B": "Ikhfa Syafawi",
+      "C": "Idgham Mimi",
+      "D": "Idgham Mutajanisain"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 31,
+    "paket": "D",
+    "soal": "Mad thabi'i yang bertemu huruf hamzah atau alif pada kata yang berbeda atau terpisah disebut mad apa?",
+    "pilihan": {
+      "A": "Wajib Muttashil",
+      "B": "Jaiz Munfashil",
+      "C": "Aridh Lissukun",
+      "D": "Badal"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 32,
+    "paket": "D",
+    "soal": "Pantulan kuat dan besar saat huruf qalqalah berharakat hidup yang dibaca mati karena waqaf disebut qalqalah apa?",
+    "pilihan": {
+      "A": "Sugra",
+      "B": "Kubra",
+      "C": "Akbar",
+      "D": "Asghar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 33,
+    "paket": "D",
+    "soal": "Suara yang wajib ditahan di rongga hidung pada huruf nun bertasydid atau mim bertasydid disebut apa?",
+    "pilihan": {
+      "A": "Qalqalah",
+      "B": "Ghunnah",
+      "C": "Tarqiq",
+      "D": "Tafkhim"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 34,
+    "paket": "D",
+    "soal": "Anak seorang utusan Allah yang menolak beriman dan akhirnya ikut tenggelam ditelan banjir bandang bernama siapa?",
+    "pilihan": {
+      "A": "Kan'an",
+      "B": "Sam",
+      "C": "Ham",
+      "D": "Yafits"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 35,
+    "paket": "D",
+    "soal": "Raja di negeri Babilonia yang sangat kejam dan mengaku sebagai tuhan bernama siapa?",
+    "pilihan": {
+      "A": "Raja Fir'aun",
+      "B": "Raja Abrahah",
+      "C": "Raja Namrud",
+      "D": "Raja Jalut"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 36,
+    "paket": "D",
+    "soal": "Kitab suci yang diturunkan oleh Allah SWT kepada nabi yang lahir dari Siti Maryam adalah kitab apa?",
+    "pilihan": {
+      "A": "Taurat",
+      "B": "Zabur",
+      "C": "Injil",
+      "D": "Al-Qur'an"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 37,
+    "paket": "D",
+    "soal": "Wahyu yang diturunkan kepada Nabi Adam dan Nabi Ibrahim berupa lembaran-lembaran disebut apa?",
+    "pilihan": {
+      "A": "Suhuf",
+      "B": "Kitab",
+      "C": "Mushaf",
+      "D": "Wahyu"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 38,
+    "paket": "D",
+    "soal": "Gelar khalifah kedua yang bermakna orang yang mampu membedakan antara kebenaran dan kebatilan adalah apa?",
+    "pilihan": {
+      "A": "As-Siddiq",
+      "B": "Al-Faruq",
+      "C": "Dzunnurain",
+      "D": "Babul Ilmi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 39,
+    "paket": "D",
+    "soal": "Tempat menyimpan harta kekayaan negara yang ditarik kembali oleh khalifah keempat untuk menolong kaum lemah disebut apa?",
+    "pilihan": {
+      "A": "Baitul Mal",
+      "B": "Baitullah",
+      "C": "Baitul Maqdis",
+      "D": "Baitul Hikmah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 40,
+    "paket": "D",
+    "soal": "Kota yang dibangun tata kelolanya oleh Ali bin Abi Thalib dan dijadikan pusat kajian ilmu pengetahuan adalah kota apa?",
+    "pilihan": {
+      "A": "Makkah",
+      "B": "Madinah",
+      "C": "Kufah",
+      "D": "Baghdad"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 21,
+    "paket": "E",
+    "soal": "Bukti bahwa Allah sudah ada sebelum segala sesuatu ada menunjukkan bahwa Allah memiliki sifat wajib...?",
+    "pilihan": {
+      "A": "Wujud",
+      "B": "Qidam",
+      "C": "Baqa'",
+      "D": "Mukhalafatu Lilhawaditsi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 22,
+    "paket": "E",
+    "soal": "Sifat mustahil yang berarti rusak atau binasa sebagai kebalikan dari sifat abadi disebut sifat...?",
+    "pilihan": {
+      "A": "'Adam",
+      "B": "Fana'",
+      "C": "Huduts",
+      "D": "Mautun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 23,
+    "paket": "E",
+    "soal": "Kepemilikan kekuasaan penuh atas segalanya merupakan arti dari sifat wajib...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Iradat",
+      "C": "'Ilmun",
+      "D": "Hayat"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 24,
+    "paket": "E",
+    "soal": "Sifat wajib yang bermakna dapat dipercaya dalam menjaga titipan serta menjalankan tugas dari Allah disebut...?",
+    "pilihan": {
+      "A": "Shiddiq",
+      "B": "Amanah",
+      "C": "Tabligh",
+      "D": "Fathanah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 25,
+    "paket": "E",
+    "soal": "Hukum bacaan ketika huruf lam langsung melebur menjadi tasydid ke huruf di depannya disebut alif lam...?",
+    "pilihan": {
+      "A": "Qamariyah",
+      "B": "Syamsiyah",
+      "C": "Idgham",
+      "D": "Ikhfa"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 26,
+    "paket": "E",
+    "soal": "Hukum bacaan saat nun mati bertemu empat huruf tertentu lalu dimasukkan dengan disertai dengungan disebut idgham...?",
+    "pilihan": {
+      "A": "Bighunnah",
+      "B": "Bilaghunnah",
+      "C": "Mimi",
+      "D": "Mutamatsilain"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 27,
+    "paket": "E",
+    "soal": "Hukum memanjangkan bacaan hingga lima harakat karena mad asli bertemu hamzah dalam satu kata disebut mad...?",
+    "pilihan": {
+      "A": "Jaiz Munfashil",
+      "B": "Aridh Lissukun",
+      "C": "Badal",
+      "D": "Wajib Muttashil"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 28,
+    "paket": "E",
+    "soal": "Makhluk sombong yang menolak perintah sujud karena merasa lebih mulia diciptakan dari api adalah...?",
+    "pilihan": {
+      "A": "Iblis",
+      "B": "Jin",
+      "C": "Setan",
+      "D": "Malaikat"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 29,
+    "paket": "E",
+    "soal": "Anak kandung dari salah satu rasul yang tetap membangkang menyembah berhala hingga akhirnya ikut tenggelam bernama...?",
+    "pilihan": {
+      "A": "Qabil",
+      "B": "Kan'an",
+      "C": "Sam",
+      "D": "Yafits"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 30,
+    "paket": "E",
+    "soal": "Saat masih kecil, seorang bayi mulia diselamatkan dari kekejaman raja dengan cara dihanyutkan ke Sungai...?",
+    "pilihan": {
+      "A": "Eufrat",
+      "B": "Tigris",
+      "C": "Nil",
+      "D": "Yordan"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 31,
+    "paket": "E",
+    "soal": "Pasukan tentara gajah yang hendak menghancurkan Ka'bah pada tahun kelahiran penutup nabi berhasil dikalahkan oleh burung...?",
+    "pilihan": {
+      "A": "Ababil",
+      "B": "Hud-hud",
+      "C": "Gagak",
+      "D": "Merpati"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 32,
+    "paket": "E",
+    "soal": "Tokoh besar Makkah yang sangat menyayangi dan merawat sang cucu pasca wafatnya sang ibunda bernama...?",
+    "pilihan": {
+      "A": "Abu Thalib",
+      "B": "Hamzah",
+      "C": "Abbas",
+      "D": "Abdul Muthalib"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 33,
+    "paket": "E",
+    "soal": "Tempat sunyi dan terpencil di Jabal Nur yang digunakan untuk berkhalwat hingga turunnya wahyu pertama adalah Gua...?",
+    "pilihan": {
+      "A": "Hira",
+      "B": "Tsur",
+      "C": "Uhud",
+      "D": "Rahmah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 34,
+    "paket": "E",
+    "soal": "Peristiwa bersejarah pembebasan kota suci Makkah secara damai tanpa adanya pertumpahan darah pada tahun kedelapan dinamakan...?",
+    "pilihan": {
+      "A": "Hijrah",
+      "B": "Fathu Makkah",
+      "C": "Bai'at Aqabah",
+      "D": "Perjanjian Hudaibiyah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 35,
+    "paket": "E",
+    "soal": "Gelar kehormatan yang didapatkan oleh pemimpin pertama umat Islam karena selalu membenarkan ucapan Rasulullah adalah gelar...?",
+    "pilihan": {
+      "A": "Al-Faruq",
+      "B": "Ash-Shiddiq",
+      "C": "Dzunnurain",
+      "D": "Saifullah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 36,
+    "paket": "E",
+    "soal": "Pemimpin kedua kaum muslimin mendapatkan gelar dari nabi yang bermakna orang pembeda antara kebenaran dan kebatilan, yakni gelar...?",
+    "pilihan": {
+      "A": "As-Siddiq",
+      "B": "Dzunnurain",
+      "C": "Babul Ilmi",
+      "D": "Al-Faruq"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 37,
+    "paket": "E",
+    "soal": "Kebalikan dari sifat kalam adalah mustahil Allah tidak bisa berfirman, sifat cacat ini dinamakan...?",
+    "pilihan": {
+      "A": "Summun",
+      "B": "'Umyun",
+      "C": "Bukmun",
+      "D": "'Ajzun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 38,
+    "paket": "E",
+    "soal": "Sifat mustahil bagi rasul yang berarti menyembunyikan kebenaran atau wahyu dari Allah dinamakan...?",
+    "pilihan": {
+      "A": "Khianat",
+      "B": "Kidzib",
+      "C": "Baladah",
+      "D": "Kitman"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 39,
+    "paket": "E",
+    "soal": "Pantulan suara ringan ketika huruf memantul berharakat mati asli di tengah kalimat disebut qalqalah...?",
+    "pilihan": {
+      "A": "Kubra",
+      "B": "Sugra",
+      "C": "Akbar",
+      "D": "Asghar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 40,
+    "paket": "E",
+    "soal": "Kumpulan susunan firman Allah yang diseragamkan penulisannya pada masa pemimpin ketiga agar tidak terjadi perbedaan bacaan dikenal dengan mushaf...?",
+    "pilihan": {
+      "A": "Abu Bakar",
+      "B": "Ali",
+      "C": "Usmani",
+      "D": "Hafshah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 41,
+    "paket": "D",
+    "soal": "Sifat pasti yang dimiliki oleh Allah SWT sebagai Tuhan semesta alam yang berarti ada adalah sifat...",
+    "pilihan": {
+      "A": "Qidam",
+      "B": "Baqa'",
+      "C": "Wujud",
+      "D": "Hayat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 42,
+    "paket": "D",
+    "soal": "Allah sudah ada sebelum segala sesuatu ada, hal ini menunjukkan bahwa Allah memiliki sifat wajib...",
+    "pilihan": {
+      "A": "Wujud",
+      "B": "Qidam",
+      "C": "Baqa'",
+      "D": "Qiyamuhu Binafsihi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 43,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang memiliki arti rusak atau binasa adalah sifat...",
+    "pilihan": {
+      "A": "'Adam",
+      "B": "Huduts",
+      "C": "Fana'",
+      "D": "Mautun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 44,
+    "paket": "D",
+    "soal": "Sifat mustahil yang berarti membutuhkan yang lain dan merupakan kebalikan dari sifat Qiyamuhu Binafsihi adalah sifat...",
+    "pilihan": {
+      "A": "Ihtiyaju Lighairihi",
+      "B": "Ta'addud",
+      "C": "Karahah",
+      "D": "Mumatsalatu Lilhawaditsi"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 45,
+    "paket": "D",
+    "soal": "Sifat wajib Allah yang berarti mengetahui segala sesuatu baik yang terlihat maupun yang tersembunyi adalah...",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Bashar",
+      "C": "Kalam",
+      "D": "'Ilmun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 46,
+    "paket": "D",
+    "soal": "Sifat wajib rasul yang mengharuskannya selalu menjaga titipan dan menjalankan tugas tanpa berkhianat adalah sifat...",
+    "pilihan": {
+      "A": "Shiddiq",
+      "B": "Amanah",
+      "C": "Tabligh",
+      "D": "Fathanah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 47,
+    "paket": "D",
+    "soal": "Seorang utusan Allah tidak pernah menutupi pesannya karena memiliki sifat wajib yang berarti menyampaikan, yakni sifat...",
+    "pilihan": {
+      "A": "Tabligh",
+      "B": "Amanah",
+      "C": "Fathanah",
+      "D": "Shiddiq"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 48,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi rasul yang berarti bodoh adalah sifat...",
+    "pilihan": {
+      "A": "Kidzib",
+      "B": "Khianat",
+      "C": "Kitman",
+      "D": "Baladah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 49,
+    "paket": "D",
+    "soal": "Fathah bertemu alif, kasrah bertemu ya sukun, atau dhammah bertemu wawu sukun akan membentuk hukum bacaan mad...",
+    "pilihan": {
+      "A": "Wajib Muttashil",
+      "B": "Jaiz Munfashil",
+      "C": "Thabi'i / Asli",
+      "D": "Aridh Lissukun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 50,
+    "paket": "D",
+    "soal": "Bacaan mad thabi'i yang bertemu dengan huruf hidup lalu disukunkan karena waqaf di akhir ayat merupakan pengertian dari mad...",
+    "pilihan": {
+      "A": "Badal",
+      "B": "Iwad",
+      "C": "Layyin",
+      "D": "Aridh Lissukun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 51,
+    "paket": "D",
+    "soal": "Hukum bacaan saat nun mati atau tanwin bertemu lima belas huruf seperti ta, tsa, jim, dan dal yang dibaca samar disebut...",
+    "pilihan": {
+      "A": "Izhar Halqi",
+      "B": "Idgham Bighunnah",
+      "C": "Ikhfa Haqiqi",
+      "D": "Iqlab"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 52,
+    "paket": "D",
+    "soal": "Hukum bacaan saat mim sukun bertemu dengan huruf ba lalu dibaca samar di bibir dan didengungkan disebut...",
+    "pilihan": {
+      "A": "Idgham Mimi",
+      "B": "Ikhfa Syafawi",
+      "C": "Izhar Syafawi",
+      "D": "Iqlab"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 53,
+    "paket": "D",
+    "soal": "Hukum bacaan saat nun mati atau tanwin bertemu salah satu huruf ya, nun, mim, atau wawu disertai dengungan disebut idgham...",
+    "pilihan": {
+      "A": "Bilaghunnah",
+      "B": "Bighunnah",
+      "C": "Mutamatsilain",
+      "D": "Mutajanisain"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 54,
+    "paket": "D",
+    "soal": "Manusia yang diciptakan Allah untuk menemani Nabi Adam tinggal di surga yang indah bernama...",
+    "pilihan": {
+      "A": "Siti Sarah",
+      "B": "Siti Hajar",
+      "C": "Siti Hawa",
+      "D": "Siti Maryam"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 55,
+    "paket": "D",
+    "soal": "Nabi Adam dan istrinya diturunkan ke bumi karena melanggar larangan Allah dengan memakan buah...",
+    "pilihan": {
+      "A": "Zaitun",
+      "B": "Tin",
+      "C": "Kurma",
+      "D": "Khuldi"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 56,
+    "paket": "D",
+    "soal": "Karena dari keturunannya lahir banyak nabi dan rasul, Nabi Ibrahim mendapat julukan bapak para nabi yang dalam bahasa Arab disebut...",
+    "pilihan": {
+      "A": "Abul Anbiya",
+      "B": "Khatamul Anbiya",
+      "C": "Ulul Azmi",
+      "D": "Khalilullah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 57,
+    "paket": "D",
+    "soal": "Salah satu nabi palsu yang berhasil ditumpas pada masa kepemimpinan Khalifah Abu Bakar bernama...",
+    "pilihan": {
+      "A": "Abu Jahal",
+      "B": "Abu Lahab",
+      "C": "Musailamah",
+      "D": "Abdullah bin Ubay"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 58,
+    "paket": "D",
+    "soal": "Nama sumber air milik seorang Yahudi yang dibeli dengan harga mahal oleh Usman bin Affan untuk disedekahkan kepada umat Islam bernama sumur...",
+    "pilihan": {
+      "A": "Zamzam",
+      "B": "Raumah",
+      "C": "Badar",
+      "D": "Kautsar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 59,
+    "paket": "D",
+    "soal": "Untuk menjaga keamanan perairan, Khalifah Usman bin Affan melatih dan membentuk pasukan pertahanan tempur berupa...",
+    "pilihan": {
+      "A": "Angkatan Darat",
+      "B": "Pasukan Kavaleri",
+      "C": "Pasukan Pemanah",
+      "D": "Angkatan Laut"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 60,
+    "paket": "D",
+    "soal": "Golongan orang-orang pertama yang masuk Islam, di mana Ali bin Abi Thalib termasuk di dalamnya, biasa disebut dengan istilah...",
+    "pilihan": {
+      "A": "Muhajirin",
+      "B": "Anshar",
+      "C": "Assabiqunal Awwalun",
+      "D": "Ahlus Suffah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 41,
+    "paket": "E",
+    "soal": "Sifat wajib yang berarti kekal atau abadi karena Allah tidak akan pernah hancur adalah sifat...?",
+    "pilihan": {
+      "A": "Baqa'",
+      "B": "Qidam",
+      "C": "Wujud",
+      "D": "Mukhalafatu Lilhawaditsi"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 42,
+    "paket": "E",
+    "soal": "Kebalikan dari sifat mukhalafatu lilhawaditsi adalah sifat mustahil wujud Allah disamakan dengan ciptaan-Nya, yakni sifat...?",
+    "pilihan": {
+      "A": "Huduts",
+      "B": "Fana'",
+      "C": "Mumatsalatu Lilhawaditsi",
+      "D": "Ihtiyaju Lighairihi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 43,
+    "paket": "E",
+    "soal": "Apapun yang diinginkan Allah pasti akan terjadi karena Allah memiliki sifat wajib berkehendak, yakni sifat...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Iradat",
+      "C": "'Ilmun",
+      "D": "Hayat"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 44,
+    "paket": "E",
+    "soal": "Seorang rasul pasti selalu memberikan seluruh wahyu kepada umat manusia karena memiliki sifat wajib...?",
+    "pilihan": {
+      "A": "Shiddiq",
+      "B": "Amanah",
+      "C": "Tabligh",
+      "D": "Fathanah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 45,
+    "paket": "E",
+    "soal": "Hukum bacaan saat nun mati bertemu lam atau ra lalu dileburkan tanpa dengung dinamakan idgham...?",
+    "pilihan": {
+      "A": "Bighunnah",
+      "B": "Bilaghunnah",
+      "C": "Mimi",
+      "D": "Syamsiyah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 46,
+    "paket": "E",
+    "soal": "Hukum bacaan saat mim sukun bertemu huruf ba sehingga dibaca samar di bibir dan didengungkan dinamakan ikhfa...?",
+    "pilihan": {
+      "A": "Haqiqi",
+      "B": "Syafawi",
+      "C": "Mutajanisain",
+      "D": "Mutaqaribain"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 47,
+    "paket": "E",
+    "soal": "Hukum bacaan saat mad thabi'i bertemu hamzah atau alif pada kata yang terpisah dinamakan mad...?",
+    "pilihan": {
+      "A": "Wajib Muttashil",
+      "B": "Jaiz Munfashil",
+      "C": "Aridh Lissukun",
+      "D": "Iwad"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 48,
+    "paket": "E",
+    "soal": "Tanaman yang dilarang untuk dimakan oleh sepasang penghuni surga namun akhirnya dilanggar akibat godaan setan adalah buah...?",
+    "pilihan": {
+      "A": "Tin",
+      "B": "Zaitun",
+      "C": "Khuldi",
+      "D": "Delima"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 49,
+    "paket": "E",
+    "soal": "Kendaraan raksasa penyelamat orang beriman yang dirakit di atas bukit sebelum datangnya banjir bandang adalah...?",
+    "pilihan": {
+      "A": "Pesawat",
+      "B": "Kapal / Bahtera",
+      "C": "Kereta",
+      "D": "Balon Udara"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 50,
+    "paket": "E",
+    "soal": "Kitab suci peninggalan ajaran kebenaran yang diturunkan khusus sebagai pedoman hidup untuk Bani Israil adalah kitab...?",
+    "pilihan": {
+      "A": "Zabur",
+      "B": "Injil",
+      "C": "Taurat",
+      "D": "Al-Qur'an"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 51,
+    "paket": "E",
+    "soal": "Wanita desa berhati mulia yang menyusui dan merawat sang manusia terpuji saat masa balita di pedesaan bernama...?",
+    "pilihan": {
+      "A": "Siti Aminah",
+      "B": "Siti Khadijah",
+      "C": "Ummu Aiman",
+      "D": "Halimah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 52,
+    "paket": "E",
+    "soal": "Ibunda manusia paling mulia wafat di perjalanan sepulang dari Madinah menuju Makkah pada sebuah desa bernama...?",
+    "pilihan": {
+      "A": "Thaif",
+      "B": "Abwa",
+      "C": "Khaibar",
+      "D": "Tabuk"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 53,
+    "paket": "E",
+    "soal": "Istri pertama yang paling setia mendampingi dan menenangkan sang utusan setelah turunnya wahyu pertama bernama Siti...?",
+    "pilihan": {
+      "A": "Aisyah",
+      "B": "Hafshah",
+      "C": "Khadijah",
+      "D": "Zainab"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 54,
+    "paket": "E",
+    "soal": "Ibadah haji terakhir yang meneteskan air mata sebelum wafatnya utusan Allah dikenal dengan sebutan haji...?",
+    "pilihan": {
+      "A": "Mabrur",
+      "B": "Tamattu",
+      "C": "Qiran",
+      "D": "Wada'"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 55,
+    "paket": "E",
+    "soal": "Pemimpin pemberontakan yang mengaku-ngaku utusan Tuhan dan ditumpas pada masa kepemimpinan sahabat terdekat nabi bernama...?",
+    "pilihan": {
+      "A": "Abdullah bin Ubay",
+      "B": "Abu Jahal",
+      "C": "Musailamah",
+      "D": "Abu Lahab"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 56,
+    "paket": "E",
+    "soal": "Sistem penanggalan peradaban Islam yang resmi diciptakan dan ditetapkan penggunaannya pada masa khalifah kedua disebut kalender...?",
+    "pilihan": {
+      "A": "Masehi",
+      "B": "Hijriyah",
+      "C": "Syamsiyah",
+      "D": "Qamariyah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 57,
+    "paket": "E",
+    "soal": "Sifat mustahil bagi Allah yang berarti bodoh sebagai kebalikan dari sifat mengetahui adalah sifat...?",
+    "pilihan": {
+      "A": "Summun",
+      "B": "'Umyun",
+      "C": "Bukmun",
+      "D": "Jahlun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 58,
+    "paket": "E",
+    "soal": "Mustahil seorang rasul itu melanggar janji atau berbuat curang, sifat keburukan ini dinamakan...?",
+    "pilihan": {
+      "A": "Kidzib",
+      "B": "Khianat",
+      "C": "Kitman",
+      "D": "Baladah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 59,
+    "paket": "E",
+    "soal": "Pantulan suara kuat saat huruf qatbujadin berada di akhir kalimat dan disukunkan karena waqaf disebut qalqalah...?",
+    "pilihan": {
+      "A": "Sugra",
+      "B": "Kubra",
+      "C": "Asghar",
+      "D": "Akbar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 60,
+    "paket": "E",
+    "soal": "Pasukan tempur penjaga pertahanan lautan yang pertama kali dibentuk dan dilatih dalam sejarah Islam pada masa khalifah ketiga berupa pasukan...?",
+    "pilihan": {
+      "A": "Kavaleri",
+      "B": "Angkatan Darat",
+      "C": "Angkatan Udara",
+      "D": "Angkatan Laut"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 61,
+    "paket": "D",
+    "soal": "Sifat wajib bagi Allah yang berarti Esa atau Tunggal adalah sifat...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Wahdaniyah",
+      "C": "Qiyamuhu Binafsihi",
+      "D": "Baqa'"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 62,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang memiliki arti serupa dengan makhluk adalah sifat...?",
+    "pilihan": {
+      "A": "Huduts",
+      "B": "Fana'",
+      "C": "Mumatsalatu Lilhawaditsi",
+      "D": "Ihtiyaju Lighairihi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 63,
+    "paket": "D",
+    "soal": "Kekuasaan penuh atas segalanya menunjukkan bahwa Allah memiliki sifat wajib...?",
+    "pilihan": {
+      "A": "Iradat",
+      "B": "Qudrat",
+      "C": "Sama'",
+      "D": "Bashar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 64,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang berarti lemah dan merupakan kebalikan dari sifat Qudrat disebut sifat...?",
+    "pilihan": {
+      "A": "Jahlun",
+      "B": "Karahah",
+      "C": "'Ajzun",
+      "D": "Mautun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 65,
+    "paket": "D",
+    "soal": "Mendengar segalanya, bahkan suara di dalam hati, menunjukkan bahwa Allah memiliki sifat wajib...?",
+    "pilihan": {
+      "A": "Kalam",
+      "B": "Bashar",
+      "C": "Sama'",
+      "D": "'Ilmun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 66,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang bermakna tuli dan merupakan kebalikan dari sifat Sama' adalah sifat...?",
+    "pilihan": {
+      "A": "Summun",
+      "B": "'Umyun",
+      "C": "Bukmun",
+      "D": "Jahlun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 67,
+    "paket": "D",
+    "soal": "Segala sesuatu yang Allah inginkan pasti terjadi karena Allah memiliki sifat wajib yang berarti berkehendak, yakni sifat...?",
+    "pilihan": {
+      "A": "Iradat",
+      "B": "Qudrat",
+      "C": "Hayat",
+      "D": "'Ilmun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 68,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang bermakna bodoh dan merupakan kebalikan dari sifat 'Ilmun disebut sifat...?",
+    "pilihan": {
+      "A": "Jahlun",
+      "B": "Summun",
+      "C": "Bukmun",
+      "D": "'Ajzun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 69,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi rasul yang berarti bohong atau dusta adalah sifat...?",
+    "pilihan": {
+      "A": "Khianat",
+      "B": "Kidzib",
+      "C": "Kitman",
+      "D": "Baladah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 70,
+    "paket": "D",
+    "soal": "Raja Mesir yang sangat sombong dan memerintahkan pembunuhan semua bayi laki-laki pada zaman Nabi Musa bernama...?",
+    "pilihan": {
+      "A": "Raja Namrud",
+      "B": "Raja Abrahah",
+      "C": "Raja Jalut",
+      "D": "Raja Fir'aun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 71,
+    "paket": "D",
+    "soal": "Saat masih bayi, ibunda Nabi Musa menyelamatkannya dari kekejaman raja dengan menghanyutkannya ke sungai...?",
+    "pilihan": {
+      "A": "Eufrat",
+      "B": "Tigris",
+      "C": "Nil",
+      "D": "Yordan"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 72,
+    "paket": "D",
+    "soal": "Mukjizat berupa membelah lautan yang digunakan Nabi Musa untuk melarikan diri dari kejaran musuh terjadi di laut...?",
+    "pilihan": {
+      "A": "Laut Merah",
+      "B": "Laut Mati",
+      "C": "Laut Hitam",
+      "D": "Laut Tengah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 73,
+    "paket": "D",
+    "soal": "Pasukan tentara bergajah yang menyerang Ka'bah dihancurkan oleh Allah menggunakan burung...?",
+    "pilihan": {
+      "A": "Hud-hud",
+      "B": "Ababil",
+      "C": "Gagak",
+      "D": "Merpati"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 74,
+    "paket": "D",
+    "soal": "Ibu susuan yang merawat Nabi Muhammad dengan penuh kasih sayang saat bayi di pedesaan bernama...?",
+    "pilihan": {
+      "A": "Siti Aminah",
+      "B": "Halimah",
+      "C": "Ummu Aiman",
+      "D": "Siti Khadijah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 75,
+    "paket": "D",
+    "soal": "Wanita mulia yang mengandung dan melahirkan manusia paling terpuji bernama Siti...?",
+    "pilihan": {
+      "A": "Hawa",
+      "B": "Khadijah",
+      "C": "Aminah",
+      "D": "Fatimah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 76,
+    "paket": "D",
+    "soal": "Gelar mulia dari penduduk Makkah untuk Nabi Muhammad remaja karena kejujurannya saat berdagang adalah...?",
+    "pilihan": {
+      "A": "Al-Faruq",
+      "B": "As-Siddiq",
+      "C": "Al-Amin",
+      "D": "Dzunnurain"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 77,
+    "paket": "D",
+    "soal": "Tempat Nabi Muhammad menyendiri dan menerima wahyu pertama dari Malaikat Jibril adalah Gua...?",
+    "pilihan": {
+      "A": "Tsur",
+      "B": "Hira",
+      "C": "Uhud",
+      "D": "Rahmah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 78,
+    "paket": "D",
+    "soal": "Peristiwa pembebasan kota suci yang dipimpin Nabi Muhammad dengan sepuluh ribu pasukan tanpa pertumpahan darah dikenal dengan sebutan...?",
+    "pilihan": {
+      "A": "Perjanjian Hudaibiyah",
+      "B": "Bai'at Aqabah",
+      "C": "Hijrah",
+      "D": "Fathu Makkah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 79,
+    "paket": "D",
+    "soal": "Pendeta Kristen saleh yang melihat tanda-tanda kenabian pada diri Muhammad remaja di negeri Syam bernama Pendeta...?",
+    "pilihan": {
+      "A": "Waraqah bin Naufal",
+      "B": "Bukhaira",
+      "C": "Nestor",
+      "D": "Salman"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 80,
+    "paket": "D",
+    "soal": "Bangunan suci di Makkah yang dibangun bersama-sama oleh Nabi Ibrahim dan putranya, Nabi Ismail, bernama...?",
+    "pilihan": {
+      "A": "Ka'bah",
+      "B": "Masjidil Aqsa",
+      "C": "Masjid Quba",
+      "D": "Masjid Nabawi"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 61,
+    "paket": "E",
+    "soal": "Sifat wajib yang menegaskan bahwa Allah sama sekali tidak serupa dengan apa pun di dunia ini adalah sifat...?",
+    "pilihan": {
+      "A": "Baqa'",
+      "B": "Mukhalafatu Lilhawaditsi",
+      "C": "Qiyamuhu Binafsihi",
+      "D": "Wahdaniyah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 62,
+    "paket": "E",
+    "soal": "Mustahil Allah membutuhkan bantuan makhluk, sifat mustahil ini disebut...?",
+    "pilihan": {
+      "A": "Ta'addud",
+      "B": "Fana'",
+      "C": "Ihtiyaju Lighairihi",
+      "D": "Mumatsalatu Lilhawaditsi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 63,
+    "paket": "E",
+    "soal": "Sifat wajib yang menegaskan bahwa Allah mengetahui segala sesuatu, baik yang terlihat maupun tersembunyi, adalah sifat...?",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Bashar",
+      "C": "'Ilmun",
+      "D": "Kalam"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 64,
+    "paket": "E",
+    "soal": "Sifat wajib rasul yang berarti memiliki akal cerdas atau pintar untuk membimbing umatnya dinamakan...?",
+    "pilihan": {
+      "A": "Fathanah",
+      "B": "Shiddiq",
+      "C": "Amanah",
+      "D": "Tabligh"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 65,
+    "paket": "E",
+    "soal": "Hukum bacaan ketika suara nun mati bertemu huruf ba lalu berubah wujud menjadi suara mim dinamakan...?",
+    "pilihan": {
+      "A": "Idgham Bighunnah",
+      "B": "Iqlab",
+      "C": "Ikhfa Syafawi",
+      "D": "Izhar Halqi"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 66,
+    "paket": "E",
+    "soal": "Hukum bacaan ketika mim sukun bertemu huruf mim sehingga suaranya ditasydidkan disebut idgham...?",
+    "pilihan": {
+      "A": "Bilaghunnah",
+      "B": "Mutajanisain",
+      "C": "Mimi / Mutamatsilain",
+      "D": "Mutaqaribain"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 67,
+    "paket": "E",
+    "soal": "Hukum memanjangkan bacaan di akhir kalimat karena mad thabi'i bertemu huruf hidup yang disukunkan disebut mad...?",
+    "pilihan": {
+      "A": "Wajib Muttashil",
+      "B": "Jaiz Munfashil",
+      "C": "Iwad",
+      "D": "Aridh Lissukun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 68,
+    "paket": "E",
+    "soal": "Gelar kemuliaan yang berarti bapaknya para nabi yang dianugerahkan oleh Allah dinamakan...?",
+    "pilihan": {
+      "A": "Ulul Azmi",
+      "B": "Khatamul Anbiya",
+      "C": "Abul Anbiya",
+      "D": "Khalilullah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 69,
+    "paket": "E",
+    "soal": "Wahyu berupa lembaran-lembaran yang tidak dibukukan dan diterima oleh nabi pertama serta bapak para nabi disebut dengan istilah...?",
+    "pilihan": {
+      "A": "Suhuf",
+      "B": "Kitab",
+      "C": "Mushaf",
+      "D": "Risalah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 70,
+    "paket": "E",
+    "soal": "Utusan Allah yang kelahirannya sangat istimewa atas kehendak-Nya karena lahir tanpa adanya seorang ayah adalah Nabi...?",
+    "pilihan": {
+      "A": "Yahya",
+      "B": "Isa",
+      "C": "Musa",
+      "D": "Ismail"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 71,
+    "paket": "E",
+    "soal": "Pendeta Kristen yang melihat tanda-tanda kenabian pada seorang remaja yang tengah berdagang ke negeri Syam bernama Pendeta...?",
+    "pilihan": {
+      "A": "Waraqah bin Naufal",
+      "B": "Bukhaira",
+      "C": "Nestor",
+      "D": "Maysarah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 72,
+    "paket": "E",
+    "soal": "Kelompok orang-orang terdekat yang memeluk agama Islam pada tahap sembunyi-sembunyi dinamakan golongan...?",
+    "pilihan": {
+      "A": "Muhajirin",
+      "B": "Anshar",
+      "C": "Ahlus Suffah",
+      "D": "Assabiqunal Awwalun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 73,
+    "paket": "E",
+    "soal": "Perjalanan berisiko menuju Madinah yang mengharuskan nabi bersembunyi selama tiga hari terjadi di Gua...?",
+    "pilihan": {
+      "A": "Hira",
+      "B": "Tsur",
+      "C": "Uhud",
+      "D": "Rahmah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 74,
+    "paket": "E",
+    "soal": "Sahabat penghafal Al-Qur'an utama yang diserahi tugas memimpin kodifikasi pertama ayat-ayat ke dalam satu mushaf bernama?",
+    "pilihan": {
+      "A": "Utsman bin Affan",
+      "B": "Ali bin Abi Thalib",
+      "C": "Zaid bin Tsabit",
+      "D": "Abdullah bin Mas'ud"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 75,
+    "paket": "E",
+    "soal": "Jabatan penegak keadilan pada lembaga pengadilan yang mulai diangkat secara khusus pada masa kepemimpinan Al-Faruq disebut...?",
+    "pilihan": {
+      "A": "Amir",
+      "B": "Wazir",
+      "C": "Hakim / Qadi",
+      "D": "Mufti"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 76,
+    "paket": "E",
+    "soal": "Pemimpin keempat yang tidak segan mengganti para pejabat karena menilai mereka kurang amanah mengurus rakyat bernama khalifah...?",
+    "pilihan": {
+      "A": "Abu Bakar",
+      "B": "Umar bin Khattab",
+      "C": "Utsman bin Affan",
+      "D": "Ali bin Abi Thalib"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 77,
+    "paket": "E",
+    "soal": "Sifat mustahil bagi Allah yang berarti mati sebagai kebalikan dari sifat hayat disebut sifat...?",
+    "pilihan": {
+      "A": "'Adam",
+      "B": "Fana'",
+      "C": "Mautun",
+      "D": "Huduts"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 78,
+    "paket": "E",
+    "soal": "Sifat mustahil yang bermakna buta dan merupakan kebalikan dari sifat bashar adalah sifat...?",
+    "pilihan": {
+      "A": "Summun",
+      "B": "'Umyun",
+      "C": "Bukmun",
+      "D": "Jahlun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 79,
+    "paket": "E",
+    "soal": "Huruf hijaiyah satu-satunya yang menjadi penyebab terjadinya hukum bacaan Iqlab adalah huruf...?",
+    "pilihan": {
+      "A": "Mim",
+      "B": "Wawu",
+      "C": "Nun",
+      "D": "Ba"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 80,
+    "paket": "E",
+    "soal": "Tempat perbendaharaan dan kekayaan kas negara yang sempat kacau dan kemudian ditertibkan fungsinya kembali pada masa Ali dinamakan...?",
+    "pilihan": {
+      "A": "Baitullah",
+      "B": "Baitul Mal",
+      "C": "Baitul Maqdis",
+      "D": "Baitul Hikmah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 81,
+    "paket": "D",
+    "soal": "Sifat wajib bagi Allah yang berarti hidup dan tidak akan pernah mati adalah sifat...?",
+    "pilihan": {
+      "A": "Hayat",
+      "B": "Qiyamuhu Binafsihi",
+      "C": "Baqa'",
+      "D": "Qidam"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 82,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang menjadi kebalikan dari sifat Hayat dan berarti mati adalah sifat...?",
+    "pilihan": {
+      "A": "'Adam",
+      "B": "Huduts",
+      "C": "Fana'",
+      "D": "Mautun"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 83,
+    "paket": "D",
+    "soal": "Sifat wajib yang menegaskan bahwa Allah melihat segala sesuatu yang ada di alam semesta adalah sifat...?",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Bashar",
+      "C": "Kalam",
+      "D": "'Ilmun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 84,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang berarti buta dan menjadi kebalikan dari sifat Bashar disebut sifat...?",
+    "pilihan": {
+      "A": "Summun",
+      "B": "Bukmun",
+      "C": "'Umyun",
+      "D": "Jahlun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 85,
+    "paket": "D",
+    "soal": "Sifat wajib bagi Allah yang menunjukkan bahwa Allah Maha Berbicara atau Berfirman adalah sifat...?",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Kalam",
+      "C": "Bashar",
+      "D": "'Ilmun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 86,
+    "paket": "D",
+    "soal": "Kebalikan dari sifat Kalam adalah sifat mustahil bagi Allah yang berarti bisu yaitu sifat...?",
+    "pilihan": {
+      "A": "Bukmun",
+      "B": "Summun",
+      "C": "'Umyun",
+      "D": "'Ajzun"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 87,
+    "paket": "D",
+    "soal": "Sifat mustahil bagi Allah yang berarti baru atau diciptakan dan merupakan kebalikan dari sifat Qidam disebut sifat...?",
+    "pilihan": {
+      "A": "Fana'",
+      "B": "'Adam",
+      "C": "Huduts",
+      "D": "Mautun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 88,
+    "paket": "D",
+    "soal": "Satu-satunya huruf hijaiyah yang menjadi penyebab terjadinya hukum bacaan Iqlab adalah huruf...?",
+    "pilihan": {
+      "A": "Nun",
+      "B": "Mim",
+      "C": "Wawu",
+      "D": "Ba"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 89,
+    "paket": "D",
+    "soal": "Huruf dalam hukum bacaan Idgham Bilaghunnah hanya berjumlah dua, yaitu huruf lam dan huruf...?",
+    "pilihan": {
+      "A": "Ya",
+      "B": "Ra",
+      "C": "Mim",
+      "D": "Nun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 90,
+    "paket": "D",
+    "soal": "Makhluk yang menolak perintah Allah untuk bersujud kepada Nabi Adam karena merasa lebih mulia diciptakan dari api adalah...?",
+    "pilihan": {
+      "A": "Malaikat",
+      "B": "Jin",
+      "C": "Iblis",
+      "D": "Setan"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 91,
+    "paket": "D",
+    "soal": "Nabi Ibrahim dibantu dalam membangun bangunan suci Ka'bah di Makkah oleh putranya yang taat bernama Nabi...?",
+    "pilihan": {
+      "A": "Ismail",
+      "B": "Ishaq",
+      "C": "Yakub",
+      "D": "Yusuf"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 92,
+    "paket": "D",
+    "soal": "Kendaraan raksasa yang dibuat oleh Nabi Nuh di atas bukit atas perintah Allah untuk menyelamatkan orang beriman adalah...?",
+    "pilihan": {
+      "A": "Kereta",
+      "B": "Pesawat",
+      "C": "Kapal / Bahtera",
+      "D": "Balon Udara"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 93,
+    "paket": "D",
+    "soal": "Ayah kandung Nabi Muhammad yang meninggal dunia saat beliau masih berada di dalam kandungan ibundanya bernama...?",
+    "pilihan": {
+      "A": "Abu Thalib",
+      "B": "Abdul Muthalib",
+      "C": "Abdullah",
+      "D": "Hamzah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 94,
+    "paket": "D",
+    "soal": "Kakek Nabi Muhammad yang sangat gembira menyambut kelahirannya dan merawatnya setelah ibunya wafat bernama...?",
+    "pilihan": {
+      "A": "Abu Thalib",
+      "B": "Abdul Muthalib",
+      "C": "Abu Lahab",
+      "D": "Abbas"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 95,
+    "paket": "D",
+    "soal": "Istri pertama Nabi Muhammad yang menyelimuti dan menenangkan beliau setelah menerima wahyu pertama bernama...?",
+    "pilihan": {
+      "A": "Siti Aisyah",
+      "B": "Siti Khadijah",
+      "C": "Siti Hafshah",
+      "D": "Siti Saudah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 96,
+    "paket": "D",
+    "soal": "Tempat persembunyian Nabi Muhammad dan Abu Bakar selama tiga hari agar selamat dari kejaran musuh saat hijrah adalah Gua...?",
+    "pilihan": {
+      "A": "Hira",
+      "B": "Tsur",
+      "C": "Uhud",
+      "D": "Rahmah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 97,
+    "paket": "D",
+    "soal": "Sahabat penghafal Al-Qur'an yang ditugaskan oleh Abu Bakar untuk mengumpulkan ayat-ayat ke dalam satu mushaf bernama?",
+    "pilihan": {
+      "A": "Ali bin Abi Thalib",
+      "B": "Utsman bin Affan",
+      "C": "Zaid bin Tsabit",
+      "D": "Abdullah bin Mas'ud"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 98,
+    "paket": "D",
+    "soal": "Sistem penanggalan umat Islam yang diciptakan pada masa pemerintahan Khalifah Umar bin Khattab dinamakan kalender...?",
+    "pilihan": {
+      "A": "Syamsiyah",
+      "B": "Masehi",
+      "C": "Hijriyah",
+      "D": "Qamariyah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 99,
+    "paket": "D",
+    "soal": "Tokoh cendekiawan yang diperintahkan oleh Khalifah Ali bin Abi Thalib untuk menyusun kaidah Ilmu Nahwu bernama Abul Aswad Ad-...?",
+    "pilihan": {
+      "A": "Duali",
+      "B": "Dinawari",
+      "C": "Dimasyqi",
+      "D": "Darimi"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 100,
+    "paket": "D",
+    "soal": "Masa kebodohan akhlak dan agama masyarakat Makkah sebelum kedatangan Islam sering disebut sebagai zaman...?",
+    "pilihan": {
+      "A": "Jahiliyah",
+      "B": "Fathimiyah",
+      "C": "Umayyah",
+      "D": "Abbasiyah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 81,
+    "paket": "E",
+    "soal": "Allah tidak membutuhkan bantuan siapa pun karena memiliki sifat wajib yang berarti berdiri sendiri, yakni sifat...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Qiyamuhu Binafsihi",
+      "C": "Wahdaniyah",
+      "D": "Baqa'"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 82,
+    "paket": "E",
+    "soal": "Tuhan semesta alam itu tunggal, hal ini sesuai dengan sifat wajib Allah yaitu sifat...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Hayat",
+      "C": "Wahdaniyah",
+      "D": "Baqa'"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 83,
+    "paket": "E",
+    "soal": "Kebalikan dari wahdaniyah adalah sifat mustahil yang berarti berbilang atau lebih dari satu, yakni sifat...?",
+    "pilihan": {
+      "A": "Ta'addud",
+      "B": "Ihtiyaju Lighairihi",
+      "C": "Karahah",
+      "D": "Fana'"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 84,
+    "paket": "E",
+    "soal": "Allah tidak akan pernah mati karena memiliki sifat wajib yang berarti Maha Hidup, yaitu sifat...?",
+    "pilihan": {
+      "A": "Qudrat",
+      "B": "Hayat",
+      "C": "Baqa'",
+      "D": "Wujud"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 85,
+    "paket": "E",
+    "soal": "Hukum bacaan saat nun mati bertemu lima belas huruf lalu dibaca samar-samar disebut ikhfa...?",
+    "pilihan": {
+      "A": "Syafawi",
+      "B": "Mutamatsilain",
+      "C": "Haqiqi",
+      "D": "Mimi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 86,
+    "paket": "E",
+    "soal": "Hukum bacaan saat mim sukun bertemu selain huruf mim dan ba sehingga wajib dibaca terang di bibir dinamakan izhar...?",
+    "pilihan": {
+      "A": "Syafawi",
+      "B": "Halqi",
+      "C": "Haqiqi",
+      "D": "Mutaqaribain"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 87,
+    "paket": "E",
+    "soal": "Huruf dalam hukum bacaan Idgham Bilaghunnah hanya berjumlah dua, yaitu huruf lam dan huruf...?",
+    "pilihan": {
+      "A": "Mim",
+      "B": "Nun",
+      "C": "Ra",
+      "D": "Ya"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 88,
+    "paket": "E",
+    "soal": "Raja kejam di negeri Babilonia yang menghukum bakar hidup-hidup penghancur berhalanya bernama Raja...?",
+    "pilihan": {
+      "A": "Fir'aun",
+      "B": "Jalut",
+      "C": "Abrahah",
+      "D": "Namrud"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 89,
+    "paket": "E",
+    "soal": "Bangunan suci pertama di kota Makkah yang secara khusus dibangun oleh bapak dan anak atas perintah Allah adalah...?",
+    "pilihan": {
+      "A": "Ka'bah",
+      "B": "Masjid Nabawi",
+      "C": "Masjid Quba",
+      "D": "Masjidil Aqsa"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 90,
+    "paket": "E",
+    "soal": "Salah satu penyakit kulit parah yang mampu disembuhkan oleh rasul penerima Injil atas izin Allah adalah penyakit...?",
+    "pilihan": {
+      "A": "Kusta",
+      "B": "Cacar",
+      "C": "Lumpuh",
+      "D": "Katarak"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 91,
+    "paket": "E",
+    "soal": "Kitab suci yang diturunkan oleh Allah kepada nabi penolong Bani Israil yang diangkat ke langit adalah kitab...?",
+    "pilihan": {
+      "A": "Zabur",
+      "B": "Injil",
+      "C": "Taurat",
+      "D": "Al-Qur'an"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 92,
+    "paket": "E",
+    "soal": "Nama tempat tinggi di kota Makkah yang digunakan untuk mulai menyerukan dakwah Islam secara terang-terangan adalah Bukit...?",
+    "pilihan": {
+      "A": "Marwah",
+      "B": "Nur",
+      "C": "Shafa",
+      "D": "Uhud"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 93,
+    "paket": "E",
+    "soal": "Khalifah ketiga yang terkenal dermawan dan menghabiskan hartanya demi agama Islam bernama khalifah...?",
+    "pilihan": {
+      "A": "Abu Bakar",
+      "B": "Umar bin Khattab",
+      "C": "Usman bin Affan",
+      "D": "Ali bin Abi Thalib"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 94,
+    "paket": "E",
+    "soal": "Nama sumber air yang awalnya dikuasai oleh seorang Yahudi lalu dibeli dengan harga sangat mahal untuk umat Islam bernama sumur...?",
+    "pilihan": {
+      "A": "Zamzam",
+      "B": "Raumah",
+      "C": "Kautsar",
+      "D": "Badar"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 95,
+    "paket": "E",
+    "soal": "Sang menantu nabi dijuluki secara khusus atas kecerdasannya sebagai pintu gerbang ilmu pengetahuan yang dalam bahasa Arab disebut...?",
+    "pilihan": {
+      "A": "Dzunnurain",
+      "B": "Al-Faruq",
+      "C": "As-Siddiq",
+      "D": "Babul Ilmi"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 96,
+    "paket": "E",
+    "soal": "Ilmu yang mengkaji kaidah tata bahasa agar orang mudah membaca ajaran Islam dan dipelopori penulisannya oleh Abul Aswad Ad-Duali dinamakan ilmu...?",
+    "pilihan": {
+      "A": "Nahwu",
+      "B": "Tafsir",
+      "C": "Fiqih",
+      "D": "Tauhid"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 97,
+    "paket": "E",
+    "soal": "Kemampuan Allah mendengarkan segalanya termasuk suara di dalam hati hamba-Nya merupakan wujud dari sifat wajib...?",
+    "pilihan": {
+      "A": "Bashar",
+      "B": "Sama'",
+      "C": "Kalam",
+      "D": "'Ilmun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 98,
+    "paket": "E",
+    "soal": "Mustahil Allah tidak bisa mendengar, kebalikan dari sifat pendengaran sempurna ini disebut sifat...?",
+    "pilihan": {
+      "A": "Bukmun",
+      "B": "Jahlun",
+      "C": "Summun",
+      "D": "'Umyun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 99,
+    "paket": "E",
+    "soal": "Allah melihat segala sesuatu yang ada di seluruh alam semesta tanpa terkecuali, yang merupakan arti sifat wajib...?",
+    "pilihan": {
+      "A": "Sama'",
+      "B": "Kalam",
+      "C": "Bashar",
+      "D": "Iradat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 100,
+    "paket": "E",
+    "soal": "Sifat mustahil bagi rasul yang bermakna bohong atau suka berdusta disebut sifat...?",
+    "pilihan": {
+      "A": "Kitman",
+      "B": "Khianat",
+      "C": "Kidzib",
+      "D": "Baladah"
+    },
+    "kunci": "C"
   }
 ]
