@@ -4391,5 +4391,1205 @@
       "D": "Baladah"
     },
     "kunci": "C"
+  },
+  {
+    "no_soal": 1,
+    "paket": "F",
+    "soal": "Apabila ada bayi laki-laki yang hanya minum air susu ibu (ASI) lalu ia buang air kecil, maka kotoran tersebut digolongkan sebagai najis...",
+    "pilihan": {
+      "A": "Mutawassitah",
+      "B": "Mukhaffafah",
+      "C": "Mughallazah",
+      "D": "Sedang"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 2,
+    "paket": "F",
+    "soal": "Terdapat najis berat yang wajib dibasuh sebanyak tujuh kali basuhan. Pada salah satu basuhan tersebut, kita harus mencampurnya menggunakan...",
+    "pilihan": {
+      "A": "Sabun",
+      "B": "Kapur barus",
+      "C": "Tanah atau debu suci",
+      "D": "Daun bidara"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 3,
+    "paket": "F",
+    "soal": "Kondisi tidak suci karena buang angin atau kentut dinamakan hadas kecil. Langkah yang tepat untuk kembali suci dari hadas ini yakni dengan cara...",
+    "pilihan": {
+      "A": "Mandi junub",
+      "B": "Tayamum",
+      "C": "Berwudhu",
+      "D": "Membasuh muka"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 4,
+    "paket": "F",
+    "soal": "Seseorang diperbolehkan bersuci menggunakan debu bersih (tayamum) apabila ia memenuhi syarat utamanya, yaitu...",
+    "pilihan": {
+      "A": "Sedang malas mengambil air",
+      "B": "Telah masuk waktu sholat dan tidak mendapati air",
+      "C": "Air di sekitar terasa sangat dingin",
+      "D": "Sedang berada di dalam rumah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 5,
+    "paket": "F",
+    "soal": "Seorang anak yang belum menunjukkan ciri-ciri pubertas akan secara otomatis dihukumi baligh ketika umurnya telah genap mencapai...",
+    "pilihan": {
+      "A": "10 tahun",
+      "B": "12 tahun",
+      "C": "15 tahun",
+      "D": "17 tahun"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 6,
+    "paket": "F",
+    "soal": "Fase di mana seorang anak sudah pintar memisahkan mana hal yang bermanfaat dan mana hal yang buruk dinamakan masa...",
+    "pilihan": {
+      "A": "Mukallaf",
+      "B": "Baligh",
+      "C": "Mumayyiz",
+      "D": "Mualaf"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 7,
+    "paket": "F",
+    "soal": "Bagian pertama dari dua kalimat syahadat yang berisi ikrar bahwa Allah adalah satu-satunya Tuhan dinamakan...",
+    "pilihan": {
+      "A": "Syahadat Rasul",
+      "B": "Syahadat Tauhid",
+      "C": "Syahadatain",
+      "D": "Syahadat Islam"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 8,
+    "paket": "F",
+    "soal": "Kewajiban menjalankan sholat lima waktu diterima oleh Rasulullah SAW secara langsung dari Allah ketika terjadinya momen agung...",
+    "pilihan": {
+      "A": "Nuzulul Qur'an",
+      "B": "Hijrah ke Madinah",
+      "C": "Perang Badar",
+      "D": "Isra Mi'raj"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 9,
+    "paket": "F",
+    "soal": "Ayat Al-Qur'an yang secara tegas memerintahkan umat Islam untuk menegakkan sholat dan menunaikan zakat terdapat di surah...",
+    "pilihan": {
+      "A": "Al-Fatihah ayat 1",
+      "B": "Al-Ikhlas ayat 3",
+      "C": "Al-Baqarah ayat 43",
+      "D": "Al-Ma'idah ayat 5"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 10,
+    "paket": "F",
+    "soal": "Ibadah sunnah yang pelaksanaannya mendampingi sholat lima waktu, baik di awal maupun di akhir, dinamakan sholat...",
+    "pilihan": {
+      "A": "Dhuha",
+      "B": "Tahajud",
+      "C": "Tarawih",
+      "D": "Rawatib"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 11,
+    "paket": "F",
+    "soal": "Kewajiban berpuasa bagi orang-orang yang beriman tertulis jelas di dalam firman Allah SWT, tepatnya pada surah...",
+    "pilihan": {
+      "A": "Al-Baqarah ayat 183",
+      "B": "Al-Baqarah ayat 255",
+      "C": "Al-Baqarah ayat 43",
+      "D": "Ali 'Imran ayat 97"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 12,
+    "paket": "F",
+    "soal": "Orang yang ikhlas dan rajin menjalankan ibadah shaum akan dipersilakan masuk ke surga melalui pintu istimewa yang dinamakan...",
+    "pilihan": {
+      "A": "Firdaus",
+      "B": "Ar-Rayyan",
+      "C": "Adn",
+      "D": "Ma'wa"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 13,
+    "paket": "F",
+    "soal": "Bagi muslim yang meninggalkan puasa di bulan Ramadhan karena udzur seperti sakit parah atau bepergian, ia wajib menggantinya di hari lain. Puasa pengganti ini disebut...",
+    "pilihan": {
+      "A": "Nazar",
+      "B": "Kifarat",
+      "C": "Qadha",
+      "D": "Syawal"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 14,
+    "paket": "F",
+    "soal": "Individu yang baru memeluk agama Islam dan hatinya masih butuh dukungan berhak mendapatkan harta zakat. Mereka ini tergolong ke dalam asnaf...",
+    "pilihan": {
+      "A": "Amil",
+      "B": "Gharim",
+      "C": "Riqab",
+      "D": "Mualaf"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 15,
+    "paket": "F",
+    "soal": "Seorang muslim yang menanggung utang menumpuk demi memenuhi kebutuhan pokok yang halal dan tak mampu lagi membayarnya berhak mendapat zakat dengan status sebagai...",
+    "pilihan": {
+      "A": "Fakir",
+      "B": "Gharim",
+      "C": "Ibnu Sabil",
+      "D": "Fi Sabilillah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 16,
+    "paket": "F",
+    "soal": "Kewajiban berangkat ke Baitullah hanya ditujukan bagi mereka yang memiliki kesiapan materi, fisik, dan keamanan jalur. Istilah untuk kemampuan ini adalah...",
+    "pilihan": {
+      "A": "Mukallaf",
+      "B": "Istitha'ah",
+      "C": "Mumayyiz",
+      "D": "Ihram"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 17,
+    "paket": "F",
+    "soal": "Aktivitas berjalan atau berlari-lari kecil bolak-balik sebanyak tujuh kali dari bukit Shafa menuju bukit Marwah dalam rangkaian rukun ibadah haji dinamakan...",
+    "pilihan": {
+      "A": "Tawaf",
+      "B": "Wukuf",
+      "C": "Sa'i",
+      "D": "Tahallul"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 18,
+    "paket": "F",
+    "soal": "Proses pemotongan atau penggundulan rambut sebagai penanda bahwa seorang jamaah telah merampungkan seluruh ibadah hajinya dinamakan...",
+    "pilihan": {
+      "A": "Tahallul",
+      "B": "Miqat",
+      "C": "Ihram",
+      "D": "Talbiyah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 19,
+    "paket": "F",
+    "soal": "Ketika dalam perjalanan menunaikan ibadah haji, jamaah sangat dianjurkan untuk sering melantunkan 'Labbaikallahumma labbaik'. Bacaan sunnah ini disebut...",
+    "pilihan": {
+      "A": "Sholawat",
+      "B": "Tasbih",
+      "C": "Istighfar",
+      "D": "Talbiyah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 20,
+    "paket": "F",
+    "soal": "Kewajiban mengeluarkan sebagian harta simpanan, emas, atau hasil pertanian yang telah mencapai batas nisab untuk menyucikan harta tersebut dinamakan zakat...",
+    "pilihan": {
+      "A": "Fitrah",
+      "B": "Mal",
+      "C": "Profesi",
+      "D": "Tijarah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 21,
+    "paket": "F",
+    "soal": "Najis yang paling sering kita temui sehari-hari, seperti darah, nanah, atau kotoran hewan, digolongkan ke dalam tingkat najis...",
+    "pilihan": {
+      "A": "Mughallazah",
+      "B": "Mukhaffafah",
+      "C": "Mutawassitah",
+      "D": "Mutlaq"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 22,
+    "paket": "F",
+    "soal": "Seseorang tidak cukup hanya dengan berwudhu jika sedang dalam keadaan hadas besar. Cara menyucikannya adalah dengan melaksanakan...",
+    "pilihan": {
+      "A": "Mandi wajib (mandi junub)",
+      "B": "Tayamum",
+      "C": "Istinja",
+      "D": "Membasuh wajah dan tangan"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 23,
+    "paket": "F",
+    "soal": "Salah satu amalan sunnah wudhu adalah menghirup sedikit air ke dalam hidung lalu mengeluarkannya kembali untuk menjaga kebersihan hidung. Amalan ini disebut...",
+    "pilihan": {
+      "A": "Istinja",
+      "B": "Istinsyaq",
+      "C": "Istikharah",
+      "D": "Berkumur"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 24,
+    "paket": "F",
+    "soal": "Bagi anak perempuan, tanda utama bahwa ia sudah memasuki usia baligh atau masa pubertas menurut ajaran agama Islam adalah mengalami...",
+    "pilihan": {
+      "A": "Perubahan suara",
+      "B": "Ihtilam (mimpi basah)",
+      "C": "Tumbuh gigi",
+      "D": "Haid atau menstruasi"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 25,
+    "paket": "F",
+    "soal": "Seorang muslim yang sudah dewasa (baligh) dan memiliki akal sehat sehingga diberikan kewajiban penuh untuk menjalankan seluruh syariat agama Islam disebut...",
+    "pilihan": {
+      "A": "Mualaf",
+      "B": "Mumayyiz",
+      "C": "Mukallaf",
+      "D": "Musafir"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 26,
+    "paket": "F",
+    "soal": "Pengucapan kalimat 'Wa asyhadu anna Muhammadar Rasulullah' yang berarti persaksian bahwa Nabi Muhammad adalah utusan Allah disebut sebagai...",
+    "pilihan": {
+      "A": "Syahadat Tauhid",
+      "B": "Syahadat Rasul",
+      "C": "Rukun Iman",
+      "D": "Syahadatain"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 27,
+    "paket": "F",
+    "soal": "Memastikan sudah masuk waktu sholat, suci dari hadas, menutup aurat, dan menghadap ke arah Kiblat merupakan bagian dari ... sholat.",
+    "pilihan": {
+      "A": "Syarat wajib",
+      "B": "Rukun",
+      "C": "Sunnah",
+      "D": "Syarat sah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 28,
+    "paket": "F",
+    "soal": "Menurut firman Allah SWT dalam Surah Al-'Ankabut ayat 45, mendirikan ibadah sholat memiliki manfaat yang sangat besar yaitu mencegah kita dari perbuatan...",
+    "pilihan": {
+      "A": "Riya dan sombong",
+      "B": "Keji dan buruk",
+      "C": "Boros dan kikir",
+      "D": "Bohong dan curang"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 29,
+    "paket": "F",
+    "soal": "Sholat sunnah yang sangat bagus dibiasakan oleh anak sekolah pada pagi hari saat matahari mulai naik untuk memohon kelancaran belajar dan rezeki adalah sholat...",
+    "pilihan": {
+      "A": "Tahajud",
+      "B": "Dhuha",
+      "C": "Witir",
+      "D": "Istikharah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 30,
+    "paket": "F",
+    "soal": "Rukun puasa yang kedua adalah disiplin menjaga diri dari segala hal yang membatalkan puasa yang dimulai sejak terbitnya fajar (waktu Subuh) hingga terdengar suara adzan...",
+    "pilihan": {
+      "A": "Dzuhur",
+      "B": "Ashar",
+      "C": "Maghrib",
+      "D": "Isya"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 31,
+    "paket": "F",
+    "soal": "Umat Islam dilarang atau diharamkan melaksanakan ibadah puasa pada tanggal 11, 12, dan 13 Dzulhijjah. Hari-hari tersebut dikenal dengan nama hari...",
+    "pilihan": {
+      "A": "Tasyrik",
+      "B": "Arafah",
+      "C": "Tarwiyah",
+      "D": "Asyura"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 32,
+    "paket": "F",
+    "soal": "Puasa yang wajib dilaksanakan oleh seseorang karena ia telah berjanji kepada Allah SWT atas sebuah keinginan atau doa baiknya yang telah terkabul disebut puasa...",
+    "pilihan": {
+      "A": "Qadha",
+      "B": "Daud",
+      "C": "Syawal",
+      "D": "Nazar"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 33,
+    "paket": "F",
+    "soal": "Secara bahasa, kata zakat memiliki arti suci, bersih, dan terus bertambah atau...",
+    "pilihan": {
+      "A": "Berkurang",
+      "B": "Berkembang",
+      "C": "Membagi",
+      "D": "Menahan"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 34,
+    "paket": "F",
+    "soal": "Salah satu syarat wajib dalam menunaikan zakat harta adalah harta tersebut sudah mencapai batas minimal jumlah tertentu. Batas minimal ini disebut dengan istilah...",
+    "pilihan": {
+      "A": "Haul",
+      "B": "Fidyah",
+      "C": "Nisab",
+      "D": "Kifarat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 35,
+    "paket": "F",
+    "soal": "Zakat yang wajib dikeluarkan pada bulan suci Ramadhan paling lambat sebelum sholat Idul Fitri dalam bentuk makanan pokok sehari-hari disebut zakat...",
+    "pilihan": {
+      "A": "Mal",
+      "B": "Tijarah",
+      "C": "Fitrah",
+      "D": "Profesi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 36,
+    "paket": "F",
+    "soal": "Salah satu golongan (asnaf) yang berhak menerima zakat adalah orang-orang yang berjuang dan mengabdi di jalan Allah, seperti pendakwah atau pejuang agama. Golongan ini disebut...",
+    "pilihan": {
+      "A": "Ibnu Sabil",
+      "B": "Fi Sabilillah",
+      "C": "Riqab",
+      "D": "Amil"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 37,
+    "paket": "F",
+    "soal": "Ibadah haji sangat istimewa karena waktu pelaksanaannya sudah ditentukan secara khusus oleh syariat Islam, yaitu hanya boleh dikerjakan pada bulan...",
+    "pilihan": {
+      "A": "Ramadhan",
+      "B": "Syawal",
+      "C": "Muharram",
+      "D": "Dzulhijjah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 38,
+    "paket": "F",
+    "soal": "Puncak dari rangkaian kegiatan ibadah haji adalah hadir dan berdiam diri untuk berdzikir di Padang Arafah pada tanggal 9 Dzulhijjah. Kegiatan ini disebut...",
+    "pilihan": {
+      "A": "Wukuf",
+      "B": "Sa'i",
+      "C": "Tawaf",
+      "D": "Ihram"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 39,
+    "paket": "F",
+    "soal": "Rukun haji berupa kegiatan berjalan mengelilingi bangunan suci Ka'bah sebanyak tujuh kali putaran dengan posisi Ka'bah berada di sebelah kiri disebut...",
+    "pilihan": {
+      "A": "Sa'i",
+      "B": "Tawaf Ifadah",
+      "C": "Wukuf",
+      "D": "Tawaf Qudum"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 40,
+    "paket": "F",
+    "soal": "Predikat atau balasan terindah yang diberikan Allah SWT berupa jaminan masuk surga bagi orang yang melaksanakan haji dengan niat ikhlas dan sempurna disebut...",
+    "pilihan": {
+      "A": "Haji Mabrur",
+      "B": "Haji Wada'",
+      "C": "Haji Qiran",
+      "D": "Haji Tamattu'"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 41,
+    "paket": "F",
+    "soal": "Secara bahasa, kata thaharah memiliki arti...",
+    "pilihan": {
+      "A": "Menahan diri",
+      "B": "Mandi wajib",
+      "C": "Bersuci atau bersih",
+      "D": "Perjalanan jauh"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 42,
+    "paket": "F",
+    "soal": "Melakukan seluruh gerakan wudhu secara berurutan mulai dari niat hingga membasuh kaki (tidak boleh melompat-lompat) disebut...",
+    "pilihan": {
+      "A": "Tumakninah",
+      "B": "Tertib",
+      "C": "Istinsyaq",
+      "D": "Tayamum"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 43,
+    "paket": "F",
+    "soal": "Dalam amalan sunnah wudhu, kegiatan yang bertujuan untuk membersihkan sisa makanan di dalam mulut disebut...",
+    "pilihan": {
+      "A": "Berkumur-kumur",
+      "B": "Membasuh telinga",
+      "C": "Mencuci telapak tangan",
+      "D": "Istinsyaq"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 44,
+    "paket": "F",
+    "soal": "Bagi anak laki-laki, tanda utama bahwa ia sudah memasuki usia baligh adalah mengalami...",
+    "pilihan": {
+      "A": "Perubahan suara",
+      "B": "Haid",
+      "C": "Ihtilam (mimpi basah)",
+      "D": "Tumbuh tinggi"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 45,
+    "paket": "F",
+    "soal": "Ketika seseorang sudah menjadi mukallaf, setiap amalan pahala dan dosa akan dicatat atas nama dirinya sendiri oleh malaikat...",
+    "pilihan": {
+      "A": "Jibril dan Mikail",
+      "B": "Munkar dan Nakir",
+      "C": "Raqib dan Atid",
+      "D": "Malik dan Ridwan"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 46,
+    "paket": "F",
+    "soal": "Menyekutukan Allah dalam ibadah atau berdoa kepada selain Allah merupakan dosa yang sangat besar. Istilah untuk menyekutukan Allah adalah...",
+    "pilihan": {
+      "A": "Kufur",
+      "B": "Nifaq",
+      "C": "Fasiq",
+      "D": "Syirik"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 47,
+    "paket": "F",
+    "soal": "Melalui Syahadat Rasul, kita berjanji untuk menjadikan Nabi Muhammad SAW sebagai teladan yang baik dalam bersikap. Teladan yang baik dalam bahasa Arab disebut...",
+    "pilihan": {
+      "A": "Akhlaqul karimah",
+      "B": "Uswatun hasanah",
+      "C": "Khatamun Nabiyyin",
+      "D": "Amal jariyah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 48,
+    "paket": "F",
+    "soal": "Saat melaksanakan ibadah sholat, laki-laki diwajibkan menutup aurat. Batas aurat bagi laki-laki yang benar adalah...",
+    "pilihan": {
+      "A": "Dari dada hingga mata kaki",
+      "B": "Dari pusar hingga lutut",
+      "C": "Seluruh tubuh kecuali wajah",
+      "D": "Dari pundak hingga lutut"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 49,
+    "paket": "F",
+    "soal": "Sholat fardhu yang dikerjakan pada malam hari dengan jumlah rakaat sebanyak 4 (empat) rakaat adalah sholat...",
+    "pilihan": {
+      "A": "Dzuhur",
+      "B": "Ashar",
+      "C": "Maghrib",
+      "D": "Isya"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 50,
+    "paket": "F",
+    "soal": "Sholat sunnah yang sangat istimewa karena dikerjakan pada malam hari setelah kita bangun dari tidur disebut sholat...",
+    "pilihan": {
+      "A": "Tahajud",
+      "B": "Dhuha",
+      "C": "Rawatib",
+      "D": "Witir"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 51,
+    "paket": "F",
+    "soal": "Bagi orang yang sudah sangat tua atau sakit parah, Allah memberikan keringanan untuk tidak berpuasa Ramadhan dan menggantinya dengan cara membayar...",
+    "pilihan": {
+      "A": "Zakat Fitrah",
+      "B": "Fidyah",
+      "C": "Kifarat",
+      "D": "Dam"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 52,
+    "paket": "F",
+    "soal": "Puasa sunnah yang paling disukai Allah SWT, yang dilakukan secara selang-seling (sehari berpuasa, sehari tidak) disebut puasa...",
+    "pilihan": {
+      "A": "Arafah",
+      "B": "Senin dan Kamis",
+      "C": "Daud",
+      "D": "Syawal"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 53,
+    "paket": "F",
+    "soal": "Anjuran puasa sunnah selama enam hari yang dilakukan setelah Hari Raya Idul Fitri disebut puasa...",
+    "pilihan": {
+      "A": "Syawal",
+      "B": "Arafah",
+      "C": "Qadha",
+      "D": "Nazar"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 54,
+    "paket": "F",
+    "soal": "Dalam 8 asnaf penerima zakat, panitia atau pengurus yang dipercaya untuk mengumpulkan dan membagikan harta zakat disebut...",
+    "pilihan": {
+      "A": "Fakir",
+      "B": "Gharim",
+      "C": "Ibnu Sabil",
+      "D": "Amil"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 55,
+    "paket": "F",
+    "soal": "Dalil yang memuat perintah dari Allah SWT untuk mengambil zakat dari sebagian harta guna membersihkan dan mensucikan jiwa terdapat pada...",
+    "pilihan": {
+      "A": "Surah Al-Baqarah ayat 43",
+      "B": "Surah At-Taubah ayat 103",
+      "C": "Surah Ali 'Imran ayat 97",
+      "D": "Surah Al-Baqarah ayat 183"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 56,
+    "paket": "F",
+    "soal": "Perintah melaksanakan ibadah haji bagi orang-orang yang mampu mengadakan perjalanan ke sana ditegaskan oleh Allah SWT di dalam Al-Qur'an pada surah...",
+    "pilihan": {
+      "A": "Surah Al-Baqarah ayat 43",
+      "B": "Surah Al-Baqarah ayat 183",
+      "C": "Surah Ali 'Imran ayat 97",
+      "D": "Surah At-Taubah ayat 103"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 57,
+    "paket": "F",
+    "soal": "Pakaian yang wajib dipakai oleh jamaah laki-laki saat memulai ibadah haji, berupa dua helai kain putih tanpa jahitan, disebut pakaian...",
+    "pilihan": {
+      "A": "Sorban",
+      "B": "Jubah",
+      "C": "Ihram",
+      "D": "Koko"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 58,
+    "paket": "F",
+    "soal": "Jika seseorang sengaja meninggalkan rukun haji, maka ibadah hajinya menjadi batal dan kelalaian ini tidak bisa diganti hanya dengan membayar denda yang disebut...",
+    "pilihan": {
+      "A": "Fidyah",
+      "B": "Dam",
+      "C": "Kifarat",
+      "D": "Zakat"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 59,
+    "paket": "F",
+    "soal": "Amalan sunnah haji berupa tawaf penghormatan atau selamat datang yang dilaksanakan saat pertama kali menginjakkan kaki di Masjidil Haram disebut Tawaf...",
+    "pilihan": {
+      "A": "Ifadah",
+      "B": "Wada'",
+      "C": "Qudum",
+      "D": "Sunnah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 60,
+    "paket": "F",
+    "soal": "Pada rukun tayamum, setelah menepukkan tangan ke debu dan mengusapkannya ke seluruh wajah secara merata, langkah selanjutnya adalah mengusapkan debu tersebut ke...",
+    "pilihan": {
+      "A": "Bagian telinga",
+      "B": "Ujung kepala",
+      "C": "Kedua tangan kanan dan kiri hingga siku",
+      "D": "Kedua kaki hingga mata kaki"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 61,
+    "paket": "F",
+    "soal": "Dua kalimat persaksian dalam Islam yang wajib diyakini di dalam hati, diucapkan dengan lisan, dan dibuktikan melalui perbuatan sehari-hari disebut...",
+    "pilihan": {
+      "A": "Syahadat Tauhid",
+      "B": "Syahadat Rasul",
+      "C": "Syahadatain",
+      "D": "Kalimat Thayyibah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 62,
+    "paket": "F",
+    "soal": "Nabi Muhammad SAW diutus oleh Allah SWT sebagai nabi dan rasul terakhir penutup para nabi. Istilah untuk sebutan nabi penutup adalah...",
+    "pilihan": {
+      "A": "Uswatun Hasanah",
+      "B": "Khatamun Nabiyyin",
+      "C": "Ulul Azmi",
+      "D": "Rahmatan Lil 'Alamin"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 63,
+    "paket": "F",
+    "soal": "Jika seseorang selesai mengambil air wudhu namun sengaja tidak membaca niat di dalam hati, maka hukum wudhunya menjadi...",
+    "pilihan": {
+      "A": "Makruh",
+      "B": "Tetap Sah",
+      "C": "Mubah",
+      "D": "Tidak Sah"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 64,
+    "paket": "F",
+    "soal": "Cara membersihkan najis mutawassitah adalah dengan membasuhnya menggunakan air mengalir sampai hilang tiga hal, yaitu warnanya, baunya, dan...",
+    "pilihan": {
+      "A": "Rasanya",
+      "B": "Kotorannya",
+      "C": "Bentuknya",
+      "D": "Bekasnya"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 65,
+    "paket": "F",
+    "soal": "Keadaan tidak suci pada diri seseorang yang mencegahnya untuk melaksanakan ibadah menghadap Allah SWT (seperti sholat) disebut dengan...",
+    "pilihan": {
+      "A": "Najis",
+      "B": "Hadas",
+      "C": "Kotoran",
+      "D": "Fasiq"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 66,
+    "paket": "F",
+    "soal": "Pelaksanaan ibadah puasa wajib di bulan Ramadhan dimulai sejak terbitnya fajar (waktu Subuh) hingga...",
+    "pilihan": {
+      "A": "Matahari terbit",
+      "B": "Waktu Dzuhur",
+      "C": "Terbenamnya matahari",
+      "D": "Waktu Isya"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 67,
+    "paket": "F",
+    "soal": "Orang yang sangat sengsara, tidak memiliki harta sama sekali, dan tidak memiliki pekerjaan berhak menerima zakat. Dalam 8 asnaf, ia tergolong sebagai...",
+    "pilihan": {
+      "A": "Fakir",
+      "B": "Miskin",
+      "C": "Mualaf",
+      "D": "Gharim"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 68,
+    "paket": "F",
+    "soal": "Rukun pertama saat melaksanakan ibadah haji adalah berniat dengan ikhlas dari batas tempat yang telah ditentukan. Batas tempat ini dikenal dengan istilah...",
+    "pilihan": {
+      "A": "Multazam",
+      "B": "Miqat",
+      "C": "Hijir Ismail",
+      "D": "Raudhah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 69,
+    "paket": "F",
+    "soal": "Salah satu amalan sunnah haji adalah meminum air suci sampai kenyang sambil memanjatkan doa setelah melaksanakan tawaf dan sa'i. Air yang dimaksud adalah...",
+    "pilihan": {
+      "A": "Air Kautsar",
+      "B": "Air Zamzam",
+      "C": "Air Salsabila",
+      "D": "Air Hujan"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 70,
+    "paket": "F",
+    "soal": "Saat melaksanakan putaran tawaf, jamaah haji disunnahkan untuk berusaha mencium atau mengusap sebuah batu hitam dari surga yang bernama...",
+    "pilihan": {
+      "A": "Hajar Aswad",
+      "B": "Batu Akik",
+      "C": "Hajar Jahanam",
+      "D": "Hajar Ismail"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 71,
+    "paket": "F",
+    "soal": "Mengerjakan sholat sunnah dua rakaat setelah selesai melakukan putaran tawaf sangat dianjurkan untuk dikerjakan di belakang tempat yang bernama...",
+    "pilihan": {
+      "A": "Gua Hira",
+      "B": "Bukit Shafa",
+      "C": "Jabal Rahmah",
+      "D": "Maqam Ibrahim"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 72,
+    "paket": "F",
+    "soal": "Agar puasa kita diterima, kita diwajibkan menahan diri dari segala perbuatan buruk dari pagi hingga petang, contohnya seperti...",
+    "pilihan": {
+      "A": "Membantu orang tua",
+      "B": "Marah-marah dan berbohong",
+      "C": "Tidur siang sebentar",
+      "D": "Membaca Al-Qur'an"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 73,
+    "paket": "F",
+    "soal": "Hal-hal yang harus kita penuhi agar ibadah sholat diterima oleh Allah SWT, seperti suci dari hadas, menutup aurat, dan menghadap kiblat, disebut...",
+    "pilihan": {
+      "A": "Syarat Wajib",
+      "B": "Rukun Sholat",
+      "C": "Syarat Sah",
+      "D": "Sunnah Sholat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 74,
+    "paket": "F",
+    "soal": "Rukun puasa yang pertama dan biasanya dilafalkan pada malam hari atau setelah selesai sholat tarawih sebelum datangnya waktu Subuh adalah...",
+    "pilihan": {
+      "A": "Menahan lapar",
+      "B": "Membaca niat",
+      "C": "Makan sahur",
+      "D": "Berbuka puasa"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 75,
+    "paket": "F",
+    "soal": "Pada gerakan rukun wudhu yang mewajibkan kita membasuh wajah, batasan wajah yang harus dialiri air adalah dari batas tumbuhnya rambut bagian atas hingga ke ujung...",
+    "pilihan": {
+      "A": "Dagu",
+      "B": "Hidung",
+      "C": "Telinga",
+      "D": "Leher"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 76,
+    "paket": "F",
+    "soal": "Rukun pertama yang mengawali ibadah tayamum untuk membolehkan kita melaksanakan sholat menggunakan debu yang suci adalah...",
+    "pilihan": {
+      "A": "Mengusap tangan",
+      "B": "Membaca niat",
+      "C": "Meniup debu",
+      "D": "Mengusap kaki"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 77,
+    "paket": "F",
+    "soal": "Masa mumayyiz adalah tahapan di mana akal anak mulai cerdas. Rasulullah SAW memerintahkan anak untuk mulai berlatih sholat saat usianya menginjak...",
+    "pilihan": {
+      "A": "5 tahun",
+      "B": "7 tahun",
+      "C": "10 tahun",
+      "D": "12 tahun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 78,
+    "paket": "F",
+    "soal": "Salah satu amalan puasa sunnah yang paling sering dibiasakan secara rutin setiap pekannya oleh Nabi Muhammad SAW adalah puasa pada hari...",
+    "pilihan": {
+      "A": "Jumat dan Sabtu",
+      "B": "Senin dan Kamis",
+      "C": "Rabu dan Kamis",
+      "D": "Ahad dan Senin"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 79,
+    "paket": "F",
+    "soal": "Setiap akan melaksanakan sholat, umat Islam diwajibkan untuk menghadap ke arah Kiblat, yaitu bangunan suci Ka'bah yang terletak di kota...",
+    "pilihan": {
+      "A": "Madinah",
+      "B": "Yerusalem",
+      "C": "Makkah",
+      "D": "Jeddah"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 80,
+    "paket": "F",
+    "soal": "Rukun Islam yang pertama dan diibaratkan sebagai pintu gerbang utama bagi seseorang untuk masuk ke dalam agama Islam adalah...",
+    "pilihan": {
+      "A": "Sholat",
+      "B": "Zakat",
+      "C": "Syahadat",
+      "D": "Puasa"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 81,
+    "paket": "F",
+    "soal": "Anak yang sudah mencapai tahap mumayyiz memiliki kemampuan akal untuk mandiri. Salah satu contoh ciri anak mumayyiz adalah...",
+    "pilihan": {
+      "A": "Diwajibkan berpuasa Ramadhan penuh",
+      "B": "Bisa melakukan makan, minum, dan istinja dengan benar",
+      "C": "Wajib membayar zakat mal sendiri",
+      "D": "Sudah mengalami mimpi basah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 82,
+    "paket": "F",
+    "soal": "Di antara delapan golongan asnaf penerima zakat, terdapat kelompok hamba sahaya pada zaman dahulu yang ingin memerdekakan dirinya. Golongan ini disebut...",
+    "pilihan": {
+      "A": "Riqab",
+      "B": "Fi Sabilillah",
+      "C": "Amil",
+      "D": "Ibnu Sabil"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 83,
+    "paket": "F",
+    "soal": "Rukun ibadah haji mutlak harus dikerjakan secara berurutan dari awal hingga akhir dan tidak boleh diacak-acak posisinya. Aturan pengerjaan berurutan ini dinamakan...",
+    "pilihan": {
+      "A": "Tawaf",
+      "B": "Tahallul",
+      "C": "Tertib",
+      "D": "Miqat"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 84,
+    "paket": "F",
+    "soal": "Musafir yang sedang menempuh perjalanan jauh untuk menuntut ilmu namun kehabisan uang dan bekal di tengah jalan sangat berhak menerima zakat dengan status...",
+    "pilihan": {
+      "A": "Fakir",
+      "B": "Ibnu Sabil",
+      "C": "Gharim",
+      "D": "Mualaf"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 85,
+    "paket": "F",
+    "soal": "Ada waktu-waktu tertentu di mana umat Islam diharamkan atau dilarang keras untuk berpuasa, salah satunya adalah pada saat...",
+    "pilihan": {
+      "A": "Bulan Muharram",
+      "B": "Hari Senin dan Kamis",
+      "C": "Hari Raya Idul Fitri dan Idul Adha",
+      "D": "Pertengahan bulan Syaban"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 86,
+    "paket": "F",
+    "soal": "Dalam melaksanakan rukun wudhu, setelah kita selesai membasuh kedua tangan kanan dan kiri hingga melewati siku, gerakan wajib selanjutnya adalah...",
+    "pilihan": {
+      "A": "Membasuh kedua kaki",
+      "B": "Berkumur-kumur",
+      "C": "Mengusap seluruh telinga",
+      "D": "Mengusapkan air ke sebagian kepala"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 87,
+    "paket": "F",
+    "soal": "Agama Islam memberikan kemudahan bagi orang sakit yang dilarang terkena air oleh dokter, yaitu dengan mengganti wudhu menggunakan media...",
+    "pilihan": {
+      "A": "Minyak wangi",
+      "B": "Debu atau tanah yang bersih",
+      "C": "Air embun sedikit",
+      "D": "Daun-daunan"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 88,
+    "paket": "F",
+    "soal": "Orang yang sedang pingsan atau tidur lelap tidak diwajibkan untuk sholat sampai ia terbangun, karena ia belum memenuhi syarat wajib sholat, yaitu...",
+    "pilihan": {
+      "A": "Berakal sehat",
+      "B": "Baligh",
+      "C": "Suci dari najis",
+      "D": "Menutup aurat"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 89,
+    "paket": "F",
+    "soal": "Syarat sah mendirikan sholat adalah menutup aurat dengan pakaian yang sopan. Batas aurat bagi perempuan saat sholat adalah...",
+    "pilihan": {
+      "A": "Seluruh tubuh ditutup rapat tanpa celah",
+      "B": "Dari pusar hingga mata kaki",
+      "C": "Seluruh tubuh kecuali wajah dan telapak tangan",
+      "D": "Mengenakan kerudung dan rok panjang"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 90,
+    "paket": "F",
+    "soal": "Seorang muslim berkewajiban mendirikan sholat fardhu lima waktu setiap harinya. Jika dijumlahkan, total keseluruhan rakaat sholat wajib dalam sehari semalam adalah...",
+    "pilihan": {
+      "A": "15 rakaat",
+      "B": "17 rakaat",
+      "C": "20 rakaat",
+      "D": "24 rakaat"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 91,
+    "paket": "F",
+    "soal": "Apabila ada anak yang belum baligh diajak pergi menunaikan ibadah haji ke Tanah Suci oleh kedua orang tuanya, maka hukum dari ibadah hajinya adalah...",
+    "pilihan": {
+      "A": "Batal karena belum dewasa",
+      "B": "Sah namun harus diulang saat dewasa",
+      "C": "Tetap sah dan pahalanya mengalir sebagai sedekah",
+      "D": "Hanya bernilai jalan-jalan"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 92,
+    "paket": "F",
+    "soal": "Pakaian ihram wajib dikenakan oleh setiap jamaah saat memulai ibadah haji. Bagi jamaah laki-laki, bentuk pakaian ihram tersebut adalah...",
+    "pilihan": {
+      "A": "Dua helai kain putih tanpa jahitan",
+      "B": "Jubah putih panjang berpenutup kepala",
+      "C": "Kemeja putih dan sarung putih",
+      "D": "Kain putih yang dijahit rapi"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 93,
+    "paket": "F",
+    "soal": "Rasulullah SAW telah memberikan anjuran untuk mulai memerintahkan dan melatih anak-anak belajar mendirikan sholat pada saat usianya menginjak...",
+    "pilihan": {
+      "A": "5 tahun",
+      "B": "7 tahun",
+      "C": "10 tahun",
+      "D": "12 tahun"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 94,
+    "paket": "F",
+    "soal": "Seseorang yang telah berstatus mukallaf memiliki tanggung jawab penuh atas dirinya, salah satunya adalah kewajiban mutlak di tengah masyarakat yaitu...",
+    "pilihan": {
+      "A": "Menikah di usia muda",
+      "B": "Mencari harta sebanyak mungkin",
+      "C": "Menuntut ilmu agama dan menjaga akhlak yang baik",
+      "D": "Menjadi pengurus masjid"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 95,
+    "paket": "F",
+    "soal": "Memahami dan mengucapkan kalimat syahadat sangatlah penting dan wajib dilakukan. Dalam agama Islam, kedudukan kalimat syahadat diibaratkan sebagai...",
+    "pilihan": {
+      "A": "Pintu gerbang utama atau pondasi agama",
+      "B": "Amalan sunnah tambahan",
+      "C": "Penghapus dosa-dosa kecil",
+      "D": "Syarat untuk menikah"
+    },
+    "kunci": "A"
+  },
+  {
+    "no_soal": 96,
+    "paket": "F",
+    "soal": "Menurut ujung dari Surah Al-Baqarah ayat 183 'la'allakum tattaquun', tujuan utama Allah mewajibkan ibadah puasa adalah agar hamba-Nya menjadi orang yang...",
+    "pilihan": {
+      "A": "Sehat fisiknya",
+      "B": "Bersyukur atas rezeki",
+      "C": "Bertakwa",
+      "D": "Sabar menahan lapar"
+    },
+    "kunci": "C"
+  },
+  {
+    "no_soal": 97,
+    "paket": "F",
+    "soal": "Untuk mengeluarkan zakat mal dari harta simpanan tertentu, harta tersebut diwajibkan sudah tersimpan dan dimiliki selama rentang waktu satu tahun. Istilah ini disebut...",
+    "pilihan": {
+      "A": "Nisab",
+      "B": "Haul",
+      "C": "Fidyah",
+      "D": "Riqab"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 98,
+    "paket": "F",
+    "soal": "Wukuf merupakan puncak dari serangkaian ibadah haji yang pelaksanaannya berdiam diri untuk berdoa pada tanggal 9 Dzulhijjah, yang dilaksanakan secara khusus di...",
+    "pilihan": {
+      "A": "Gua Hira",
+      "B": "Padang Arafah",
+      "C": "Mina",
+      "D": "Muzdalifah"
+    },
+    "kunci": "B"
+  },
+  {
+    "no_soal": 99,
+    "paket": "F",
+    "soal": "Seseorang yang memiliki pekerjaan tetap namun penghasilan hariannya tidak cukup untuk memenuhi kebutuhan makan sehari-hari tergolong dalam asnaf...",
+    "pilihan": {
+      "A": "Fakir",
+      "B": "Gharim",
+      "C": "Amil",
+      "D": "Miskin"
+    },
+    "kunci": "D"
+  },
+  {
+    "no_soal": 100,
+    "paket": "F",
+    "soal": "Contoh keadaan yang membuat seorang perempuan dewasa berstatus memiliki hadas besar dan diwajibkan melakukan mandi junub adalah ketika ia sedang mengalami...",
+    "pilihan": {
+      "A": "Flu berat",
+      "B": "Pingsan lama",
+      "C": "Haid atau menstruasi",
+      "D": "Berdarah karena luka"
+    },
+    "kunci": "C"
   }
 ]
