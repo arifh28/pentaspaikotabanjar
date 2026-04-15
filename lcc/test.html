@@ -51,6 +51,9 @@
         .exam-card.paket-a { border-left-color: #16a34a; }
         .exam-card.paket-b { border-left-color: #2563eb; }
         .exam-card.paket-c { border-left-color: #d97706; }
+        .exam-card.paket-d { border-left-color: #9333ea; } /* Purple untuk D */
+        .exam-card.paket-e { border-left-color: #dc2626; } /* Red untuk E */
+        .exam-card.paket-f { border-left-color: #0d9488; } /* Teal untuk F */
 
         .card-header-exam {
             padding: 10px 15px;
@@ -71,6 +74,9 @@
         .bg-paket-a { background: #dcfce7; color: #166534; }
         .bg-paket-b { background: #dbeafe; color: #1e40af; }
         .bg-paket-c { background: #fef3c7; color: #92400e; }
+        .bg-paket-d { background: #f3e8ff; color: #6b21a8; }
+        .bg-paket-e { background: #fee2e2; color: #991b1b; }
+        .bg-paket-f { background: #ccfbf1; color: #115e59; }
 
         /* Area Jawaban Benar */
         .answer-box {
@@ -140,7 +146,7 @@
             <h6 class="m-0 fw-bold text-dark"><i class="fas fa-chalkboard-teacher me-2"></i>Mode Ujian Lisan</h6>
             <small class="text-muted">Pegangan Penguji / Guru</small>
         </div>
-        <span class="badge bg-secondary" id="total-badge">20 Soal</span>
+        <span class="badge bg-secondary" id="total-badge">50 Soal</span>
     </div>
 
     <div class="container mt-3 px-3" id="exam-container">
@@ -152,7 +158,7 @@
 
     <div class="fab-container">
         <button onclick="generateOralExam()" class="btn-action btn-refresh">
-            <i class="fas fa-sync-alt me-2"></i>ACAK 20 SOAL BARU
+            <i class="fas fa-sync-alt me-2"></i>ACAK 50 SOAL BARU
         </button>
     </div>
 
@@ -193,6 +199,9 @@
             if (p === 'A') return 'paket-a';
             if (p === 'B') return 'paket-b';
             if (p === 'C') return 'paket-c';
+            if (p === 'D') return 'paket-d';
+            if (p === 'E') return 'paket-e';
+            if (p === 'F') return 'paket-f';
             return '';
         }
         
@@ -201,6 +210,9 @@
             if (p === 'A') return 'bg-paket-a';
             if (p === 'B') return 'bg-paket-b';
             if (p === 'C') return 'bg-paket-c';
+            if (p === 'D') return 'bg-paket-d';
+            if (p === 'E') return 'bg-paket-e';
+            if (p === 'F') return 'bg-paket-f';
             return 'bg-secondary text-white';
         }
 
@@ -223,8 +235,8 @@
                 return;
             }
 
-            // Ambil 20 Soal
-            const soalTerpilih = getRandomQuestions(databaseSoal, 20);
+            // Ambil 50 Soal
+            const soalTerpilih = getRandomQuestions(databaseSoal, 50);
             
             if (soalTerpilih.length === 0) {
                 container.innerHTML = `<div class="alert alert-warning">Data soal kosong.</div>`;
